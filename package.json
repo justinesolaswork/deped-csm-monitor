@@ -1,0 +1,26 @@
+{
+  "name": "csm-monitor",
+  "private": true,
+  "version": "0.2.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node ./node_modules/vite/bin/vite.js",
+    "build": "node ./node_modules/vite/bin/vite.js build",
+    "preview": "node ./node_modules/vite/bin/vite.js preview",
+    "data": "python scripts/build_dashboard_data.py",
+    "test": "node --test",
+    "check": "python -m unittest discover -s scripts && python scripts/build_dashboard_data.py --check && node --test && node ./node_modules/vite/bin/vite.js build --outDir node_modules/.cache/build-check --logLevel warn"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/material": "^7.3.1",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "recharts": "^3.6.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.0.2",
+    "vite": "^7.1.7"
+  }
+}

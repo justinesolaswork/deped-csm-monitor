@@ -1,0 +1,44 @@
+CSM MONITOR - STAR SUMMARY FOR MY PRESENTATION
+(STAR = Situation, Task, Action, Result)
+
+SITUATION
+DepEd keeps school data in three huge spreadsheets (CSV files):
+a list of 45,934 schools, about 705,000 classes, and about 269,000
+shifting records. Nobody can read that much data by eye, so it is
+hard to see where classes are too big or too crowded.
+
+TASK
+Turn those three files into one easy dashboard that shows:
+- Class size: are classes above, within, or below the standard?
+- Shifting: do schools run a single, double, or triple shift?
+...by region, and down to each school.
+
+ACTION
+- Wrote Python scripts that add up the big files into small
+  summary files, so the dashboard loads fast.
+- Built the dashboard with React, with charts and a table for
+  every chart.
+- Compared all 17 regions side by side, and added a school list
+  you can search, sort, and filter by region and division.
+- Added a short key that explains Above / Within / Below and
+  Single / Double / Triple in plain words.
+- Made it easier to use: a text size slider (Small to XL),
+  bigger tap targets on phones, and a note on what you are viewing.
+- Added automatic checks (32 tests) so the dashboard numbers match
+  the original files.
+- Reviewed the design and fixed what the review found (for example,
+  one colour was being used for two different meanings).
+
+RESULT
+- One page now answers the question in seconds.
+- Class size: about 69% of classes are below standard, 20% are
+  within, and 11% are above.
+- Shifting: about 97% of records are single shift, 2.5% double,
+  0.1% triple.
+- Data gaps are shown, not hidden: 5,002 schools have no shifting
+  record and 1,648 have no class-size record.
+- All automatic checks pass.
+
+ONE-LINE SUMMARY
+I turned three unreadable spreadsheets into a dashboard that shows
+where class sizes and shifting need attention, by region and school.

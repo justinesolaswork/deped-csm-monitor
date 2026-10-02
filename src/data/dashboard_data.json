@@ -1,0 +1,6775 @@
+{
+  "meta": {
+    "snapshotDate": "2026-09-28",
+    "generatedBy": "scripts/build_dashboard_data.py",
+    "sources": {
+      "schools": "official_list_of_schools_202609281509.csv",
+      "shifting": "unit5_shifting_modality_view_202609281508.csv",
+      "class_sizes": "vw_organized_class_sizes_202609281455.csv"
+    },
+    "notes": [
+      "classSize values are sums of the 'number' column (count of classes), not row counts.",
+      "shifting values are school-by-grade records.",
+      "offering and coverage values are counts of schools in the master list.",
+      "Rows whose school_id is absent from the master list are grouped under 'Not in master list'.",
+      "Region casing is normalized (e.g. 'REGION V' -> 'Region V').",
+      "Division spellings that differ only by casing or spacing are merged (e.g. 'ALBAY' -> 'Albay')."
+    ]
+  },
+  "national": {
+    "name": "All regions",
+    "classSize": {
+      "Less than Standard": 485956,
+      "Within Standard": 142899,
+      "Above Standard": 76119
+    },
+    "shifting": {
+      "Single Shift": 262220,
+      "Double Shift": 6707,
+      "Triple Shift": 210
+    },
+    "offering": {
+      "PURELY ES": 34944,
+      "JHS WITH SHS": 6651,
+      "ES AND JHS": 1765,
+      "PURELY JHS": 1384,
+      "ALL OFFERING": 905,
+      "PURELY SHS": 283,
+      "ES WITH SHS": 2
+    },
+    "coverage": {
+      "schools": 45934,
+      "withClassSize": 44286,
+      "withShifting": 40932,
+      "inNeitherView": 866,
+      "withoutShifting": 5002,
+      "withoutClassSize": 1648,
+      "orphanSchoolIds": 86
+    }
+  },
+  "regions": [
+    {
+      "name": "CAR",
+      "classSize": {
+        "Less than Standard": 13380,
+        "Within Standard": 1179,
+        "Above Standard": 652
+      },
+      "shifting": {
+        "Single Shift": 9774,
+        "Double Shift": 13,
+        "Triple Shift": 0
+      },
+      "offering": {
+        "PURELY ES": 1460,
+        "JHS WITH SHS": 237,
+        "ES AND JHS": 64,
+        "PURELY JHS": 63,
+        "ALL OFFERING": 15,
+        "PURELY SHS": 3,
+        "ES WITH SHS": 0
+      },
+      "coverage": {
+        "schools": 1842,
+        "withClassSize": 1785,
+        "withShifting": 1683,
+        "inNeitherView": 11
+      },
+      "divisions": [
+        {
+          "name": "Abra",
+          "classSize": {
+            "Less than Standard": 2230,
+            "Within Standard": 132,
+            "Above Standard": 106
+          },
+          "shifting": {
+            "Single Shift": 1618,
+            "Double Shift": 0,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 269,
+            "JHS WITH SHS": 35,
+            "ES AND JHS": 9,
+            "PURELY JHS": 0,
+            "ALL OFFERING": 4,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 317,
+            "withClassSize": 308,
+            "withShifting": 281,
+            "inNeitherView": 5
+          }
+        },
+        {
+          "name": "Apayao",
+          "classSize": {
+            "Less than Standard": 1426,
+            "Within Standard": 78,
+            "Above Standard": 14
+          },
+          "shifting": {
+            "Single Shift": 1062,
+            "Double Shift": 0,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 156,
+            "JHS WITH SHS": 29,
+            "ES AND JHS": 10,
+            "PURELY JHS": 5,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 200,
+            "withClassSize": 193,
+            "withShifting": 186,
+            "inNeitherView": 1
+          }
+        },
+        {
+          "name": "Baguio City",
+          "classSize": {
+            "Less than Standard": 1293,
+            "Within Standard": 403,
+            "Above Standard": 227
+          },
+          "shifting": {
+            "Single Shift": 397,
+            "Double Shift": 9,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 42,
+            "JHS WITH SHS": 19,
+            "ES AND JHS": 3,
+            "PURELY JHS": 3,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 67,
+            "withClassSize": 64,
+            "withShifting": 61,
+            "inNeitherView": 1
+          }
+        },
+        {
+          "name": "Benguet",
+          "classSize": {
+            "Less than Standard": 3013,
+            "Within Standard": 278,
+            "Above Standard": 169
+          },
+          "shifting": {
+            "Single Shift": 2246,
+            "Double Shift": 4,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 337,
+            "JHS WITH SHS": 56,
+            "ES AND JHS": 26,
+            "PURELY JHS": 2,
+            "ALL OFFERING": 9,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 430,
+            "withClassSize": 414,
+            "withShifting": 381,
+            "inNeitherView": 2
+          }
+        },
+        {
+          "name": "Ifugao",
+          "classSize": {
+            "Less than Standard": 1694,
+            "Within Standard": 93,
+            "Above Standard": 29
+          },
+          "shifting": {
+            "Single Shift": 1465,
+            "Double Shift": 0,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 224,
+            "JHS WITH SHS": 30,
+            "ES AND JHS": 2,
+            "PURELY JHS": 8,
+            "ALL OFFERING": 1,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 266,
+            "withClassSize": 262,
+            "withShifting": 254,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Kalinga",
+          "classSize": {
+            "Less than Standard": 1091,
+            "Within Standard": 33,
+            "Above Standard": 17
+          },
+          "shifting": {
+            "Single Shift": 1009,
+            "Double Shift": 0,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 157,
+            "JHS WITH SHS": 29,
+            "ES AND JHS": 3,
+            "PURELY JHS": 3,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 193,
+            "withClassSize": 185,
+            "withShifting": 177,
+            "inNeitherView": 1
+          }
+        },
+        {
+          "name": "Mt. Province",
+          "classSize": {
+            "Less than Standard": 1826,
+            "Within Standard": 40,
+            "Above Standard": 11
+          },
+          "shifting": {
+            "Single Shift": 1364,
+            "Double Shift": 0,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 200,
+            "JHS WITH SHS": 28,
+            "ES AND JHS": 1,
+            "PURELY JHS": 36,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 266,
+            "withClassSize": 258,
+            "withShifting": 246,
+            "inNeitherView": 1
+          }
+        },
+        {
+          "name": "Tabuk City",
+          "classSize": {
+            "Less than Standard": 807,
+            "Within Standard": 122,
+            "Above Standard": 79
+          },
+          "shifting": {
+            "Single Shift": 613,
+            "Double Shift": 0,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 75,
+            "JHS WITH SHS": 11,
+            "ES AND JHS": 10,
+            "PURELY JHS": 6,
+            "ALL OFFERING": 1,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 103,
+            "withClassSize": 101,
+            "withShifting": 97,
+            "inNeitherView": 0
+          }
+        }
+      ]
+    },
+    {
+      "name": "CARAGA",
+      "classSize": {
+        "Less than Standard": 18835,
+        "Within Standard": 3648,
+        "Above Standard": 2006
+      },
+      "shifting": {
+        "Single Shift": 12171,
+        "Double Shift": 126,
+        "Triple Shift": 2
+      },
+      "offering": {
+        "PURELY ES": 1589,
+        "JHS WITH SHS": 359,
+        "ES AND JHS": 71,
+        "PURELY JHS": 37,
+        "ALL OFFERING": 45,
+        "PURELY SHS": 5,
+        "ES WITH SHS": 0
+      },
+      "coverage": {
+        "schools": 2106,
+        "withClassSize": 2062,
+        "withShifting": 1941,
+        "inNeitherView": 12
+      },
+      "divisions": [
+        {
+          "name": "Agusan del Norte",
+          "classSize": {
+            "Less than Standard": 1781,
+            "Within Standard": 382,
+            "Above Standard": 196
+          },
+          "shifting": {
+            "Single Shift": 1226,
+            "Double Shift": 3,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 160,
+            "JHS WITH SHS": 38,
+            "ES AND JHS": 0,
+            "PURELY JHS": 4,
+            "ALL OFFERING": 6,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 209,
+            "withClassSize": 206,
+            "withShifting": 190,
+            "inNeitherView": 1
+          }
+        },
+        {
+          "name": "Agusan del Sur",
+          "classSize": {
+            "Less than Standard": 4898,
+            "Within Standard": 796,
+            "Above Standard": 618
+          },
+          "shifting": {
+            "Single Shift": 2933,
+            "Double Shift": 17,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 401,
+            "JHS WITH SHS": 86,
+            "ES AND JHS": 22,
+            "PURELY JHS": 10,
+            "ALL OFFERING": 1,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 520,
+            "withClassSize": 493,
+            "withShifting": 468,
+            "inNeitherView": 10
+          }
+        },
+        {
+          "name": "Bayugan City",
+          "classSize": {
+            "Less than Standard": 644,
+            "Within Standard": 139,
+            "Above Standard": 92
+          },
+          "shifting": {
+            "Single Shift": 414,
+            "Double Shift": 1,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 56,
+            "JHS WITH SHS": 13,
+            "ES AND JHS": 1,
+            "PURELY JHS": 1,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 71,
+            "withClassSize": 70,
+            "withShifting": 63,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Bislig City",
+          "classSize": {
+            "Less than Standard": 781,
+            "Within Standard": 116,
+            "Above Standard": 38
+          },
+          "shifting": {
+            "Single Shift": 414,
+            "Double Shift": 6,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 50,
+            "JHS WITH SHS": 12,
+            "ES AND JHS": 0,
+            "PURELY JHS": 6,
+            "ALL OFFERING": 1,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 70,
+            "withClassSize": 69,
+            "withShifting": 67,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Butuan City",
+          "classSize": {
+            "Less than Standard": 2075,
+            "Within Standard": 496,
+            "Above Standard": 152
+          },
+          "shifting": {
+            "Single Shift": 874,
+            "Double Shift": 59,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 90,
+            "JHS WITH SHS": 31,
+            "ES AND JHS": 10,
+            "PURELY JHS": 1,
+            "ALL OFFERING": 6,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 138,
+            "withClassSize": 138,
+            "withShifting": 131,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Cabadbaran City",
+          "classSize": {
+            "Less than Standard": 433,
+            "Within Standard": 121,
+            "Above Standard": 49
+          },
+          "shifting": {
+            "Single Shift": 220,
+            "Double Shift": 4,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 20,
+            "JHS WITH SHS": 6,
+            "ES AND JHS": 5,
+            "PURELY JHS": 1,
+            "ALL OFFERING": 2,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 35,
+            "withClassSize": 35,
+            "withShifting": 30,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Dinagat Island",
+          "classSize": {
+            "Less than Standard": 1514,
+            "Within Standard": 91,
+            "Above Standard": 19
+          },
+          "shifting": {
+            "Single Shift": 761,
+            "Double Shift": 1,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 109,
+            "JHS WITH SHS": 31,
+            "ES AND JHS": 0,
+            "PURELY JHS": 3,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 144,
+            "withClassSize": 140,
+            "withShifting": 133,
+            "inNeitherView": 1
+          }
+        },
+        {
+          "name": "Siargao",
+          "classSize": {
+            "Less than Standard": 825,
+            "Within Standard": 228,
+            "Above Standard": 89
+          },
+          "shifting": {
+            "Single Shift": 752,
+            "Double Shift": 1,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 118,
+            "JHS WITH SHS": 23,
+            "ES AND JHS": 2,
+            "PURELY JHS": 2,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 145,
+            "withClassSize": 144,
+            "withShifting": 134,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Surigao City",
+          "classSize": {
+            "Less than Standard": 586,
+            "Within Standard": 275,
+            "Above Standard": 95
+          },
+          "shifting": {
+            "Single Shift": 452,
+            "Double Shift": 2,
+            "Triple Shift": 2
+          },
+          "offering": {
+            "PURELY ES": 65,
+            "JHS WITH SHS": 22,
+            "ES AND JHS": 0,
+            "PURELY JHS": 0,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 87,
+            "withClassSize": 84,
+            "withShifting": 75,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Surigao del Norte",
+          "classSize": {
+            "Less than Standard": 1439,
+            "Within Standard": 315,
+            "Above Standard": 286
+          },
+          "shifting": {
+            "Single Shift": 1198,
+            "Double Shift": 0,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 162,
+            "JHS WITH SHS": 32,
+            "ES AND JHS": 2,
+            "PURELY JHS": 5,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 202,
+            "withClassSize": 201,
+            "withShifting": 192,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Surigao del Sur",
+          "classSize": {
+            "Less than Standard": 3551,
+            "Within Standard": 549,
+            "Above Standard": 313
+          },
+          "shifting": {
+            "Single Shift": 2764,
+            "Double Shift": 11,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 336,
+            "JHS WITH SHS": 62,
+            "ES AND JHS": 24,
+            "PURELY JHS": 3,
+            "ALL OFFERING": 28,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 453,
+            "withClassSize": 450,
+            "withShifting": 431,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Tandag City",
+          "classSize": {
+            "Less than Standard": 308,
+            "Within Standard": 140,
+            "Above Standard": 59
+          },
+          "shifting": {
+            "Single Shift": 163,
+            "Double Shift": 21,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 22,
+            "JHS WITH SHS": 3,
+            "ES AND JHS": 5,
+            "PURELY JHS": 1,
+            "ALL OFFERING": 1,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 32,
+            "withClassSize": 32,
+            "withShifting": 27,
+            "inNeitherView": 0
+          }
+        }
+      ]
+    },
+    {
+      "name": "MIMAROPA",
+      "classSize": {
+        "Less than Standard": 21463,
+        "Within Standard": 3942,
+        "Above Standard": 2149
+      },
+      "shifting": {
+        "Single Shift": 13385,
+        "Double Shift": 102,
+        "Triple Shift": 0
+      },
+      "offering": {
+        "PURELY ES": 1887,
+        "JHS WITH SHS": 331,
+        "ES AND JHS": 35,
+        "PURELY JHS": 155,
+        "ALL OFFERING": 2,
+        "PURELY SHS": 4,
+        "ES WITH SHS": 0
+      },
+      "coverage": {
+        "schools": 2414,
+        "withClassSize": 2367,
+        "withShifting": 2152,
+        "inNeitherView": 17
+      },
+      "divisions": [
+        {
+          "name": "Calapan City",
+          "classSize": {
+            "Less than Standard": 591,
+            "Within Standard": 200,
+            "Above Standard": 157
+          },
+          "shifting": {
+            "Single Shift": 355,
+            "Double Shift": 2,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 48,
+            "JHS WITH SHS": 9,
+            "ES AND JHS": 1,
+            "PURELY JHS": 1,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 59,
+            "withClassSize": 57,
+            "withShifting": 53,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Marinduque",
+          "classSize": {
+            "Less than Standard": 1886,
+            "Within Standard": 220,
+            "Above Standard": 80
+          },
+          "shifting": {
+            "Single Shift": 1293,
+            "Double Shift": 1,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 182,
+            "JHS WITH SHS": 39,
+            "ES AND JHS": 1,
+            "PURELY JHS": 6,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 229,
+            "withClassSize": 222,
+            "withShifting": 208,
+            "inNeitherView": 2
+          }
+        },
+        {
+          "name": "Occidental Mindoro",
+          "classSize": {
+            "Less than Standard": 2984,
+            "Within Standard": 898,
+            "Above Standard": 436
+          },
+          "shifting": {
+            "Single Shift": 2103,
+            "Double Shift": 13,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 304,
+            "JHS WITH SHS": 34,
+            "ES AND JHS": 2,
+            "PURELY JHS": 25,
+            "ALL OFFERING": 1,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 366,
+            "withClassSize": 357,
+            "withShifting": 334,
+            "inNeitherView": 5
+          }
+        },
+        {
+          "name": "Oriental Mindoro",
+          "classSize": {
+            "Less than Standard": 5376,
+            "Within Standard": 605,
+            "Above Standard": 282
+          },
+          "shifting": {
+            "Single Shift": 3160,
+            "Double Shift": 14,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 433,
+            "JHS WITH SHS": 80,
+            "ES AND JHS": 4,
+            "PURELY JHS": 32,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 549,
+            "withClassSize": 544,
+            "withShifting": 497,
+            "inNeitherView": 2
+          }
+        },
+        {
+          "name": "Palawan",
+          "classSize": {
+            "Less than Standard": 6916,
+            "Within Standard": 1112,
+            "Above Standard": 811
+          },
+          "shifting": {
+            "Single Shift": 4384,
+            "Double Shift": 29,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 639,
+            "JHS WITH SHS": 114,
+            "ES AND JHS": 15,
+            "PURELY JHS": 70,
+            "ALL OFFERING": 1,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 840,
+            "withClassSize": 820,
+            "withShifting": 730,
+            "inNeitherView": 8
+          }
+        },
+        {
+          "name": "Puerto Princesa City",
+          "classSize": {
+            "Less than Standard": 978,
+            "Within Standard": 690,
+            "Above Standard": 317
+          },
+          "shifting": {
+            "Single Shift": 580,
+            "Double Shift": 29,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 70,
+            "JHS WITH SHS": 22,
+            "ES AND JHS": 5,
+            "PURELY JHS": 3,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 101,
+            "withClassSize": 100,
+            "withShifting": 95,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Romblon",
+          "classSize": {
+            "Less than Standard": 2732,
+            "Within Standard": 217,
+            "Above Standard": 66
+          },
+          "shifting": {
+            "Single Shift": 1510,
+            "Double Shift": 14,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 211,
+            "JHS WITH SHS": 33,
+            "ES AND JHS": 7,
+            "PURELY JHS": 18,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 270,
+            "withClassSize": 267,
+            "withShifting": 235,
+            "inNeitherView": 0
+          }
+        }
+      ]
+    },
+    {
+      "name": "NCR",
+      "classSize": {
+        "Less than Standard": 24453,
+        "Within Standard": 21461,
+        "Above Standard": 8594
+      },
+      "shifting": {
+        "Single Shift": 4011,
+        "Double Shift": 745,
+        "Triple Shift": 15
+      },
+      "offering": {
+        "PURELY ES": 487,
+        "JHS WITH SHS": 178,
+        "ES AND JHS": 19,
+        "PURELY JHS": 81,
+        "ALL OFFERING": 16,
+        "PURELY SHS": 46,
+        "ES WITH SHS": 0
+      },
+      "coverage": {
+        "schools": 827,
+        "withClassSize": 814,
+        "withShifting": 743,
+        "inNeitherView": 4
+      },
+      "divisions": [
+        {
+          "name": "Caloocan City",
+          "classSize": {
+            "Less than Standard": 3080,
+            "Within Standard": 3104,
+            "Above Standard": 1056
+          },
+          "shifting": {
+            "Single Shift": 358,
+            "Double Shift": 137,
+            "Triple Shift": 1
+          },
+          "offering": {
+            "PURELY ES": 52,
+            "JHS WITH SHS": 16,
+            "ES AND JHS": 0,
+            "PURELY JHS": 14,
+            "ALL OFFERING": 1,
+            "PURELY SHS": 6,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 89,
+            "withClassSize": 89,
+            "withShifting": 81,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "City of San Juan",
+          "classSize": {
+            "Less than Standard": 210,
+            "Within Standard": 110,
+            "Above Standard": 18
+          },
+          "shifting": {
+            "Single Shift": 89,
+            "Double Shift": 0,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 6,
+            "JHS WITH SHS": 2,
+            "ES AND JHS": 3,
+            "PURELY JHS": 0,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 2,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 13,
+            "withClassSize": 12,
+            "withShifting": 13,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Las Pi\u00f1as City",
+          "classSize": {
+            "Less than Standard": 878,
+            "Within Standard": 885,
+            "Above Standard": 563
+          },
+          "shifting": {
+            "Single Shift": 175,
+            "Double Shift": 19,
+            "Triple Shift": 1
+          },
+          "offering": {
+            "PURELY ES": 22,
+            "JHS WITH SHS": 4,
+            "ES AND JHS": 0,
+            "PURELY JHS": 9,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 5,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 40,
+            "withClassSize": 39,
+            "withShifting": 35,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Makati City",
+          "classSize": {
+            "Less than Standard": 760,
+            "Within Standard": 177,
+            "Above Standard": 20
+          },
+          "shifting": {
+            "Single Shift": 114,
+            "Double Shift": 16,
+            "Triple Shift": 1
+          },
+          "offering": {
+            "PURELY ES": 13,
+            "JHS WITH SHS": 1,
+            "ES AND JHS": 2,
+            "PURELY JHS": 4,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 3,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 23,
+            "withClassSize": 23,
+            "withShifting": 22,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Malabon City",
+          "classSize": {
+            "Less than Standard": 957,
+            "Within Standard": 731,
+            "Above Standard": 174
+          },
+          "shifting": {
+            "Single Shift": 211,
+            "Double Shift": 42,
+            "Triple Shift": 1
+          },
+          "offering": {
+            "PURELY ES": 23,
+            "JHS WITH SHS": 9,
+            "ES AND JHS": 5,
+            "PURELY JHS": 3,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 2,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 42,
+            "withClassSize": 40,
+            "withShifting": 37,
+            "inNeitherView": 1
+          }
+        },
+        {
+          "name": "Mandaluyong City",
+          "classSize": {
+            "Less than Standard": 951,
+            "Within Standard": 443,
+            "Above Standard": 74
+          },
+          "shifting": {
+            "Single Shift": 188,
+            "Double Shift": 19,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 11,
+            "JHS WITH SHS": 3,
+            "ES AND JHS": 2,
+            "PURELY JHS": 0,
+            "ALL OFFERING": 7,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 24,
+            "withClassSize": 23,
+            "withShifting": 23,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Manila",
+          "classSize": {
+            "Less than Standard": 4699,
+            "Within Standard": 2388,
+            "Above Standard": 299
+          },
+          "shifting": {
+            "Single Shift": 479,
+            "Double Shift": 149,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 70,
+            "JHS WITH SHS": 21,
+            "ES AND JHS": 1,
+            "PURELY JHS": 8,
+            "ALL OFFERING": 3,
+            "PURELY SHS": 2,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 105,
+            "withClassSize": 104,
+            "withShifting": 95,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Marikina City",
+          "classSize": {
+            "Less than Standard": 689,
+            "Within Standard": 1022,
+            "Above Standard": 315
+          },
+          "shifting": {
+            "Single Shift": 174,
+            "Double Shift": 10,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 16,
+            "JHS WITH SHS": 13,
+            "ES AND JHS": 0,
+            "PURELY JHS": 3,
+            "ALL OFFERING": 1,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 33,
+            "withClassSize": 33,
+            "withShifting": 29,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Muntinlupa City",
+          "classSize": {
+            "Less than Standard": 533,
+            "Within Standard": 1042,
+            "Above Standard": 518
+          },
+          "shifting": {
+            "Single Shift": 121,
+            "Double Shift": 44,
+            "Triple Shift": 1
+          },
+          "offering": {
+            "PURELY ES": 18,
+            "JHS WITH SHS": 4,
+            "ES AND JHS": 0,
+            "PURELY JHS": 3,
+            "ALL OFFERING": 1,
+            "PURELY SHS": 2,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 28,
+            "withClassSize": 28,
+            "withShifting": 27,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Navotas",
+          "classSize": {
+            "Less than Standard": 593,
+            "Within Standard": 505,
+            "Above Standard": 167
+          },
+          "shifting": {
+            "Single Shift": 91,
+            "Double Shift": 56,
+            "Triple Shift": 2
+          },
+          "offering": {
+            "PURELY ES": 15,
+            "JHS WITH SHS": 7,
+            "ES AND JHS": 0,
+            "PURELY JHS": 1,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 2,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 25,
+            "withClassSize": 25,
+            "withShifting": 24,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Paranaque City",
+          "classSize": {
+            "Less than Standard": 1022,
+            "Within Standard": 1034,
+            "Above Standard": 571
+          },
+          "shifting": {
+            "Single Shift": 214,
+            "Double Shift": 38,
+            "Triple Shift": 1
+          },
+          "offering": {
+            "PURELY ES": 26,
+            "JHS WITH SHS": 10,
+            "ES AND JHS": 0,
+            "PURELY JHS": 5,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 2,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 43,
+            "withClassSize": 42,
+            "withShifting": 41,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Pasay City",
+          "classSize": {
+            "Less than Standard": 599,
+            "Within Standard": 705,
+            "Above Standard": 388
+          },
+          "shifting": {
+            "Single Shift": 182,
+            "Double Shift": 18,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 19,
+            "JHS WITH SHS": 8,
+            "ES AND JHS": 0,
+            "PURELY JHS": 0,
+            "ALL OFFERING": 2,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 29,
+            "withClassSize": 29,
+            "withShifting": 28,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Pasig City",
+          "classSize": {
+            "Less than Standard": 984,
+            "Within Standard": 1816,
+            "Above Standard": 741
+          },
+          "shifting": {
+            "Single Shift": 201,
+            "Double Shift": 17,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 28,
+            "JHS WITH SHS": 10,
+            "ES AND JHS": 0,
+            "PURELY JHS": 4,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 2,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 44,
+            "withClassSize": 43,
+            "withShifting": 35,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Quezon City",
+          "classSize": {
+            "Less than Standard": 5021,
+            "Within Standard": 4508,
+            "Above Standard": 1625
+          },
+          "shifting": {
+            "Single Shift": 744,
+            "Double Shift": 99,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 95,
+            "JHS WITH SHS": 33,
+            "ES AND JHS": 0,
+            "PURELY JHS": 18,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 11,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 157,
+            "withClassSize": 154,
+            "withShifting": 137,
+            "inNeitherView": 1
+          }
+        },
+        {
+          "name": "Taguig City and Pateros",
+          "classSize": {
+            "Less than Standard": 1957,
+            "Within Standard": 1710,
+            "Above Standard": 1337
+          },
+          "shifting": {
+            "Single Shift": 347,
+            "Double Shift": 39,
+            "Triple Shift": 1
+          },
+          "offering": {
+            "PURELY ES": 32,
+            "JHS WITH SHS": 20,
+            "ES AND JHS": 6,
+            "PURELY JHS": 1,
+            "ALL OFFERING": 1,
+            "PURELY SHS": 2,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 62,
+            "withClassSize": 61,
+            "withShifting": 56,
+            "inNeitherView": 1
+          }
+        },
+        {
+          "name": "Valenzuela City",
+          "classSize": {
+            "Less than Standard": 1520,
+            "Within Standard": 1281,
+            "Above Standard": 728
+          },
+          "shifting": {
+            "Single Shift": 323,
+            "Double Shift": 42,
+            "Triple Shift": 6
+          },
+          "offering": {
+            "PURELY ES": 41,
+            "JHS WITH SHS": 17,
+            "ES AND JHS": 0,
+            "PURELY JHS": 8,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 4,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 70,
+            "withClassSize": 69,
+            "withShifting": 60,
+            "inNeitherView": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "NIR",
+      "classSize": {
+        "Less than Standard": 25586,
+        "Within Standard": 7272,
+        "Above Standard": 3511
+      },
+      "shifting": {
+        "Single Shift": 13588,
+        "Double Shift": 93,
+        "Triple Shift": 4
+      },
+      "offering": {
+        "PURELY ES": 1669,
+        "JHS WITH SHS": 431,
+        "ES AND JHS": 46,
+        "PURELY JHS": 60,
+        "ALL OFFERING": 39,
+        "PURELY SHS": 8,
+        "ES WITH SHS": 0
+      },
+      "coverage": {
+        "schools": 2253,
+        "withClassSize": 2214,
+        "withShifting": 2035,
+        "inNeitherView": 17
+      },
+      "divisions": [
+        {
+          "name": "Bacolod City",
+          "classSize": {
+            "Less than Standard": 1388,
+            "Within Standard": 1313,
+            "Above Standard": 281
+          },
+          "shifting": {
+            "Single Shift": 345,
+            "Double Shift": 44,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 44,
+            "JHS WITH SHS": 19,
+            "ES AND JHS": 0,
+            "PURELY JHS": 4,
+            "ALL OFFERING": 2,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 70,
+            "withClassSize": 69,
+            "withShifting": 58,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Bago City",
+          "classSize": {
+            "Less than Standard": 705,
+            "Within Standard": 249,
+            "Above Standard": 132
+          },
+          "shifting": {
+            "Single Shift": 253,
+            "Double Shift": 1,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 36,
+            "JHS WITH SHS": 7,
+            "ES AND JHS": 0,
+            "PURELY JHS": 3,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 47,
+            "withClassSize": 45,
+            "withShifting": 39,
+            "inNeitherView": 2
+          }
+        },
+        {
+          "name": "Bais City",
+          "classSize": {
+            "Less than Standard": 598,
+            "Within Standard": 128,
+            "Above Standard": 55
+          },
+          "shifting": {
+            "Single Shift": 382,
+            "Double Shift": 0,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 31,
+            "JHS WITH SHS": 16,
+            "ES AND JHS": 0,
+            "PURELY JHS": 0,
+            "ALL OFFERING": 10,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 57,
+            "withClassSize": 56,
+            "withShifting": 50,
+            "inNeitherView": 1
+          }
+        },
+        {
+          "name": "Bayawan City",
+          "classSize": {
+            "Less than Standard": 921,
+            "Within Standard": 299,
+            "Above Standard": 193
+          },
+          "shifting": {
+            "Single Shift": 592,
+            "Double Shift": 6,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 69,
+            "JHS WITH SHS": 27,
+            "ES AND JHS": 0,
+            "PURELY JHS": 8,
+            "ALL OFFERING": 1,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 105,
+            "withClassSize": 105,
+            "withShifting": 93,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Cadiz City",
+          "classSize": {
+            "Less than Standard": 1117,
+            "Within Standard": 266,
+            "Above Standard": 149
+          },
+          "shifting": {
+            "Single Shift": 343,
+            "Double Shift": 0,
+            "Triple Shift": 4
+          },
+          "offering": {
+            "PURELY ES": 50,
+            "JHS WITH SHS": 18,
+            "ES AND JHS": 1,
+            "PURELY JHS": 0,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 69,
+            "withClassSize": 69,
+            "withShifting": 52,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Canlaon City",
+          "classSize": {
+            "Less than Standard": 320,
+            "Within Standard": 116,
+            "Above Standard": 34
+          },
+          "shifting": {
+            "Single Shift": 212,
+            "Double Shift": 1,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 28,
+            "JHS WITH SHS": 8,
+            "ES AND JHS": 0,
+            "PURELY JHS": 2,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 38,
+            "withClassSize": 38,
+            "withShifting": 32,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Dumaguete City",
+          "classSize": {
+            "Less than Standard": 317,
+            "Within Standard": 160,
+            "Above Standard": 203
+          },
+          "shifting": {
+            "Single Shift": 142,
+            "Double Shift": 0,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 18,
+            "JHS WITH SHS": 7,
+            "ES AND JHS": 0,
+            "PURELY JHS": 0,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 26,
+            "withClassSize": 25,
+            "withShifting": 20,
+            "inNeitherView": 1
+          }
+        },
+        {
+          "name": "Escalante City",
+          "classSize": {
+            "Less than Standard": 601,
+            "Within Standard": 188,
+            "Above Standard": 36
+          },
+          "shifting": {
+            "Single Shift": 275,
+            "Double Shift": 8,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 26,
+            "JHS WITH SHS": 14,
+            "ES AND JHS": 0,
+            "PURELY JHS": 0,
+            "ALL OFFERING": 2,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 42,
+            "withClassSize": 42,
+            "withShifting": 41,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Guihulngan City",
+          "classSize": {
+            "Less than Standard": 701,
+            "Within Standard": 257,
+            "Above Standard": 120
+          },
+          "shifting": {
+            "Single Shift": 615,
+            "Double Shift": 1,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 77,
+            "JHS WITH SHS": 18,
+            "ES AND JHS": 0,
+            "PURELY JHS": 8,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 104,
+            "withClassSize": 97,
+            "withShifting": 96,
+            "inNeitherView": 4
+          }
+        },
+        {
+          "name": "Himamaylan City",
+          "classSize": {
+            "Less than Standard": 648,
+            "Within Standard": 197,
+            "Above Standard": 54
+          },
+          "shifting": {
+            "Single Shift": 342,
+            "Double Shift": 6,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 40,
+            "JHS WITH SHS": 10,
+            "ES AND JHS": 1,
+            "PURELY JHS": 0,
+            "ALL OFFERING": 6,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 57,
+            "withClassSize": 55,
+            "withShifting": 47,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Kabankalan City",
+          "classSize": {
+            "Less than Standard": 1101,
+            "Within Standard": 285,
+            "Above Standard": 190
+          },
+          "shifting": {
+            "Single Shift": 578,
+            "Double Shift": 6,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 69,
+            "JHS WITH SHS": 20,
+            "ES AND JHS": 0,
+            "PURELY JHS": 5,
+            "ALL OFFERING": 1,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 95,
+            "withClassSize": 94,
+            "withShifting": 88,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "La Carlota City",
+          "classSize": {
+            "Less than Standard": 565,
+            "Within Standard": 37,
+            "Above Standard": 15
+          },
+          "shifting": {
+            "Single Shift": 204,
+            "Double Shift": 0,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 23,
+            "JHS WITH SHS": 4,
+            "ES AND JHS": 2,
+            "PURELY JHS": 2,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 31,
+            "withClassSize": 29,
+            "withShifting": 30,
+            "inNeitherView": 1
+          }
+        },
+        {
+          "name": "Negros Occidental",
+          "classSize": {
+            "Less than Standard": 7664,
+            "Within Standard": 1556,
+            "Above Standard": 938
+          },
+          "shifting": {
+            "Single Shift": 3610,
+            "Double Shift": 9,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 467,
+            "JHS WITH SHS": 87,
+            "ES AND JHS": 14,
+            "PURELY JHS": 7,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 576,
+            "withClassSize": 574,
+            "withShifting": 538,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Negros Oriental",
+          "classSize": {
+            "Less than Standard": 4547,
+            "Within Standard": 1104,
+            "Above Standard": 587
+          },
+          "shifting": {
+            "Single Shift": 3103,
+            "Double Shift": 6,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 402,
+            "JHS WITH SHS": 103,
+            "ES AND JHS": 1,
+            "PURELY JHS": 8,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 2,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 516,
+            "withClassSize": 509,
+            "withShifting": 476,
+            "inNeitherView": 2
+          }
+        },
+        {
+          "name": "Sagay City",
+          "classSize": {
+            "Less than Standard": 915,
+            "Within Standard": 289,
+            "Above Standard": 100
+          },
+          "shifting": {
+            "Single Shift": 432,
+            "Double Shift": 1,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 45,
+            "JHS WITH SHS": 8,
+            "ES AND JHS": 6,
+            "PURELY JHS": 4,
+            "ALL OFFERING": 3,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 67,
+            "withClassSize": 66,
+            "withShifting": 60,
+            "inNeitherView": 1
+          }
+        },
+        {
+          "name": "San Carlos City",
+          "classSize": {
+            "Less than Standard": 731,
+            "Within Standard": 161,
+            "Above Standard": 80
+          },
+          "shifting": {
+            "Single Shift": 410,
+            "Double Shift": 0,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 51,
+            "JHS WITH SHS": 5,
+            "ES AND JHS": 8,
+            "PURELY JHS": 1,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 65,
+            "withClassSize": 64,
+            "withShifting": 55,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Silay City",
+          "classSize": {
+            "Less than Standard": 459,
+            "Within Standard": 206,
+            "Above Standard": 142
+          },
+          "shifting": {
+            "Single Shift": 283,
+            "Double Shift": 1,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 24,
+            "JHS WITH SHS": 7,
+            "ES AND JHS": 1,
+            "PURELY JHS": 0,
+            "ALL OFFERING": 8,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 40,
+            "withClassSize": 39,
+            "withShifting": 37,
+            "inNeitherView": 1
+          }
+        },
+        {
+          "name": "Sipalay City",
+          "classSize": {
+            "Less than Standard": 474,
+            "Within Standard": 97,
+            "Above Standard": 26
+          },
+          "shifting": {
+            "Single Shift": 300,
+            "Double Shift": 0,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 28,
+            "JHS WITH SHS": 12,
+            "ES AND JHS": 7,
+            "PURELY JHS": 2,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 49,
+            "withClassSize": 44,
+            "withShifting": 43,
+            "inNeitherView": 3
+          }
+        },
+        {
+          "name": "Siquijor",
+          "classSize": {
+            "Less than Standard": 728,
+            "Within Standard": 96,
+            "Above Standard": 11
+          },
+          "shifting": {
+            "Single Shift": 476,
+            "Double Shift": 1,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 54,
+            "JHS WITH SHS": 14,
+            "ES AND JHS": 5,
+            "PURELY JHS": 0,
+            "ALL OFFERING": 5,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 78,
+            "withClassSize": 75,
+            "withShifting": 69,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Tanjay City",
+          "classSize": {
+            "Less than Standard": 650,
+            "Within Standard": 146,
+            "Above Standard": 72
+          },
+          "shifting": {
+            "Single Shift": 533,
+            "Double Shift": 0,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 68,
+            "JHS WITH SHS": 23,
+            "ES AND JHS": 0,
+            "PURELY JHS": 4,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 95,
+            "withClassSize": 93,
+            "withShifting": 87,
+            "inNeitherView": 1
+          }
+        },
+        {
+          "name": "Victorias City",
+          "classSize": {
+            "Less than Standard": 436,
+            "Within Standard": 122,
+            "Above Standard": 93
+          },
+          "shifting": {
+            "Single Shift": 158,
+            "Double Shift": 2,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 19,
+            "JHS WITH SHS": 4,
+            "ES AND JHS": 0,
+            "PURELY JHS": 2,
+            "ALL OFFERING": 1,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 26,
+            "withClassSize": 26,
+            "withShifting": 24,
+            "inNeitherView": 0
+          }
+        }
+      ]
+    },
+    {
+      "name": "Region I",
+      "classSize": {
+        "Less than Standard": 31353,
+        "Within Standard": 4730,
+        "Above Standard": 2044
+      },
+      "shifting": {
+        "Single Shift": 17315,
+        "Double Shift": 86,
+        "Triple Shift": 0
+      },
+      "offering": {
+        "PURELY ES": 2221,
+        "JHS WITH SHS": 437,
+        "ES AND JHS": 73,
+        "PURELY JHS": 7,
+        "ALL OFFERING": 121,
+        "PURELY SHS": 6,
+        "ES WITH SHS": 0
+      },
+      "coverage": {
+        "schools": 2865,
+        "withClassSize": 2795,
+        "withShifting": 2542,
+        "inNeitherView": 34
+      },
+      "divisions": [
+        {
+          "name": "Alaminos City",
+          "classSize": {
+            "Less than Standard": 528,
+            "Within Standard": 125,
+            "Above Standard": 63
+          },
+          "shifting": {
+            "Single Shift": 251,
+            "Double Shift": 0,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 37,
+            "JHS WITH SHS": 8,
+            "ES AND JHS": 0,
+            "PURELY JHS": 0,
+            "ALL OFFERING": 1,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 46,
+            "withClassSize": 46,
+            "withShifting": 36,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Batac City",
+          "classSize": {
+            "Less than Standard": 309,
+            "Within Standard": 41,
+            "Above Standard": 2
+          },
+          "shifting": {
+            "Single Shift": 211,
+            "Double Shift": 0,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 26,
+            "JHS WITH SHS": 3,
+            "ES AND JHS": 0,
+            "PURELY JHS": 2,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 2,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 33,
+            "withClassSize": 33,
+            "withShifting": 33,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Candon City",
+          "classSize": {
+            "Less than Standard": 392,
+            "Within Standard": 34,
+            "Above Standard": 10
+          },
+          "shifting": {
+            "Single Shift": 230,
+            "Double Shift": 0,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 26,
+            "JHS WITH SHS": 5,
+            "ES AND JHS": 3,
+            "PURELY JHS": 0,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 34,
+            "withClassSize": 32,
+            "withShifting": 32,
+            "inNeitherView": 1
+          }
+        },
+        {
+          "name": "Dagupan City",
+          "classSize": {
+            "Less than Standard": 673,
+            "Within Standard": 268,
+            "Above Standard": 102
+          },
+          "shifting": {
+            "Single Shift": 274,
+            "Double Shift": 5,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 31,
+            "JHS WITH SHS": 5,
+            "ES AND JHS": 0,
+            "PURELY JHS": 0,
+            "ALL OFFERING": 3,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 39,
+            "withClassSize": 39,
+            "withShifting": 38,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Ilocos Norte",
+          "classSize": {
+            "Less than Standard": 3087,
+            "Within Standard": 187,
+            "Above Standard": 37
+          },
+          "shifting": {
+            "Single Shift": 2093,
+            "Double Shift": 4,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 303,
+            "JHS WITH SHS": 46,
+            "ES AND JHS": 7,
+            "PURELY JHS": 0,
+            "ALL OFFERING": 8,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 364,
+            "withClassSize": 360,
+            "withShifting": 327,
+            "inNeitherView": 1
+          }
+        },
+        {
+          "name": "Ilocos Sur",
+          "classSize": {
+            "Less than Standard": 3721,
+            "Within Standard": 383,
+            "Above Standard": 132
+          },
+          "shifting": {
+            "Single Shift": 2979,
+            "Double Shift": 1,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 420,
+            "JHS WITH SHS": 53,
+            "ES AND JHS": 13,
+            "PURELY JHS": 0,
+            "ALL OFFERING": 20,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 506,
+            "withClassSize": 499,
+            "withShifting": 461,
+            "inNeitherView": 1
+          }
+        },
+        {
+          "name": "La Union",
+          "classSize": {
+            "Less than Standard": 4698,
+            "Within Standard": 538,
+            "Above Standard": 233
+          },
+          "shifting": {
+            "Single Shift": 2269,
+            "Double Shift": 19,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 275,
+            "JHS WITH SHS": 65,
+            "ES AND JHS": 23,
+            "PURELY JHS": 3,
+            "ALL OFFERING": 16,
+            "PURELY SHS": 4,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 386,
+            "withClassSize": 381,
+            "withShifting": 331,
+            "inNeitherView": 1
+          }
+        },
+        {
+          "name": "Laoag City",
+          "classSize": {
+            "Less than Standard": 559,
+            "Within Standard": 107,
+            "Above Standard": 50
+          },
+          "shifting": {
+            "Single Shift": 254,
+            "Double Shift": 0,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 31,
+            "JHS WITH SHS": 5,
+            "ES AND JHS": 1,
+            "PURELY JHS": 1,
+            "ALL OFFERING": 2,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 40,
+            "withClassSize": 40,
+            "withShifting": 36,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Pangasinan I, Lingayen",
+          "classSize": {
+            "Less than Standard": 8352,
+            "Within Standard": 1383,
+            "Above Standard": 777
+          },
+          "shifting": {
+            "Single Shift": 4223,
+            "Double Shift": 25,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 516,
+            "JHS WITH SHS": 110,
+            "ES AND JHS": 4,
+            "PURELY JHS": 0,
+            "ALL OFFERING": 32,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 662,
+            "withClassSize": 650,
+            "withShifting": 602,
+            "inNeitherView": 3
+          }
+        },
+        {
+          "name": "Pangasinan II, Binalonan",
+          "classSize": {
+            "Less than Standard": 6633,
+            "Within Standard": 1146,
+            "Above Standard": 444
+          },
+          "shifting": {
+            "Single Shift": 3471,
+            "Double Shift": 6,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 423,
+            "JHS WITH SHS": 95,
+            "ES AND JHS": 18,
+            "PURELY JHS": 0,
+            "ALL OFFERING": 25,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 561,
+            "withClassSize": 551,
+            "withShifting": 497,
+            "inNeitherView": 4
+          }
+        },
+        {
+          "name": "San Carlos City",
+          "classSize": {
+            "Less than Standard": 1174,
+            "Within Standard": 222,
+            "Above Standard": 76
+          },
+          "shifting": {
+            "Single Shift": 452,
+            "Double Shift": 1,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 56,
+            "JHS WITH SHS": 16,
+            "ES AND JHS": 0,
+            "PURELY JHS": 0,
+            "ALL OFFERING": 4,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 76,
+            "withClassSize": 76,
+            "withShifting": 65,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "San Fernando City",
+          "classSize": {
+            "Less than Standard": 465,
+            "Within Standard": 109,
+            "Above Standard": 71
+          },
+          "shifting": {
+            "Single Shift": 223,
+            "Double Shift": 19,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 20,
+            "JHS WITH SHS": 5,
+            "ES AND JHS": 1,
+            "PURELY JHS": 1,
+            "ALL OFFERING": 6,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 33,
+            "withClassSize": 32,
+            "withShifting": 30,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Urdaneta City",
+          "classSize": {
+            "Less than Standard": 378,
+            "Within Standard": 106,
+            "Above Standard": 45
+          },
+          "shifting": {
+            "Single Shift": 271,
+            "Double Shift": 0,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 40,
+            "JHS WITH SHS": 18,
+            "ES AND JHS": 2,
+            "PURELY JHS": 0,
+            "ALL OFFERING": 4,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 64,
+            "withClassSize": 35,
+            "withShifting": 37,
+            "inNeitherView": 23
+          }
+        },
+        {
+          "name": "Vigan City",
+          "classSize": {
+            "Less than Standard": 384,
+            "Within Standard": 81,
+            "Above Standard": 2
+          },
+          "shifting": {
+            "Single Shift": 114,
+            "Double Shift": 6,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 17,
+            "JHS WITH SHS": 3,
+            "ES AND JHS": 1,
+            "PURELY JHS": 0,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 21,
+            "withClassSize": 21,
+            "withShifting": 17,
+            "inNeitherView": 0
+          }
+        }
+      ]
+    },
+    {
+      "name": "Region II",
+      "classSize": {
+        "Less than Standard": 23298,
+        "Within Standard": 3230,
+        "Above Standard": 1531
+      },
+      "shifting": {
+        "Single Shift": 15186,
+        "Double Shift": 41,
+        "Triple Shift": 6
+      },
+      "offering": {
+        "PURELY ES": 2007,
+        "JHS WITH SHS": 294,
+        "ES AND JHS": 142,
+        "PURELY JHS": 25,
+        "ALL OFFERING": 66,
+        "PURELY SHS": 12,
+        "ES WITH SHS": 0
+      },
+      "coverage": {
+        "schools": 2546,
+        "withClassSize": 2491,
+        "withShifting": 2268,
+        "inNeitherView": 12
+      },
+      "divisions": [
+        {
+          "name": "Batanes",
+          "classSize": {
+            "Less than Standard": 206,
+            "Within Standard": 2,
+            "Above Standard": 0
+          },
+          "shifting": {
+            "Single Shift": 165,
+            "Double Shift": 0,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 18,
+            "JHS WITH SHS": 6,
+            "ES AND JHS": 1,
+            "PURELY JHS": 0,
+            "ALL OFFERING": 2,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 27,
+            "withClassSize": 24,
+            "withShifting": 25,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Cagayan",
+          "classSize": {
+            "Less than Standard": 7423,
+            "Within Standard": 991,
+            "Above Standard": 365
+          },
+          "shifting": {
+            "Single Shift": 5019,
+            "Double Shift": 6,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 664,
+            "JHS WITH SHS": 100,
+            "ES AND JHS": 30,
+            "PURELY JHS": 3,
+            "ALL OFFERING": 13,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 810,
+            "withClassSize": 796,
+            "withShifting": 751,
+            "inNeitherView": 3
+          }
+        },
+        {
+          "name": "Cauayan City",
+          "classSize": {
+            "Less than Standard": 785,
+            "Within Standard": 204,
+            "Above Standard": 80
+          },
+          "shifting": {
+            "Single Shift": 450,
+            "Double Shift": 8,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 62,
+            "JHS WITH SHS": 13,
+            "ES AND JHS": 3,
+            "PURELY JHS": 1,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 80,
+            "withClassSize": 80,
+            "withShifting": 73,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "City of Ilagan",
+          "classSize": {
+            "Less than Standard": 1053,
+            "Within Standard": 137,
+            "Above Standard": 28
+          },
+          "shifting": {
+            "Single Shift": 613,
+            "Double Shift": 3,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 79,
+            "JHS WITH SHS": 8,
+            "ES AND JHS": 2,
+            "PURELY JHS": 2,
+            "ALL OFFERING": 7,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 98,
+            "withClassSize": 95,
+            "withShifting": 89,
+            "inNeitherView": 1
+          }
+        },
+        {
+          "name": "Isabela",
+          "classSize": {
+            "Less than Standard": 7979,
+            "Within Standard": 919,
+            "Above Standard": 463
+          },
+          "shifting": {
+            "Single Shift": 5080,
+            "Double Shift": 8,
+            "Triple Shift": 5
+          },
+          "offering": {
+            "PURELY ES": 690,
+            "JHS WITH SHS": 93,
+            "ES AND JHS": 56,
+            "PURELY JHS": 18,
+            "ALL OFFERING": 19,
+            "PURELY SHS": 8,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 884,
+            "withClassSize": 866,
+            "withShifting": 753,
+            "inNeitherView": 3
+          }
+        },
+        {
+          "name": "Nueva Vizcaya",
+          "classSize": {
+            "Less than Standard": 3056,
+            "Within Standard": 402,
+            "Above Standard": 295
+          },
+          "shifting": {
+            "Single Shift": 2297,
+            "Double Shift": 9,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 319,
+            "JHS WITH SHS": 47,
+            "ES AND JHS": 13,
+            "PURELY JHS": 0,
+            "ALL OFFERING": 4,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 384,
+            "withClassSize": 368,
+            "withShifting": 359,
+            "inNeitherView": 4
+          }
+        },
+        {
+          "name": "Quirino",
+          "classSize": {
+            "Less than Standard": 1519,
+            "Within Standard": 171,
+            "Above Standard": 49
+          },
+          "shifting": {
+            "Single Shift": 1058,
+            "Double Shift": 2,
+            "Triple Shift": 1
+          },
+          "offering": {
+            "PURELY ES": 131,
+            "JHS WITH SHS": 14,
+            "ES AND JHS": 26,
+            "PURELY JHS": 0,
+            "ALL OFFERING": 16,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 187,
+            "withClassSize": 186,
+            "withShifting": 152,
+            "inNeitherView": 1
+          }
+        },
+        {
+          "name": "Santiago City",
+          "classSize": {
+            "Less than Standard": 630,
+            "Within Standard": 187,
+            "Above Standard": 115
+          },
+          "shifting": {
+            "Single Shift": 267,
+            "Double Shift": 4,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 25,
+            "JHS WITH SHS": 9,
+            "ES AND JHS": 3,
+            "PURELY JHS": 0,
+            "ALL OFFERING": 4,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 41,
+            "withClassSize": 41,
+            "withShifting": 35,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Tuguegarao City",
+          "classSize": {
+            "Less than Standard": 647,
+            "Within Standard": 217,
+            "Above Standard": 136
+          },
+          "shifting": {
+            "Single Shift": 237,
+            "Double Shift": 1,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 19,
+            "JHS WITH SHS": 4,
+            "ES AND JHS": 8,
+            "PURELY JHS": 1,
+            "ALL OFFERING": 1,
+            "PURELY SHS": 2,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 35,
+            "withClassSize": 35,
+            "withShifting": 31,
+            "inNeitherView": 0
+          }
+        }
+      ]
+    },
+    {
+      "name": "Region III",
+      "classSize": {
+        "Less than Standard": 50265,
+        "Within Standard": 17397,
+        "Above Standard": 6847
+      },
+      "shifting": {
+        "Single Shift": 22213,
+        "Double Shift": 1431,
+        "Triple Shift": 59
+      },
+      "offering": {
+        "PURELY ES": 2768,
+        "JHS WITH SHS": 558,
+        "ES AND JHS": 208,
+        "PURELY JHS": 105,
+        "ALL OFFERING": 84,
+        "PURELY SHS": 38,
+        "ES WITH SHS": 0
+      },
+      "coverage": {
+        "schools": 3761,
+        "withClassSize": 3670,
+        "withShifting": 3413,
+        "inNeitherView": 31
+      },
+      "divisions": [
+        {
+          "name": "Angeles City",
+          "classSize": {
+            "Less than Standard": 1436,
+            "Within Standard": 846,
+            "Above Standard": 221
+          },
+          "shifting": {
+            "Single Shift": 226,
+            "Double Shift": 83,
+            "Triple Shift": 11
+          },
+          "offering": {
+            "PURELY ES": 33,
+            "JHS WITH SHS": 7,
+            "ES AND JHS": 3,
+            "PURELY JHS": 2,
+            "ALL OFFERING": 6,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 52,
+            "withClassSize": 51,
+            "withShifting": 43,
+            "inNeitherView": 1
+          }
+        },
+        {
+          "name": "Aurora",
+          "classSize": {
+            "Less than Standard": 1561,
+            "Within Standard": 208,
+            "Above Standard": 111
+          },
+          "shifting": {
+            "Single Shift": 982,
+            "Double Shift": 0,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 127,
+            "JHS WITH SHS": 29,
+            "ES AND JHS": 5,
+            "PURELY JHS": 9,
+            "ALL OFFERING": 5,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 176,
+            "withClassSize": 159,
+            "withShifting": 151,
+            "inNeitherView": 6
+          }
+        },
+        {
+          "name": "Balanga City",
+          "classSize": {
+            "Less than Standard": 353,
+            "Within Standard": 270,
+            "Above Standard": 82
+          },
+          "shifting": {
+            "Single Shift": 143,
+            "Double Shift": 4,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 10,
+            "JHS WITH SHS": 2,
+            "ES AND JHS": 8,
+            "PURELY JHS": 3,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 24,
+            "withClassSize": 24,
+            "withShifting": 19,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Bataan",
+          "classSize": {
+            "Less than Standard": 3220,
+            "Within Standard": 1242,
+            "Above Standard": 438
+          },
+          "shifting": {
+            "Single Shift": 1352,
+            "Double Shift": 80,
+            "Triple Shift": 2
+          },
+          "offering": {
+            "PURELY ES": 146,
+            "JHS WITH SHS": 34,
+            "ES AND JHS": 18,
+            "PURELY JHS": 9,
+            "ALL OFFERING": 4,
+            "PURELY SHS": 4,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 215,
+            "withClassSize": 213,
+            "withShifting": 203,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Bulacan",
+          "classSize": {
+            "Less than Standard": 7478,
+            "Within Standard": 3615,
+            "Above Standard": 1859
+          },
+          "shifting": {
+            "Single Shift": 2827,
+            "Double Shift": 386,
+            "Triple Shift": 4
+          },
+          "offering": {
+            "PURELY ES": 410,
+            "JHS WITH SHS": 77,
+            "ES AND JHS": 10,
+            "PURELY JHS": 12,
+            "ALL OFFERING": 1,
+            "PURELY SHS": 2,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 512,
+            "withClassSize": 498,
+            "withShifting": 478,
+            "inNeitherView": 8
+          }
+        },
+        {
+          "name": "Cabanatuan City",
+          "classSize": {
+            "Less than Standard": 988,
+            "Within Standard": 365,
+            "Above Standard": 249
+          },
+          "shifting": {
+            "Single Shift": 402,
+            "Double Shift": 60,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 45,
+            "JHS WITH SHS": 7,
+            "ES AND JHS": 12,
+            "PURELY JHS": 0,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 65,
+            "withClassSize": 64,
+            "withShifting": 61,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "City of Baliwag",
+          "classSize": {
+            "Less than Standard": 509,
+            "Within Standard": 219,
+            "Above Standard": 41
+          },
+          "shifting": {
+            "Single Shift": 157,
+            "Double Shift": 14,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 23,
+            "JHS WITH SHS": 3,
+            "ES AND JHS": 0,
+            "PURELY JHS": 3,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 30,
+            "withClassSize": 29,
+            "withShifting": 26,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "City of San Jose Del Monte",
+          "classSize": {
+            "Less than Standard": 1235,
+            "Within Standard": 1715,
+            "Above Standard": 418
+          },
+          "shifting": {
+            "Single Shift": 191,
+            "Double Shift": 152,
+            "Triple Shift": 28
+          },
+          "offering": {
+            "PURELY ES": 35,
+            "JHS WITH SHS": 17,
+            "ES AND JHS": 2,
+            "PURELY JHS": 4,
+            "ALL OFFERING": 1,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 59,
+            "withClassSize": 58,
+            "withShifting": 55,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Gapan City",
+          "classSize": {
+            "Less than Standard": 615,
+            "Within Standard": 180,
+            "Above Standard": 71
+          },
+          "shifting": {
+            "Single Shift": 234,
+            "Double Shift": 4,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 30,
+            "JHS WITH SHS": 8,
+            "ES AND JHS": 3,
+            "PURELY JHS": 0,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 41,
+            "withClassSize": 40,
+            "withShifting": 34,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Mabalacat City",
+          "classSize": {
+            "Less than Standard": 952,
+            "Within Standard": 431,
+            "Above Standard": 119
+          },
+          "shifting": {
+            "Single Shift": 199,
+            "Double Shift": 103,
+            "Triple Shift": 1
+          },
+          "offering": {
+            "PURELY ES": 36,
+            "JHS WITH SHS": 6,
+            "ES AND JHS": 4,
+            "PURELY JHS": 7,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 54,
+            "withClassSize": 53,
+            "withShifting": 47,
+            "inNeitherView": 1
+          }
+        },
+        {
+          "name": "Malolos City",
+          "classSize": {
+            "Less than Standard": 915,
+            "Within Standard": 260,
+            "Above Standard": 89
+          },
+          "shifting": {
+            "Single Shift": 294,
+            "Double Shift": 52,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 41,
+            "JHS WITH SHS": 5,
+            "ES AND JHS": 4,
+            "PURELY JHS": 4,
+            "ALL OFFERING": 2,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 57,
+            "withClassSize": 55,
+            "withShifting": 49,
+            "inNeitherView": 1
+          }
+        },
+        {
+          "name": "Meycauayan City",
+          "classSize": {
+            "Less than Standard": 426,
+            "Within Standard": 457,
+            "Above Standard": 137
+          },
+          "shifting": {
+            "Single Shift": 152,
+            "Double Shift": 61,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 19,
+            "JHS WITH SHS": 3,
+            "ES AND JHS": 4,
+            "PURELY JHS": 1,
+            "ALL OFFERING": 3,
+            "PURELY SHS": 2,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 32,
+            "withClassSize": 31,
+            "withShifting": 29,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Nueva Ecija",
+          "classSize": {
+            "Less than Standard": 8415,
+            "Within Standard": 1641,
+            "Above Standard": 785
+          },
+          "shifting": {
+            "Single Shift": 4923,
+            "Double Shift": 16,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 589,
+            "JHS WITH SHS": 104,
+            "ES AND JHS": 40,
+            "PURELY JHS": 15,
+            "ALL OFFERING": 5,
+            "PURELY SHS": 11,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 764,
+            "withClassSize": 755,
+            "withShifting": 721,
+            "inNeitherView": 1
+          }
+        },
+        {
+          "name": "Olongapo City",
+          "classSize": {
+            "Less than Standard": 1026,
+            "Within Standard": 365,
+            "Above Standard": 63
+          },
+          "shifting": {
+            "Single Shift": 195,
+            "Double Shift": 32,
+            "Triple Shift": 2
+          },
+          "offering": {
+            "PURELY ES": 22,
+            "JHS WITH SHS": 5,
+            "ES AND JHS": 6,
+            "PURELY JHS": 3,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 4,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 40,
+            "withClassSize": 39,
+            "withShifting": 34,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Pampanga",
+          "classSize": {
+            "Less than Standard": 7498,
+            "Within Standard": 2024,
+            "Above Standard": 850
+          },
+          "shifting": {
+            "Single Shift": 3312,
+            "Double Shift": 183,
+            "Triple Shift": 3
+          },
+          "offering": {
+            "PURELY ES": 425,
+            "JHS WITH SHS": 105,
+            "ES AND JHS": 17,
+            "PURELY JHS": 18,
+            "ALL OFFERING": 4,
+            "PURELY SHS": 3,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 572,
+            "withClassSize": 546,
+            "withShifting": 520,
+            "inNeitherView": 10
+          }
+        },
+        {
+          "name": "San Fernando City",
+          "classSize": {
+            "Less than Standard": 1208,
+            "Within Standard": 570,
+            "Above Standard": 162
+          },
+          "shifting": {
+            "Single Shift": 352,
+            "Double Shift": 45,
+            "Triple Shift": 4
+          },
+          "offering": {
+            "PURELY ES": 14,
+            "JHS WITH SHS": 5,
+            "ES AND JHS": 9,
+            "PURELY JHS": 0,
+            "ALL OFFERING": 16,
+            "PURELY SHS": 2,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 46,
+            "withClassSize": 46,
+            "withShifting": 43,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "San Jose City",
+          "classSize": {
+            "Less than Standard": 630,
+            "Within Standard": 236,
+            "Above Standard": 62
+          },
+          "shifting": {
+            "Single Shift": 375,
+            "Double Shift": 3,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 47,
+            "JHS WITH SHS": 7,
+            "ES AND JHS": 2,
+            "PURELY JHS": 3,
+            "ALL OFFERING": 1,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 61,
+            "withClassSize": 59,
+            "withShifting": 55,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Science City of Mu\u00f1oz",
+          "classSize": {
+            "Less than Standard": 496,
+            "Within Standard": 65,
+            "Above Standard": 55
+          },
+          "shifting": {
+            "Single Shift": 246,
+            "Double Shift": 0,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 27,
+            "JHS WITH SHS": 1,
+            "ES AND JHS": 2,
+            "PURELY JHS": 2,
+            "ALL OFFERING": 5,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 38,
+            "withClassSize": 38,
+            "withShifting": 34,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Tarlac",
+          "classSize": {
+            "Less than Standard": 5780,
+            "Within Standard": 1245,
+            "Above Standard": 662
+          },
+          "shifting": {
+            "Single Shift": 3101,
+            "Double Shift": 58,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 403,
+            "JHS WITH SHS": 71,
+            "ES AND JHS": 16,
+            "PURELY JHS": 3,
+            "ALL OFFERING": 14,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 508,
+            "withClassSize": 499,
+            "withShifting": 449,
+            "inNeitherView": 3
+          }
+        },
+        {
+          "name": "Tarlac City",
+          "classSize": {
+            "Less than Standard": 1418,
+            "Within Standard": 496,
+            "Above Standard": 169
+          },
+          "shifting": {
+            "Single Shift": 577,
+            "Double Shift": 35,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 80,
+            "JHS WITH SHS": 10,
+            "ES AND JHS": 3,
+            "PURELY JHS": 1,
+            "ALL OFFERING": 5,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 99,
+            "withClassSize": 98,
+            "withShifting": 85,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Zambales",
+          "classSize": {
+            "Less than Standard": 4106,
+            "Within Standard": 947,
+            "Above Standard": 204
+          },
+          "shifting": {
+            "Single Shift": 1973,
+            "Double Shift": 60,
+            "Triple Shift": 4
+          },
+          "offering": {
+            "PURELY ES": 206,
+            "JHS WITH SHS": 52,
+            "ES AND JHS": 40,
+            "PURELY JHS": 6,
+            "ALL OFFERING": 12,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 316,
+            "withClassSize": 315,
+            "withShifting": 277,
+            "inNeitherView": 0
+          }
+        }
+      ]
+    },
+    {
+      "name": "Region IV-A",
+      "classSize": {
+        "Less than Standard": 44001,
+        "Within Standard": 25953,
+        "Above Standard": 16391
+      },
+      "shifting": {
+        "Single Shift": 18947,
+        "Double Shift": 2082,
+        "Triple Shift": 88
+      },
+      "offering": {
+        "PURELY ES": 2673,
+        "JHS WITH SHS": 445,
+        "ES AND JHS": 82,
+        "PURELY JHS": 279,
+        "ALL OFFERING": 15,
+        "PURELY SHS": 96,
+        "ES WITH SHS": 0
+      },
+      "coverage": {
+        "schools": 3590,
+        "withClassSize": 3519,
+        "withShifting": 3254,
+        "inNeitherView": 19
+      },
+      "divisions": [
+        {
+          "name": "Antipolo City",
+          "classSize": {
+            "Less than Standard": 1276,
+            "Within Standard": 1698,
+            "Above Standard": 1144
+          },
+          "shifting": {
+            "Single Shift": 269,
+            "Double Shift": 119,
+            "Triple Shift": 10
+          },
+          "offering": {
+            "PURELY ES": 44,
+            "JHS WITH SHS": 17,
+            "ES AND JHS": 3,
+            "PURELY JHS": 3,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 68,
+            "withClassSize": 62,
+            "withShifting": 60,
+            "inNeitherView": 1
+          }
+        },
+        {
+          "name": "Bacoor City",
+          "classSize": {
+            "Less than Standard": 895,
+            "Within Standard": 926,
+            "Above Standard": 363
+          },
+          "shifting": {
+            "Single Shift": 131,
+            "Double Shift": 114,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 28,
+            "JHS WITH SHS": 0,
+            "ES AND JHS": 1,
+            "PURELY JHS": 10,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 5,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 44,
+            "withClassSize": 44,
+            "withShifting": 42,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Batangas",
+          "classSize": {
+            "Less than Standard": 7252,
+            "Within Standard": 2206,
+            "Above Standard": 1092
+          },
+          "shifting": {
+            "Single Shift": 4133,
+            "Double Shift": 62,
+            "Triple Shift": 1
+          },
+          "offering": {
+            "PURELY ES": 530,
+            "JHS WITH SHS": 36,
+            "ES AND JHS": 24,
+            "PURELY JHS": 81,
+            "ALL OFFERING": 1,
+            "PURELY SHS": 30,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 702,
+            "withClassSize": 688,
+            "withShifting": 654,
+            "inNeitherView": 2
+          }
+        },
+        {
+          "name": "Batangas City",
+          "classSize": {
+            "Less than Standard": 1355,
+            "Within Standard": 393,
+            "Above Standard": 150
+          },
+          "shifting": {
+            "Single Shift": 594,
+            "Double Shift": 10,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 82,
+            "JHS WITH SHS": 14,
+            "ES AND JHS": 2,
+            "PURELY JHS": 7,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 4,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 109,
+            "withClassSize": 105,
+            "withShifting": 92,
+            "inNeitherView": 2
+          }
+        },
+        {
+          "name": "Binan City",
+          "classSize": {
+            "Less than Standard": 1063,
+            "Within Standard": 588,
+            "Above Standard": 174
+          },
+          "shifting": {
+            "Single Shift": 127,
+            "Double Shift": 85,
+            "Triple Shift": 1
+          },
+          "offering": {
+            "PURELY ES": 26,
+            "JHS WITH SHS": 4,
+            "ES AND JHS": 1,
+            "PURELY JHS": 7,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 3,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 41,
+            "withClassSize": 40,
+            "withShifting": 36,
+            "inNeitherView": 1
+          }
+        },
+        {
+          "name": "Cabuyao City",
+          "classSize": {
+            "Less than Standard": 344,
+            "Within Standard": 837,
+            "Above Standard": 328
+          },
+          "shifting": {
+            "Single Shift": 102,
+            "Double Shift": 56,
+            "Triple Shift": 1
+          },
+          "offering": {
+            "PURELY ES": 18,
+            "JHS WITH SHS": 4,
+            "ES AND JHS": 1,
+            "PURELY JHS": 4,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 2,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 29,
+            "withClassSize": 29,
+            "withShifting": 26,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Calaca City",
+          "classSize": {
+            "Less than Standard": 376,
+            "Within Standard": 156,
+            "Above Standard": 56
+          },
+          "shifting": {
+            "Single Shift": 196,
+            "Double Shift": 16,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 29,
+            "JHS WITH SHS": 1,
+            "ES AND JHS": 2,
+            "PURELY JHS": 5,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 38,
+            "withClassSize": 38,
+            "withShifting": 32,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Calamba City",
+          "classSize": {
+            "Less than Standard": 870,
+            "Within Standard": 1458,
+            "Above Standard": 461
+          },
+          "shifting": {
+            "Single Shift": 317,
+            "Double Shift": 127,
+            "Triple Shift": 3
+          },
+          "offering": {
+            "PURELY ES": 51,
+            "JHS WITH SHS": 17,
+            "ES AND JHS": 0,
+            "PURELY JHS": 4,
+            "ALL OFFERING": 1,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 73,
+            "withClassSize": 73,
+            "withShifting": 67,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Carmona City",
+          "classSize": {
+            "Less than Standard": 167,
+            "Within Standard": 203,
+            "Above Standard": 117
+          },
+          "shifting": {
+            "Single Shift": 33,
+            "Double Shift": 15,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 9,
+            "JHS WITH SHS": 0,
+            "ES AND JHS": 0,
+            "PURELY JHS": 1,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 11,
+            "withClassSize": 11,
+            "withShifting": 8,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Cavite",
+          "classSize": {
+            "Less than Standard": 3873,
+            "Within Standard": 2677,
+            "Above Standard": 3275
+          },
+          "shifting": {
+            "Single Shift": 1562,
+            "Double Shift": 363,
+            "Triple Shift": 17
+          },
+          "offering": {
+            "PURELY ES": 251,
+            "JHS WITH SHS": 37,
+            "ES AND JHS": 3,
+            "PURELY JHS": 25,
+            "ALL OFFERING": 2,
+            "PURELY SHS": 5,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 323,
+            "withClassSize": 322,
+            "withShifting": 292,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Cavite City",
+          "classSize": {
+            "Less than Standard": 478,
+            "Within Standard": 115,
+            "Above Standard": 26
+          },
+          "shifting": {
+            "Single Shift": 52,
+            "Double Shift": 46,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 12,
+            "JHS WITH SHS": 2,
+            "ES AND JHS": 0,
+            "PURELY JHS": 1,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 15,
+            "withClassSize": 15,
+            "withShifting": 15,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Dasmarinas City",
+          "classSize": {
+            "Less than Standard": 1351,
+            "Within Standard": 1092,
+            "Above Standard": 578
+          },
+          "shifting": {
+            "Single Shift": 125,
+            "Double Shift": 117,
+            "Triple Shift": 18
+          },
+          "offering": {
+            "PURELY ES": 29,
+            "JHS WITH SHS": 5,
+            "ES AND JHS": 0,
+            "PURELY JHS": 8,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 3,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 45,
+            "withClassSize": 44,
+            "withShifting": 43,
+            "inNeitherView": 1
+          }
+        },
+        {
+          "name": "General Trias City",
+          "classSize": {
+            "Less than Standard": 474,
+            "Within Standard": 628,
+            "Above Standard": 874
+          },
+          "shifting": {
+            "Single Shift": 92,
+            "Double Shift": 116,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 28,
+            "JHS WITH SHS": 3,
+            "ES AND JHS": 0,
+            "PURELY JHS": 8,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 2,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 41,
+            "withClassSize": 40,
+            "withShifting": 35,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Imus City",
+          "classSize": {
+            "Less than Standard": 751,
+            "Within Standard": 714,
+            "Above Standard": 466
+          },
+          "shifting": {
+            "Single Shift": 154,
+            "Double Shift": 67,
+            "Triple Shift": 4
+          },
+          "offering": {
+            "PURELY ES": 25,
+            "JHS WITH SHS": 0,
+            "ES AND JHS": 4,
+            "PURELY JHS": 5,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 4,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 38,
+            "withClassSize": 37,
+            "withShifting": 35,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Laguna",
+          "classSize": {
+            "Less than Standard": 4220,
+            "Within Standard": 1469,
+            "Above Standard": 707
+          },
+          "shifting": {
+            "Single Shift": 1773,
+            "Double Shift": 100,
+            "Triple Shift": 2
+          },
+          "offering": {
+            "PURELY ES": 260,
+            "JHS WITH SHS": 45,
+            "ES AND JHS": 0,
+            "PURELY JHS": 24,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 16,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 345,
+            "withClassSize": 340,
+            "withShifting": 298,
+            "inNeitherView": 2
+          }
+        },
+        {
+          "name": "Lipa City",
+          "classSize": {
+            "Less than Standard": 1403,
+            "Within Standard": 679,
+            "Above Standard": 144
+          },
+          "shifting": {
+            "Single Shift": 475,
+            "Double Shift": 48,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 61,
+            "JHS WITH SHS": 16,
+            "ES AND JHS": 6,
+            "PURELY JHS": 1,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 85,
+            "withClassSize": 82,
+            "withShifting": 75,
+            "inNeitherView": 1
+          }
+        },
+        {
+          "name": "Lucena City",
+          "classSize": {
+            "Less than Standard": 728,
+            "Within Standard": 448,
+            "Above Standard": 299
+          },
+          "shifting": {
+            "Single Shift": 287,
+            "Double Shift": 25,
+            "Triple Shift": 1
+          },
+          "offering": {
+            "PURELY ES": 43,
+            "JHS WITH SHS": 6,
+            "ES AND JHS": 1,
+            "PURELY JHS": 4,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 54,
+            "withClassSize": 54,
+            "withShifting": 47,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Quezon",
+          "classSize": {
+            "Less than Standard": 9942,
+            "Within Standard": 3071,
+            "Above Standard": 1134
+          },
+          "shifting": {
+            "Single Shift": 5835,
+            "Double Shift": 60,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 744,
+            "JHS WITH SHS": 173,
+            "ES AND JHS": 21,
+            "PURELY JHS": 11,
+            "ALL OFFERING": 8,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 958,
+            "withClassSize": 932,
+            "withShifting": 888,
+            "inNeitherView": 6
+          }
+        },
+        {
+          "name": "Rizal",
+          "classSize": {
+            "Less than Standard": 3254,
+            "Within Standard": 4213,
+            "Above Standard": 3776
+          },
+          "shifting": {
+            "Single Shift": 1271,
+            "Double Shift": 374,
+            "Triple Shift": 25
+          },
+          "offering": {
+            "PURELY ES": 213,
+            "JHS WITH SHS": 38,
+            "ES AND JHS": 0,
+            "PURELY JHS": 44,
+            "ALL OFFERING": 1,
+            "PURELY SHS": 12,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 308,
+            "withClassSize": 303,
+            "withShifting": 272,
+            "inNeitherView": 2
+          }
+        },
+        {
+          "name": "San Pablo City",
+          "classSize": {
+            "Less than Standard": 1105,
+            "Within Standard": 442,
+            "Above Standard": 197
+          },
+          "shifting": {
+            "Single Shift": 469,
+            "Double Shift": 37,
+            "Triple Shift": 3
+          },
+          "offering": {
+            "PURELY ES": 63,
+            "JHS WITH SHS": 9,
+            "ES AND JHS": 2,
+            "PURELY JHS": 4,
+            "ALL OFFERING": 1,
+            "PURELY SHS": 2,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 81,
+            "withClassSize": 81,
+            "withShifting": 74,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "San Pedro City",
+          "classSize": {
+            "Less than Standard": 749,
+            "Within Standard": 484,
+            "Above Standard": 210
+          },
+          "shifting": {
+            "Single Shift": 115,
+            "Double Shift": 50,
+            "Triple Shift": 2
+          },
+          "offering": {
+            "PURELY ES": 20,
+            "JHS WITH SHS": 3,
+            "ES AND JHS": 0,
+            "PURELY JHS": 4,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 28,
+            "withClassSize": 27,
+            "withShifting": 26,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Sta. Rosa City",
+          "classSize": {
+            "Less than Standard": 709,
+            "Within Standard": 547,
+            "Above Standard": 330
+          },
+          "shifting": {
+            "Single Shift": 72,
+            "Double Shift": 70,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 17,
+            "JHS WITH SHS": 6,
+            "ES AND JHS": 1,
+            "PURELY JHS": 3,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 28,
+            "withClassSize": 27,
+            "withShifting": 22,
+            "inNeitherView": 1
+          }
+        },
+        {
+          "name": "Sto. Tomas City",
+          "classSize": {
+            "Less than Standard": 336,
+            "Within Standard": 384,
+            "Above Standard": 231
+          },
+          "shifting": {
+            "Single Shift": 195,
+            "Double Shift": 3,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 26,
+            "JHS WITH SHS": 1,
+            "ES AND JHS": 0,
+            "PURELY JHS": 4,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 32,
+            "withClassSize": 32,
+            "withShifting": 31,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Tanauan City",
+          "classSize": {
+            "Less than Standard": 600,
+            "Within Standard": 343,
+            "Above Standard": 190
+          },
+          "shifting": {
+            "Single Shift": 318,
+            "Double Shift": 1,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 42,
+            "JHS WITH SHS": 4,
+            "ES AND JHS": 2,
+            "PURELY JHS": 11,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 59,
+            "withClassSize": 58,
+            "withShifting": 50,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Tayabas City",
+          "classSize": {
+            "Less than Standard": 430,
+            "Within Standard": 182,
+            "Above Standard": 69
+          },
+          "shifting": {
+            "Single Shift": 250,
+            "Double Shift": 1,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 22,
+            "JHS WITH SHS": 4,
+            "ES AND JHS": 8,
+            "PURELY JHS": 0,
+            "ALL OFFERING": 1,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 35,
+            "withClassSize": 35,
+            "withShifting": 34,
+            "inNeitherView": 0
+          }
+        }
+      ]
+    },
+    {
+      "name": "Region V",
+      "classSize": {
+        "Less than Standard": 46193,
+        "Within Standard": 7230,
+        "Above Standard": 3316
+      },
+      "shifting": {
+        "Single Shift": 22752,
+        "Double Shift": 221,
+        "Triple Shift": 0
+      },
+      "offering": {
+        "PURELY ES": 3008,
+        "JHS WITH SHS": 661,
+        "ES AND JHS": 100,
+        "PURELY JHS": 44,
+        "ALL OFFERING": 67,
+        "PURELY SHS": 9,
+        "ES WITH SHS": 0
+      },
+      "coverage": {
+        "schools": 3889,
+        "withClassSize": 3799,
+        "withShifting": 3427,
+        "inNeitherView": 36
+      },
+      "divisions": [
+        {
+          "name": "Albay",
+          "classSize": {
+            "Less than Standard": 6798,
+            "Within Standard": 795,
+            "Above Standard": 462
+          },
+          "shifting": {
+            "Single Shift": 3164,
+            "Double Shift": 48,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 449,
+            "JHS WITH SHS": 90,
+            "ES AND JHS": 16,
+            "PURELY JHS": 3,
+            "ALL OFFERING": 3,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 562,
+            "withClassSize": 551,
+            "withShifting": 479,
+            "inNeitherView": 6
+          }
+        },
+        {
+          "name": "Camarines Norte",
+          "classSize": {
+            "Less than Standard": 4193,
+            "Within Standard": 796,
+            "Above Standard": 298
+          },
+          "shifting": {
+            "Single Shift": 1956,
+            "Double Shift": 23,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 240,
+            "JHS WITH SHS": 57,
+            "ES AND JHS": 10,
+            "PURELY JHS": 5,
+            "ALL OFFERING": 6,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 319,
+            "withClassSize": 316,
+            "withShifting": 291,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Camarines Sur",
+          "classSize": {
+            "Less than Standard": 13764,
+            "Within Standard": 2180,
+            "Above Standard": 868
+          },
+          "shifting": {
+            "Single Shift": 6350,
+            "Double Shift": 63,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 850,
+            "JHS WITH SHS": 213,
+            "ES AND JHS": 14,
+            "PURELY JHS": 16,
+            "ALL OFFERING": 7,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 1101,
+            "withClassSize": 1075,
+            "withShifting": 967,
+            "inNeitherView": 9
+          }
+        },
+        {
+          "name": "Catanduanes",
+          "classSize": {
+            "Less than Standard": 2278,
+            "Within Standard": 219,
+            "Above Standard": 83
+          },
+          "shifting": {
+            "Single Shift": 1512,
+            "Double Shift": 6,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 220,
+            "JHS WITH SHS": 34,
+            "ES AND JHS": 6,
+            "PURELY JHS": 0,
+            "ALL OFFERING": 8,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 268,
+            "withClassSize": 258,
+            "withShifting": 242,
+            "inNeitherView": 3
+          }
+        },
+        {
+          "name": "Iriga City",
+          "classSize": {
+            "Less than Standard": 732,
+            "Within Standard": 118,
+            "Above Standard": 38
+          },
+          "shifting": {
+            "Single Shift": 306,
+            "Double Shift": 7,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 32,
+            "JHS WITH SHS": 8,
+            "ES AND JHS": 6,
+            "PURELY JHS": 2,
+            "ALL OFFERING": 2,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 51,
+            "withClassSize": 50,
+            "withShifting": 44,
+            "inNeitherView": 1
+          }
+        },
+        {
+          "name": "Legaspi City",
+          "classSize": {
+            "Less than Standard": 709,
+            "Within Standard": 347,
+            "Above Standard": 202
+          },
+          "shifting": {
+            "Single Shift": 321,
+            "Double Shift": 41,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 35,
+            "JHS WITH SHS": 11,
+            "ES AND JHS": 8,
+            "PURELY JHS": 3,
+            "ALL OFFERING": 1,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 58,
+            "withClassSize": 55,
+            "withShifting": 50,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Ligao City",
+          "classSize": {
+            "Less than Standard": 720,
+            "Within Standard": 197,
+            "Above Standard": 111
+          },
+          "shifting": {
+            "Single Shift": 415,
+            "Double Shift": 3,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 55,
+            "JHS WITH SHS": 12,
+            "ES AND JHS": 0,
+            "PURELY JHS": 0,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 67,
+            "withClassSize": 66,
+            "withShifting": 61,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Masbate",
+          "classSize": {
+            "Less than Standard": 7943,
+            "Within Standard": 893,
+            "Above Standard": 341
+          },
+          "shifting": {
+            "Single Shift": 4387,
+            "Double Shift": 12,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 528,
+            "JHS WITH SHS": 118,
+            "ES AND JHS": 23,
+            "PURELY JHS": 7,
+            "ALL OFFERING": 30,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 707,
+            "withClassSize": 690,
+            "withShifting": 632,
+            "inNeitherView": 8
+          }
+        },
+        {
+          "name": "Masbate City",
+          "classSize": {
+            "Less than Standard": 741,
+            "Within Standard": 152,
+            "Above Standard": 38
+          },
+          "shifting": {
+            "Single Shift": 210,
+            "Double Shift": 0,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 33,
+            "JHS WITH SHS": 6,
+            "ES AND JHS": 2,
+            "PURELY JHS": 3,
+            "ALL OFFERING": 1,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 46,
+            "withClassSize": 45,
+            "withShifting": 30,
+            "inNeitherView": 1
+          }
+        },
+        {
+          "name": "Naga City",
+          "classSize": {
+            "Less than Standard": 803,
+            "Within Standard": 361,
+            "Above Standard": 161
+          },
+          "shifting": {
+            "Single Shift": 268,
+            "Double Shift": 2,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 31,
+            "JHS WITH SHS": 12,
+            "ES AND JHS": 0,
+            "PURELY JHS": 2,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 45,
+            "withClassSize": 44,
+            "withShifting": 42,
+            "inNeitherView": 1
+          }
+        },
+        {
+          "name": "Sorsogon",
+          "classSize": {
+            "Less than Standard": 5366,
+            "Within Standard": 694,
+            "Above Standard": 461
+          },
+          "shifting": {
+            "Single Shift": 3120,
+            "Double Shift": 10,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 435,
+            "JHS WITH SHS": 81,
+            "ES AND JHS": 13,
+            "PURELY JHS": 0,
+            "ALL OFFERING": 2,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 531,
+            "withClassSize": 517,
+            "withShifting": 480,
+            "inNeitherView": 6
+          }
+        },
+        {
+          "name": "Sorsogon City",
+          "classSize": {
+            "Less than Standard": 1325,
+            "Within Standard": 287,
+            "Above Standard": 129
+          },
+          "shifting": {
+            "Single Shift": 464,
+            "Double Shift": 1,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 60,
+            "JHS WITH SHS": 9,
+            "ES AND JHS": 1,
+            "PURELY JHS": 3,
+            "ALL OFFERING": 7,
+            "PURELY SHS": 3,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 83,
+            "withClassSize": 82,
+            "withShifting": 67,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Tabaco City",
+          "classSize": {
+            "Less than Standard": 821,
+            "Within Standard": 191,
+            "Above Standard": 124
+          },
+          "shifting": {
+            "Single Shift": 279,
+            "Double Shift": 5,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 40,
+            "JHS WITH SHS": 10,
+            "ES AND JHS": 1,
+            "PURELY JHS": 0,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 51,
+            "withClassSize": 50,
+            "withShifting": 42,
+            "inNeitherView": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Region VI",
+      "classSize": {
+        "Less than Standard": 30106,
+        "Within Standard": 4607,
+        "Above Standard": 2419
+      },
+      "shifting": {
+        "Single Shift": 17453,
+        "Double Shift": 89,
+        "Triple Shift": 0
+      },
+      "offering": {
+        "PURELY ES": 2254,
+        "JHS WITH SHS": 387,
+        "ES AND JHS": 138,
+        "PURELY JHS": 8,
+        "ALL OFFERING": 53,
+        "PURELY SHS": 0,
+        "ES WITH SHS": 0
+      },
+      "coverage": {
+        "schools": 2840,
+        "withClassSize": 2807,
+        "withShifting": 2633,
+        "inNeitherView": 9
+      },
+      "divisions": [
+        {
+          "name": "Aklan",
+          "classSize": {
+            "Less than Standard": 3618,
+            "Within Standard": 582,
+            "Above Standard": 219
+          },
+          "shifting": {
+            "Single Shift": 2334,
+            "Double Shift": 7,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 282,
+            "JHS WITH SHS": 57,
+            "ES AND JHS": 8,
+            "PURELY JHS": 2,
+            "ALL OFFERING": 31,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 380,
+            "withClassSize": 374,
+            "withShifting": 349,
+            "inNeitherView": 3
+          }
+        },
+        {
+          "name": "Antique",
+          "classSize": {
+            "Less than Standard": 4692,
+            "Within Standard": 538,
+            "Above Standard": 310
+          },
+          "shifting": {
+            "Single Shift": 3149,
+            "Double Shift": 20,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 461,
+            "JHS WITH SHS": 54,
+            "ES AND JHS": 15,
+            "PURELY JHS": 0,
+            "ALL OFFERING": 8,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 538,
+            "withClassSize": 531,
+            "withShifting": 504,
+            "inNeitherView": 1
+          }
+        },
+        {
+          "name": "Capiz",
+          "classSize": {
+            "Less than Standard": 5111,
+            "Within Standard": 511,
+            "Above Standard": 202
+          },
+          "shifting": {
+            "Single Shift": 2875,
+            "Double Shift": 6,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 391,
+            "JHS WITH SHS": 54,
+            "ES AND JHS": 25,
+            "PURELY JHS": 0,
+            "ALL OFFERING": 1,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 471,
+            "withClassSize": 468,
+            "withShifting": 435,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Guimaras",
+          "classSize": {
+            "Less than Standard": 1651,
+            "Within Standard": 168,
+            "Above Standard": 61
+          },
+          "shifting": {
+            "Single Shift": 735,
+            "Double Shift": 1,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 97,
+            "JHS WITH SHS": 17,
+            "ES AND JHS": 1,
+            "PURELY JHS": 1,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 116,
+            "withClassSize": 116,
+            "withShifting": 112,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Iloilo",
+          "classSize": {
+            "Less than Standard": 12181,
+            "Within Standard": 2004,
+            "Above Standard": 1287
+          },
+          "shifting": {
+            "Single Shift": 7277,
+            "Double Shift": 13,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 919,
+            "JHS WITH SHS": 179,
+            "ES AND JHS": 69,
+            "PURELY JHS": 3,
+            "ALL OFFERING": 4,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 1174,
+            "withClassSize": 1158,
+            "withShifting": 1086,
+            "inNeitherView": 5
+          }
+        },
+        {
+          "name": "Iloilo City",
+          "classSize": {
+            "Less than Standard": 1528,
+            "Within Standard": 520,
+            "Above Standard": 227
+          },
+          "shifting": {
+            "Single Shift": 384,
+            "Double Shift": 24,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 47,
+            "JHS WITH SHS": 11,
+            "ES AND JHS": 5,
+            "PURELY JHS": 0,
+            "ALL OFFERING": 2,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 65,
+            "withClassSize": 65,
+            "withShifting": 55,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Passi City",
+          "classSize": {
+            "Less than Standard": 588,
+            "Within Standard": 103,
+            "Above Standard": 26
+          },
+          "shifting": {
+            "Single Shift": 315,
+            "Double Shift": 0,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 30,
+            "JHS WITH SHS": 6,
+            "ES AND JHS": 7,
+            "PURELY JHS": 2,
+            "ALL OFFERING": 1,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 46,
+            "withClassSize": 45,
+            "withShifting": 43,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Roxas City",
+          "classSize": {
+            "Less than Standard": 737,
+            "Within Standard": 181,
+            "Above Standard": 87
+          },
+          "shifting": {
+            "Single Shift": 384,
+            "Double Shift": 18,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 27,
+            "JHS WITH SHS": 9,
+            "ES AND JHS": 8,
+            "PURELY JHS": 0,
+            "ALL OFFERING": 6,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 50,
+            "withClassSize": 50,
+            "withShifting": 49,
+            "inNeitherView": 0
+          }
+        }
+      ]
+    },
+    {
+      "name": "Region VII",
+      "classSize": {
+        "Less than Standard": 30982,
+        "Within Standard": 9855,
+        "Above Standard": 5219
+      },
+      "shifting": {
+        "Single Shift": 16308,
+        "Double Shift": 770,
+        "Triple Shift": 18
+      },
+      "offering": {
+        "PURELY ES": 2046,
+        "JHS WITH SHS": 540,
+        "ES AND JHS": 81,
+        "PURELY JHS": 95,
+        "ALL OFFERING": 68,
+        "PURELY SHS": 8,
+        "ES WITH SHS": 2
+      },
+      "coverage": {
+        "schools": 2840,
+        "withClassSize": 2774,
+        "withShifting": 2566,
+        "inNeitherView": 26
+      },
+      "divisions": [
+        {
+          "name": "Bogo City",
+          "classSize": {
+            "Less than Standard": 401,
+            "Within Standard": 109,
+            "Above Standard": 84
+          },
+          "shifting": {
+            "Single Shift": 228,
+            "Double Shift": 4,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 21,
+            "JHS WITH SHS": 10,
+            "ES AND JHS": 0,
+            "PURELY JHS": 4,
+            "ALL OFFERING": 2,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 38,
+            "withClassSize": 38,
+            "withShifting": 35,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Bohol",
+          "classSize": {
+            "Less than Standard": 10359,
+            "Within Standard": 851,
+            "Above Standard": 327
+          },
+          "shifting": {
+            "Single Shift": 6497,
+            "Double Shift": 21,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 915,
+            "JHS WITH SHS": 180,
+            "ES AND JHS": 2,
+            "PURELY JHS": 16,
+            "ALL OFFERING": 16,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 2
+          },
+          "coverage": {
+            "schools": 1131,
+            "withClassSize": 1108,
+            "withShifting": 1015,
+            "inNeitherView": 10
+          }
+        },
+        {
+          "name": "Carcar City",
+          "classSize": {
+            "Less than Standard": 533,
+            "Within Standard": 231,
+            "Above Standard": 217
+          },
+          "shifting": {
+            "Single Shift": 293,
+            "Double Shift": 12,
+            "Triple Shift": 6
+          },
+          "offering": {
+            "PURELY ES": 30,
+            "JHS WITH SHS": 14,
+            "ES AND JHS": 1,
+            "PURELY JHS": 2,
+            "ALL OFFERING": 2,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 50,
+            "withClassSize": 50,
+            "withShifting": 46,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Cebu",
+          "classSize": {
+            "Less than Standard": 12703,
+            "Within Standard": 3112,
+            "Above Standard": 2169
+          },
+          "shifting": {
+            "Single Shift": 6930,
+            "Double Shift": 241,
+            "Triple Shift": 9
+          },
+          "offering": {
+            "PURELY ES": 812,
+            "JHS WITH SHS": 217,
+            "ES AND JHS": 61,
+            "PURELY JHS": 22,
+            "ALL OFFERING": 27,
+            "PURELY SHS": 4,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 1143,
+            "withClassSize": 1114,
+            "withShifting": 1048,
+            "inNeitherView": 8
+          }
+        },
+        {
+          "name": "Cebu City",
+          "classSize": {
+            "Less than Standard": 2051,
+            "Within Standard": 1822,
+            "Above Standard": 766
+          },
+          "shifting": {
+            "Single Shift": 549,
+            "Double Shift": 161,
+            "Triple Shift": 2
+          },
+          "offering": {
+            "PURELY ES": 53,
+            "JHS WITH SHS": 37,
+            "ES AND JHS": 2,
+            "PURELY JHS": 2,
+            "ALL OFFERING": 13,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 107,
+            "withClassSize": 103,
+            "withShifting": 97,
+            "inNeitherView": 2
+          }
+        },
+        {
+          "name": "City of Naga, Cebu",
+          "classSize": {
+            "Less than Standard": 613,
+            "Within Standard": 244,
+            "Above Standard": 103
+          },
+          "shifting": {
+            "Single Shift": 257,
+            "Double Shift": 15,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 26,
+            "JHS WITH SHS": 19,
+            "ES AND JHS": 1,
+            "PURELY JHS": 6,
+            "ALL OFFERING": 2,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 55,
+            "withClassSize": 54,
+            "withShifting": 44,
+            "inNeitherView": 1
+          }
+        },
+        {
+          "name": "Danao City",
+          "classSize": {
+            "Less than Standard": 643,
+            "Within Standard": 252,
+            "Above Standard": 187
+          },
+          "shifting": {
+            "Single Shift": 451,
+            "Double Shift": 13,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 26,
+            "JHS WITH SHS": 9,
+            "ES AND JHS": 13,
+            "PURELY JHS": 6,
+            "ALL OFFERING": 6,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 61,
+            "withClassSize": 61,
+            "withShifting": 58,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Lapu-Lapu City",
+          "classSize": {
+            "Less than Standard": 960,
+            "Within Standard": 1348,
+            "Above Standard": 420
+          },
+          "shifting": {
+            "Single Shift": 296,
+            "Double Shift": 98,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 43,
+            "JHS WITH SHS": 11,
+            "ES AND JHS": 1,
+            "PURELY JHS": 15,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 70,
+            "withClassSize": 70,
+            "withShifting": 64,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Mandaue City",
+          "classSize": {
+            "Less than Standard": 739,
+            "Within Standard": 647,
+            "Above Standard": 375
+          },
+          "shifting": {
+            "Single Shift": 165,
+            "Double Shift": 90,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 27,
+            "JHS WITH SHS": 13,
+            "ES AND JHS": 0,
+            "PURELY JHS": 8,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 48,
+            "withClassSize": 46,
+            "withShifting": 42,
+            "inNeitherView": 1
+          }
+        },
+        {
+          "name": "Tagbilaran City",
+          "classSize": {
+            "Less than Standard": 436,
+            "Within Standard": 152,
+            "Above Standard": 25
+          },
+          "shifting": {
+            "Single Shift": 141,
+            "Double Shift": 14,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 17,
+            "JHS WITH SHS": 6,
+            "ES AND JHS": 0,
+            "PURELY JHS": 3,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 26,
+            "withClassSize": 26,
+            "withShifting": 25,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Talisay City",
+          "classSize": {
+            "Less than Standard": 825,
+            "Within Standard": 481,
+            "Above Standard": 298
+          },
+          "shifting": {
+            "Single Shift": 156,
+            "Double Shift": 75,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 26,
+            "JHS WITH SHS": 12,
+            "ES AND JHS": 0,
+            "PURELY JHS": 6,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 44,
+            "withClassSize": 43,
+            "withShifting": 37,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Toledo City",
+          "classSize": {
+            "Less than Standard": 719,
+            "Within Standard": 606,
+            "Above Standard": 248
+          },
+          "shifting": {
+            "Single Shift": 345,
+            "Double Shift": 26,
+            "Triple Shift": 1
+          },
+          "offering": {
+            "PURELY ES": 50,
+            "JHS WITH SHS": 12,
+            "ES AND JHS": 0,
+            "PURELY JHS": 5,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 67,
+            "withClassSize": 61,
+            "withShifting": 55,
+            "inNeitherView": 4
+          }
+        }
+      ]
+    },
+    {
+      "name": "Region VIII",
+      "classSize": {
+        "Less than Standard": 28149,
+        "Within Standard": 3947,
+        "Above Standard": 2383
+      },
+      "shifting": {
+        "Single Shift": 20048,
+        "Double Shift": 44,
+        "Triple Shift": 3
+      },
+      "offering": {
+        "PURELY ES": 3528,
+        "JHS WITH SHS": 412,
+        "ES AND JHS": 103,
+        "PURELY JHS": 106,
+        "ALL OFFERING": 25,
+        "PURELY SHS": 22,
+        "ES WITH SHS": 0
+      },
+      "coverage": {
+        "schools": 4196,
+        "withClassSize": 3480,
+        "withShifting": 3381,
+        "inNeitherView": 568
+      },
+      "divisions": [
+        {
+          "name": "Baybay City",
+          "classSize": {
+            "Less than Standard": 965,
+            "Within Standard": 67,
+            "Above Standard": 16
+          },
+          "shifting": {
+            "Single Shift": 432,
+            "Double Shift": 0,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 65,
+            "JHS WITH SHS": 10,
+            "ES AND JHS": 1,
+            "PURELY JHS": 3,
+            "ALL OFFERING": 2,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 82,
+            "withClassSize": 79,
+            "withShifting": 68,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Biliran",
+          "classSize": {
+            "Less than Standard": 1738,
+            "Within Standard": 175,
+            "Above Standard": 55
+          },
+          "shifting": {
+            "Single Shift": 841,
+            "Double Shift": 3,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 119,
+            "JHS WITH SHS": 20,
+            "ES AND JHS": 4,
+            "PURELY JHS": 0,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 143,
+            "withClassSize": 140,
+            "withShifting": 130,
+            "inNeitherView": 1
+          }
+        },
+        {
+          "name": "Borongan City",
+          "classSize": {
+            "Less than Standard": 548,
+            "Within Standard": 81,
+            "Above Standard": 8
+          },
+          "shifting": {
+            "Single Shift": 333,
+            "Double Shift": 1,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 50,
+            "JHS WITH SHS": 7,
+            "ES AND JHS": 1,
+            "PURELY JHS": 0,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 58,
+            "withClassSize": 56,
+            "withShifting": 54,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Calbayog City",
+          "classSize": {
+            "Less than Standard": 1180,
+            "Within Standard": 204,
+            "Above Standard": 199
+          },
+          "shifting": {
+            "Single Shift": 1024,
+            "Double Shift": 2,
+            "Triple Shift": 1
+          },
+          "offering": {
+            "PURELY ES": 132,
+            "JHS WITH SHS": 14,
+            "ES AND JHS": 21,
+            "PURELY JHS": 2,
+            "ALL OFFERING": 4,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 174,
+            "withClassSize": 172,
+            "withShifting": 164,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Catbalogan City",
+          "classSize": {
+            "Less than Standard": 160,
+            "Within Standard": 30,
+            "Above Standard": 12
+          },
+          "shifting": {
+            "Single Shift": 69,
+            "Double Shift": 0,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 49,
+            "JHS WITH SHS": 8,
+            "ES AND JHS": 1,
+            "PURELY JHS": 0,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 58,
+            "withClassSize": 11,
+            "withShifting": 12,
+            "inNeitherView": 45
+          }
+        },
+        {
+          "name": "Eastern Samar",
+          "classSize": {
+            "Less than Standard": 1079,
+            "Within Standard": 115,
+            "Above Standard": 44
+          },
+          "shifting": {
+            "Single Shift": 1057,
+            "Double Shift": 2,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 404,
+            "JHS WITH SHS": 30,
+            "ES AND JHS": 11,
+            "PURELY JHS": 18,
+            "ALL OFFERING": 2,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 466,
+            "withClassSize": 132,
+            "withShifting": 187,
+            "inNeitherView": 274
+          }
+        },
+        {
+          "name": "Leyte",
+          "classSize": {
+            "Less than Standard": 9670,
+            "Within Standard": 1395,
+            "Above Standard": 1110
+          },
+          "shifting": {
+            "Single Shift": 7101,
+            "Double Shift": 16,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 1105,
+            "JHS WITH SHS": 125,
+            "ES AND JHS": 5,
+            "PURELY JHS": 38,
+            "ALL OFFERING": 1,
+            "PURELY SHS": 12,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 1286,
+            "withClassSize": 1260,
+            "withShifting": 1200,
+            "inNeitherView": 7
+          }
+        },
+        {
+          "name": "Maasin City",
+          "classSize": {
+            "Less than Standard": 574,
+            "Within Standard": 19,
+            "Above Standard": 2
+          },
+          "shifting": {
+            "Single Shift": 440,
+            "Double Shift": 0,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 55,
+            "JHS WITH SHS": 8,
+            "ES AND JHS": 7,
+            "PURELY JHS": 4,
+            "ALL OFFERING": 1,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 76,
+            "withClassSize": 75,
+            "withShifting": 71,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Northern Samar",
+          "classSize": {
+            "Less than Standard": 2764,
+            "Within Standard": 414,
+            "Above Standard": 244
+          },
+          "shifting": {
+            "Single Shift": 2058,
+            "Double Shift": 16,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 512,
+            "JHS WITH SHS": 63,
+            "ES AND JHS": 6,
+            "PURELY JHS": 24,
+            "ALL OFFERING": 2,
+            "PURELY SHS": 3,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 610,
+            "withClassSize": 349,
+            "withShifting": 342,
+            "inNeitherView": 234
+          }
+        },
+        {
+          "name": "Ormoc City",
+          "classSize": {
+            "Less than Standard": 1051,
+            "Within Standard": 376,
+            "Above Standard": 223
+          },
+          "shifting": {
+            "Single Shift": 580,
+            "Double Shift": 0,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 70,
+            "JHS WITH SHS": 13,
+            "ES AND JHS": 11,
+            "PURELY JHS": 2,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 2,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 98,
+            "withClassSize": 97,
+            "withShifting": 82,
+            "inNeitherView": 1
+          }
+        },
+        {
+          "name": "Samar (Western Samar)",
+          "classSize": {
+            "Less than Standard": 4863,
+            "Within Standard": 496,
+            "Above Standard": 183
+          },
+          "shifting": {
+            "Single Shift": 3918,
+            "Double Shift": 3,
+            "Triple Shift": 2
+          },
+          "offering": {
+            "PURELY ES": 636,
+            "JHS WITH SHS": 63,
+            "ES AND JHS": 25,
+            "PURELY JHS": 8,
+            "ALL OFFERING": 10,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 742,
+            "withClassSize": 719,
+            "withShifting": 700,
+            "inNeitherView": 5
+          }
+        },
+        {
+          "name": "Southern Leyte",
+          "classSize": {
+            "Less than Standard": 2572,
+            "Within Standard": 174,
+            "Above Standard": 103
+          },
+          "shifting": {
+            "Single Shift": 1853,
+            "Double Shift": 1,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 289,
+            "JHS WITH SHS": 43,
+            "ES AND JHS": 6,
+            "PURELY JHS": 3,
+            "ALL OFFERING": 2,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 343,
+            "withClassSize": 331,
+            "withShifting": 321,
+            "inNeitherView": 1
+          }
+        },
+        {
+          "name": "Tacloban City",
+          "classSize": {
+            "Less than Standard": 985,
+            "Within Standard": 401,
+            "Above Standard": 184
+          },
+          "shifting": {
+            "Single Shift": 342,
+            "Double Shift": 0,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 42,
+            "JHS WITH SHS": 8,
+            "ES AND JHS": 4,
+            "PURELY JHS": 4,
+            "ALL OFFERING": 1,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 60,
+            "withClassSize": 59,
+            "withShifting": 50,
+            "inNeitherView": 0
+          }
+        }
+      ]
+    },
+    {
+      "name": "Region IX",
+      "classSize": {
+        "Less than Standard": 25599,
+        "Within Standard": 5668,
+        "Above Standard": 5362
+      },
+      "shifting": {
+        "Single Shift": 17381,
+        "Double Shift": 160,
+        "Triple Shift": 2
+      },
+      "offering": {
+        "PURELY ES": 2442,
+        "JHS WITH SHS": 376,
+        "ES AND JHS": 77,
+        "PURELY JHS": 89,
+        "ALL OFFERING": 34,
+        "PURELY SHS": 6,
+        "ES WITH SHS": 0
+      },
+      "coverage": {
+        "schools": 3024,
+        "withClassSize": 2913,
+        "withShifting": 2757,
+        "inNeitherView": 22
+      },
+      "divisions": [
+        {
+          "name": "Dapitan City",
+          "classSize": {
+            "Less than Standard": 603,
+            "Within Standard": 93,
+            "Above Standard": 53
+          },
+          "shifting": {
+            "Single Shift": 365,
+            "Double Shift": 3,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 44,
+            "JHS WITH SHS": 10,
+            "ES AND JHS": 2,
+            "PURELY JHS": 1,
+            "ALL OFFERING": 4,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 61,
+            "withClassSize": 60,
+            "withShifting": 53,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Dipolog City",
+          "classSize": {
+            "Less than Standard": 652,
+            "Within Standard": 219,
+            "Above Standard": 149
+          },
+          "shifting": {
+            "Single Shift": 243,
+            "Double Shift": 0,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 32,
+            "JHS WITH SHS": 10,
+            "ES AND JHS": 2,
+            "PURELY JHS": 0,
+            "ALL OFFERING": 4,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 48,
+            "withClassSize": 48,
+            "withShifting": 33,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Isabela City",
+          "classSize": {
+            "Less than Standard": 478,
+            "Within Standard": 190,
+            "Above Standard": 216
+          },
+          "shifting": {
+            "Single Shift": 388,
+            "Double Shift": 1,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 50,
+            "JHS WITH SHS": 11,
+            "ES AND JHS": 2,
+            "PURELY JHS": 1,
+            "ALL OFFERING": 2,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 66,
+            "withClassSize": 62,
+            "withShifting": 60,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Pagadian City",
+          "classSize": {
+            "Less than Standard": 896,
+            "Within Standard": 330,
+            "Above Standard": 184
+          },
+          "shifting": {
+            "Single Shift": 535,
+            "Double Shift": 24,
+            "Triple Shift": 1
+          },
+          "offering": {
+            "PURELY ES": 51,
+            "JHS WITH SHS": 20,
+            "ES AND JHS": 10,
+            "PURELY JHS": 0,
+            "ALL OFFERING": 1,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 82,
+            "withClassSize": 80,
+            "withShifting": 74,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Sulu",
+          "classSize": {
+            "Less than Standard": 2465,
+            "Within Standard": 589,
+            "Above Standard": 1206
+          },
+          "shifting": {
+            "Single Shift": 2430,
+            "Double Shift": 38,
+            "Triple Shift": 1
+          },
+          "offering": {
+            "PURELY ES": 420,
+            "JHS WITH SHS": 26,
+            "ES AND JHS": 1,
+            "PURELY JHS": 13,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 460,
+            "withClassSize": 442,
+            "withShifting": 434,
+            "inNeitherView": 5
+          }
+        },
+        {
+          "name": "Zamboanga City",
+          "classSize": {
+            "Less than Standard": 2135,
+            "Within Standard": 1589,
+            "Above Standard": 2180
+          },
+          "shifting": {
+            "Single Shift": 1196,
+            "Double Shift": 87,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 167,
+            "JHS WITH SHS": 35,
+            "ES AND JHS": 3,
+            "PURELY JHS": 11,
+            "ALL OFFERING": 4,
+            "PURELY SHS": 2,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 222,
+            "withClassSize": 217,
+            "withShifting": 192,
+            "inNeitherView": 3
+          }
+        },
+        {
+          "name": "Zamboanga del Norte",
+          "classSize": {
+            "Less than Standard": 6540,
+            "Within Standard": 1093,
+            "Above Standard": 616
+          },
+          "shifting": {
+            "Single Shift": 4535,
+            "Double Shift": 5,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 608,
+            "JHS WITH SHS": 102,
+            "ES AND JHS": 28,
+            "PURELY JHS": 13,
+            "ALL OFFERING": 14,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 766,
+            "withClassSize": 735,
+            "withShifting": 690,
+            "inNeitherView": 8
+          }
+        },
+        {
+          "name": "Zamboanga del Sur",
+          "classSize": {
+            "Less than Standard": 7425,
+            "Within Standard": 701,
+            "Above Standard": 322
+          },
+          "shifting": {
+            "Single Shift": 4767,
+            "Double Shift": 1,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 652,
+            "JHS WITH SHS": 96,
+            "ES AND JHS": 20,
+            "PURELY JHS": 38,
+            "ALL OFFERING": 4,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 811,
+            "withClassSize": 776,
+            "withShifting": 757,
+            "inNeitherView": 4
+          }
+        },
+        {
+          "name": "Zamboanga Sibugay",
+          "classSize": {
+            "Less than Standard": 4405,
+            "Within Standard": 864,
+            "Above Standard": 436
+          },
+          "shifting": {
+            "Single Shift": 2922,
+            "Double Shift": 1,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 418,
+            "JHS WITH SHS": 66,
+            "ES AND JHS": 9,
+            "PURELY JHS": 12,
+            "ALL OFFERING": 1,
+            "PURELY SHS": 2,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 508,
+            "withClassSize": 493,
+            "withShifting": 464,
+            "inNeitherView": 2
+          }
+        }
+      ]
+    },
+    {
+      "name": "Region X",
+      "classSize": {
+        "Less than Standard": 25514,
+        "Within Standard": 7329,
+        "Above Standard": 4123
+      },
+      "shifting": {
+        "Single Shift": 15448,
+        "Double Shift": 283,
+        "Triple Shift": 1
+      },
+      "offering": {
+        "PURELY ES": 1839,
+        "JHS WITH SHS": 315,
+        "ES AND JHS": 226,
+        "PURELY JHS": 24,
+        "ALL OFFERING": 124,
+        "PURELY SHS": 11,
+        "ES WITH SHS": 0
+      },
+      "coverage": {
+        "schools": 2539,
+        "withClassSize": 2479,
+        "withShifting": 2282,
+        "inNeitherView": 22
+      },
+      "divisions": [
+        {
+          "name": "Bukidnon",
+          "classSize": {
+            "Less than Standard": 6887,
+            "Within Standard": 1500,
+            "Above Standard": 842
+          },
+          "shifting": {
+            "Single Shift": 4079,
+            "Double Shift": 28,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 514,
+            "JHS WITH SHS": 65,
+            "ES AND JHS": 34,
+            "PURELY JHS": 4,
+            "ALL OFFERING": 37,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 654,
+            "withClassSize": 632,
+            "withShifting": 590,
+            "inNeitherView": 9
+          }
+        },
+        {
+          "name": "Cagayan de Oro City",
+          "classSize": {
+            "Less than Standard": 1680,
+            "Within Standard": 1545,
+            "Above Standard": 691
+          },
+          "shifting": {
+            "Single Shift": 593,
+            "Double Shift": 86,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 65,
+            "JHS WITH SHS": 41,
+            "ES AND JHS": 4,
+            "PURELY JHS": 1,
+            "ALL OFFERING": 4,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 115,
+            "withClassSize": 113,
+            "withShifting": 99,
+            "inNeitherView": 2
+          }
+        },
+        {
+          "name": "Camiguin",
+          "classSize": {
+            "Less than Standard": 760,
+            "Within Standard": 68,
+            "Above Standard": 15
+          },
+          "shifting": {
+            "Single Shift": 415,
+            "Double Shift": 0,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 50,
+            "JHS WITH SHS": 11,
+            "ES AND JHS": 0,
+            "PURELY JHS": 0,
+            "ALL OFFERING": 5,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 66,
+            "withClassSize": 66,
+            "withShifting": 58,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "El Salvador",
+          "classSize": {
+            "Less than Standard": 240,
+            "Within Standard": 105,
+            "Above Standard": 43
+          },
+          "shifting": {
+            "Single Shift": 141,
+            "Double Shift": 17,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 15,
+            "JHS WITH SHS": 8,
+            "ES AND JHS": 0,
+            "PURELY JHS": 0,
+            "ALL OFFERING": 1,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 24,
+            "withClassSize": 24,
+            "withShifting": 23,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Gingoog City",
+          "classSize": {
+            "Less than Standard": 921,
+            "Within Standard": 208,
+            "Above Standard": 50
+          },
+          "shifting": {
+            "Single Shift": 571,
+            "Double Shift": 27,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 64,
+            "JHS WITH SHS": 16,
+            "ES AND JHS": 4,
+            "PURELY JHS": 0,
+            "ALL OFFERING": 13,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 97,
+            "withClassSize": 94,
+            "withShifting": 85,
+            "inNeitherView": 1
+          }
+        },
+        {
+          "name": "Iligan City",
+          "classSize": {
+            "Less than Standard": 1301,
+            "Within Standard": 653,
+            "Above Standard": 416
+          },
+          "shifting": {
+            "Single Shift": 605,
+            "Double Shift": 25,
+            "Triple Shift": 1
+          },
+          "offering": {
+            "PURELY ES": 79,
+            "JHS WITH SHS": 27,
+            "ES AND JHS": 4,
+            "PURELY JHS": 0,
+            "ALL OFFERING": 3,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 113,
+            "withClassSize": 111,
+            "withShifting": 98,
+            "inNeitherView": 1
+          }
+        },
+        {
+          "name": "Lanao del Norte",
+          "classSize": {
+            "Less than Standard": 2840,
+            "Within Standard": 867,
+            "Above Standard": 741
+          },
+          "shifting": {
+            "Single Shift": 2447,
+            "Double Shift": 5,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 300,
+            "JHS WITH SHS": 30,
+            "ES AND JHS": 40,
+            "PURELY JHS": 0,
+            "ALL OFFERING": 14,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 384,
+            "withClassSize": 372,
+            "withShifting": 354,
+            "inNeitherView": 3
+          }
+        },
+        {
+          "name": "Malaybalay City",
+          "classSize": {
+            "Less than Standard": 1094,
+            "Within Standard": 373,
+            "Above Standard": 182
+          },
+          "shifting": {
+            "Single Shift": 556,
+            "Double Shift": 7,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 50,
+            "JHS WITH SHS": 16,
+            "ES AND JHS": 8,
+            "PURELY JHS": 1,
+            "ALL OFFERING": 11,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 87,
+            "withClassSize": 87,
+            "withShifting": 74,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Misamis Occidental",
+          "classSize": {
+            "Less than Standard": 2752,
+            "Within Standard": 221,
+            "Above Standard": 94
+          },
+          "shifting": {
+            "Single Shift": 1897,
+            "Double Shift": 1,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 275,
+            "JHS WITH SHS": 25,
+            "ES AND JHS": 29,
+            "PURELY JHS": 0,
+            "ALL OFFERING": 9,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 338,
+            "withClassSize": 327,
+            "withShifting": 307,
+            "inNeitherView": 4
+          }
+        },
+        {
+          "name": "Misamis Oriental",
+          "classSize": {
+            "Less than Standard": 4556,
+            "Within Standard": 1148,
+            "Above Standard": 522
+          },
+          "shifting": {
+            "Single Shift": 2472,
+            "Double Shift": 75,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 292,
+            "JHS WITH SHS": 42,
+            "ES AND JHS": 56,
+            "PURELY JHS": 18,
+            "ALL OFFERING": 4,
+            "PURELY SHS": 10,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 422,
+            "withClassSize": 416,
+            "withShifting": 373,
+            "inNeitherView": 2
+          }
+        },
+        {
+          "name": "Oroquieta City",
+          "classSize": {
+            "Less than Standard": 428,
+            "Within Standard": 94,
+            "Above Standard": 36
+          },
+          "shifting": {
+            "Single Shift": 348,
+            "Double Shift": 0,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 36,
+            "JHS WITH SHS": 7,
+            "ES AND JHS": 5,
+            "PURELY JHS": 0,
+            "ALL OFFERING": 3,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 51,
+            "withClassSize": 50,
+            "withShifting": 50,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Ozamis City",
+          "classSize": {
+            "Less than Standard": 763,
+            "Within Standard": 181,
+            "Above Standard": 72
+          },
+          "shifting": {
+            "Single Shift": 416,
+            "Double Shift": 0,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 34,
+            "JHS WITH SHS": 10,
+            "ES AND JHS": 9,
+            "PURELY JHS": 0,
+            "ALL OFFERING": 5,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 58,
+            "withClassSize": 58,
+            "withShifting": 55,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Tangub City",
+          "classSize": {
+            "Less than Standard": 473,
+            "Within Standard": 97,
+            "Above Standard": 22
+          },
+          "shifting": {
+            "Single Shift": 391,
+            "Double Shift": 0,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 49,
+            "JHS WITH SHS": 10,
+            "ES AND JHS": 1,
+            "PURELY JHS": 0,
+            "ALL OFFERING": 5,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 65,
+            "withClassSize": 64,
+            "withShifting": 57,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Valencia City",
+          "classSize": {
+            "Less than Standard": 819,
+            "Within Standard": 269,
+            "Above Standard": 397
+          },
+          "shifting": {
+            "Single Shift": 517,
+            "Double Shift": 12,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 16,
+            "JHS WITH SHS": 7,
+            "ES AND JHS": 32,
+            "PURELY JHS": 0,
+            "ALL OFFERING": 10,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 65,
+            "withClassSize": 65,
+            "withShifting": 59,
+            "inNeitherView": 0
+          }
+        }
+      ]
+    },
+    {
+      "name": "Region XI",
+      "classSize": {
+        "Less than Standard": 23185,
+        "Within Standard": 8233,
+        "Above Standard": 4871
+      },
+      "shifting": {
+        "Single Shift": 12734,
+        "Double Shift": 367,
+        "Triple Shift": 5
+      },
+      "offering": {
+        "PURELY ES": 1572,
+        "JHS WITH SHS": 375,
+        "ES AND JHS": 141,
+        "PURELY JHS": 100,
+        "ALL OFFERING": 36,
+        "PURELY SHS": 8,
+        "ES WITH SHS": 0
+      },
+      "coverage": {
+        "schools": 2232,
+        "withClassSize": 2197,
+        "withShifting": 1948,
+        "inNeitherView": 8
+      },
+      "divisions": [
+        {
+          "name": "Davao City",
+          "classSize": {
+            "Less than Standard": 5772,
+            "Within Standard": 3114,
+            "Above Standard": 1742
+          },
+          "shifting": {
+            "Single Shift": 2269,
+            "Double Shift": 310,
+            "Triple Shift": 5
+          },
+          "offering": {
+            "PURELY ES": 263,
+            "JHS WITH SHS": 88,
+            "ES AND JHS": 40,
+            "PURELY JHS": 42,
+            "ALL OFFERING": 2,
+            "PURELY SHS": 3,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 438,
+            "withClassSize": 435,
+            "withShifting": 383,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Davao De Oro",
+          "classSize": {
+            "Less than Standard": 3830,
+            "Within Standard": 1305,
+            "Above Standard": 704
+          },
+          "shifting": {
+            "Single Shift": 2452,
+            "Double Shift": 2,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 301,
+            "JHS WITH SHS": 72,
+            "ES AND JHS": 33,
+            "PURELY JHS": 11,
+            "ALL OFFERING": 1,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 419,
+            "withClassSize": 415,
+            "withShifting": 364,
+            "inNeitherView": 1
+          }
+        },
+        {
+          "name": "Davao del Norte",
+          "classSize": {
+            "Less than Standard": 2717,
+            "Within Standard": 646,
+            "Above Standard": 425
+          },
+          "shifting": {
+            "Single Shift": 1696,
+            "Double Shift": 2,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 189,
+            "JHS WITH SHS": 43,
+            "ES AND JHS": 14,
+            "PURELY JHS": 2,
+            "ALL OFFERING": 16,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 264,
+            "withClassSize": 259,
+            "withShifting": 238,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Davao del Sur",
+          "classSize": {
+            "Less than Standard": 2727,
+            "Within Standard": 668,
+            "Above Standard": 317
+          },
+          "shifting": {
+            "Single Shift": 1487,
+            "Double Shift": 4,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 218,
+            "JHS WITH SHS": 34,
+            "ES AND JHS": 3,
+            "PURELY JHS": 8,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 263,
+            "withClassSize": 261,
+            "withShifting": 226,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Davao Occidental",
+          "classSize": {
+            "Less than Standard": 2072,
+            "Within Standard": 307,
+            "Above Standard": 245
+          },
+          "shifting": {
+            "Single Shift": 1263,
+            "Double Shift": 4,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 156,
+            "JHS WITH SHS": 28,
+            "ES AND JHS": 17,
+            "PURELY JHS": 17,
+            "ALL OFFERING": 1,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 219,
+            "withClassSize": 216,
+            "withShifting": 190,
+            "inNeitherView": 1
+          }
+        },
+        {
+          "name": "Davao Oriental",
+          "classSize": {
+            "Less than Standard": 2749,
+            "Within Standard": 495,
+            "Above Standard": 399
+          },
+          "shifting": {
+            "Single Shift": 1843,
+            "Double Shift": 2,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 244,
+            "JHS WITH SHS": 43,
+            "ES AND JHS": 30,
+            "PURELY JHS": 10,
+            "ALL OFFERING": 6,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 333,
+            "withClassSize": 321,
+            "withShifting": 286,
+            "inNeitherView": 5
+          }
+        },
+        {
+          "name": "Digos City",
+          "classSize": {
+            "Less than Standard": 563,
+            "Within Standard": 256,
+            "Above Standard": 236
+          },
+          "shifting": {
+            "Single Shift": 274,
+            "Double Shift": 5,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 36,
+            "JHS WITH SHS": 6,
+            "ES AND JHS": 0,
+            "PURELY JHS": 5,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 48,
+            "withClassSize": 46,
+            "withShifting": 44,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Island Garden City of Samal",
+          "classSize": {
+            "Less than Standard": 643,
+            "Within Standard": 205,
+            "Above Standard": 62
+          },
+          "shifting": {
+            "Single Shift": 391,
+            "Double Shift": 6,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 49,
+            "JHS WITH SHS": 21,
+            "ES AND JHS": 1,
+            "PURELY JHS": 2,
+            "ALL OFFERING": 1,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 75,
+            "withClassSize": 73,
+            "withShifting": 61,
+            "inNeitherView": 1
+          }
+        },
+        {
+          "name": "Mati City",
+          "classSize": {
+            "Less than Standard": 780,
+            "Within Standard": 218,
+            "Above Standard": 193
+          },
+          "shifting": {
+            "Single Shift": 485,
+            "Double Shift": 3,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 47,
+            "JHS WITH SHS": 18,
+            "ES AND JHS": 2,
+            "PURELY JHS": 0,
+            "ALL OFFERING": 5,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 72,
+            "withClassSize": 72,
+            "withShifting": 67,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Panabo City",
+          "classSize": {
+            "Less than Standard": 697,
+            "Within Standard": 395,
+            "Above Standard": 202
+          },
+          "shifting": {
+            "Single Shift": 332,
+            "Double Shift": 18,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 44,
+            "JHS WITH SHS": 13,
+            "ES AND JHS": 1,
+            "PURELY JHS": 3,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 62,
+            "withClassSize": 61,
+            "withShifting": 53,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "Tagum City",
+          "classSize": {
+            "Less than Standard": 635,
+            "Within Standard": 624,
+            "Above Standard": 346
+          },
+          "shifting": {
+            "Single Shift": 242,
+            "Double Shift": 11,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 25,
+            "JHS WITH SHS": 9,
+            "ES AND JHS": 0,
+            "PURELY JHS": 0,
+            "ALL OFFERING": 4,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 39,
+            "withClassSize": 38,
+            "withShifting": 36,
+            "inNeitherView": 0
+          }
+        }
+      ]
+    },
+    {
+      "name": "Region XII",
+      "classSize": {
+        "Less than Standard": 22964,
+        "Within Standard": 6904,
+        "Above Standard": 4573
+      },
+      "shifting": {
+        "Single Shift": 13440,
+        "Double Shift": 49,
+        "Triple Shift": 5
+      },
+      "offering": {
+        "PURELY ES": 1494,
+        "JHS WITH SHS": 315,
+        "ES AND JHS": 159,
+        "PURELY JHS": 106,
+        "ALL OFFERING": 95,
+        "PURELY SHS": 1,
+        "ES WITH SHS": 0
+      },
+      "coverage": {
+        "schools": 2170,
+        "withClassSize": 2120,
+        "withShifting": 1907,
+        "inNeitherView": 18
+      },
+      "divisions": [
+        {
+          "name": "General Santos City",
+          "classSize": {
+            "Less than Standard": 1481,
+            "Within Standard": 1679,
+            "Above Standard": 949
+          },
+          "shifting": {
+            "Single Shift": 600,
+            "Double Shift": 20,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 76,
+            "JHS WITH SHS": 26,
+            "ES AND JHS": 0,
+            "PURELY JHS": 3,
+            "ALL OFFERING": 1,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 106,
+            "withClassSize": 104,
+            "withShifting": 93,
+            "inNeitherView": 1
+          }
+        },
+        {
+          "name": "Kidapawan City",
+          "classSize": {
+            "Less than Standard": 1149,
+            "Within Standard": 259,
+            "Above Standard": 138
+          },
+          "shifting": {
+            "Single Shift": 505,
+            "Double Shift": 1,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 49,
+            "JHS WITH SHS": 18,
+            "ES AND JHS": 5,
+            "PURELY JHS": 0,
+            "ALL OFFERING": 4,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 76,
+            "withClassSize": 71,
+            "withShifting": 70,
+            "inNeitherView": 1
+          }
+        },
+        {
+          "name": "Koronadal City",
+          "classSize": {
+            "Less than Standard": 609,
+            "Within Standard": 274,
+            "Above Standard": 269
+          },
+          "shifting": {
+            "Single Shift": 322,
+            "Double Shift": 7,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 45,
+            "JHS WITH SHS": 9,
+            "ES AND JHS": 0,
+            "PURELY JHS": 0,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 54,
+            "withClassSize": 52,
+            "withShifting": 50,
+            "inNeitherView": 0
+          }
+        },
+        {
+          "name": "North Cotabato",
+          "classSize": {
+            "Less than Standard": 7401,
+            "Within Standard": 1403,
+            "Above Standard": 1113
+          },
+          "shifting": {
+            "Single Shift": 4241,
+            "Double Shift": 8,
+            "Triple Shift": 2
+          },
+          "offering": {
+            "PURELY ES": 564,
+            "JHS WITH SHS": 106,
+            "ES AND JHS": 19,
+            "PURELY JHS": 95,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 784,
+            "withClassSize": 766,
+            "withShifting": 662,
+            "inNeitherView": 6
+          }
+        },
+        {
+          "name": "Sarangani",
+          "classSize": {
+            "Less than Standard": 3786,
+            "Within Standard": 890,
+            "Above Standard": 509
+          },
+          "shifting": {
+            "Single Shift": 2510,
+            "Double Shift": 6,
+            "Triple Shift": 1
+          },
+          "offering": {
+            "PURELY ES": 189,
+            "JHS WITH SHS": 36,
+            "ES AND JHS": 43,
+            "PURELY JHS": 1,
+            "ALL OFFERING": 58,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 327,
+            "withClassSize": 318,
+            "withShifting": 304,
+            "inNeitherView": 3
+          }
+        },
+        {
+          "name": "South Cotabato",
+          "classSize": {
+            "Less than Standard": 4004,
+            "Within Standard": 1301,
+            "Above Standard": 732
+          },
+          "shifting": {
+            "Single Shift": 2500,
+            "Double Shift": 6,
+            "Triple Shift": 2
+          },
+          "offering": {
+            "PURELY ES": 249,
+            "JHS WITH SHS": 63,
+            "ES AND JHS": 50,
+            "PURELY JHS": 1,
+            "ALL OFFERING": 20,
+            "PURELY SHS": 1,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 384,
+            "withClassSize": 379,
+            "withShifting": 337,
+            "inNeitherView": 3
+          }
+        },
+        {
+          "name": "Sultan Kudarat",
+          "classSize": {
+            "Less than Standard": 4145,
+            "Within Standard": 935,
+            "Above Standard": 767
+          },
+          "shifting": {
+            "Single Shift": 2582,
+            "Double Shift": 1,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 299,
+            "JHS WITH SHS": 50,
+            "ES AND JHS": 41,
+            "PURELY JHS": 6,
+            "ALL OFFERING": 12,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 408,
+            "withClassSize": 400,
+            "withShifting": 365,
+            "inNeitherView": 3
+          }
+        },
+        {
+          "name": "Tacurong City",
+          "classSize": {
+            "Less than Standard": 389,
+            "Within Standard": 163,
+            "Above Standard": 96
+          },
+          "shifting": {
+            "Single Shift": 180,
+            "Double Shift": 0,
+            "Triple Shift": 0
+          },
+          "offering": {
+            "PURELY ES": 23,
+            "JHS WITH SHS": 7,
+            "ES AND JHS": 1,
+            "PURELY JHS": 0,
+            "ALL OFFERING": 0,
+            "PURELY SHS": 0,
+            "ES WITH SHS": 0
+          },
+          "coverage": {
+            "schools": 31,
+            "withClassSize": 30,
+            "withShifting": 26,
+            "inNeitherView": 1
+          }
+        }
+      ]
+    }
+  ],
+  "unmatched": {
+    "name": "Not in master list",
+    "classSize": {
+      "Less than Standard": 630,
+      "Within Standard": 314,
+      "Above Standard": 128
+    },
+    "shifting": {
+      "Single Shift": 66,
+      "Double Shift": 5,
+      "Triple Shift": 2
+    },
+    "offering": {
+      "PURELY ES": 0,
+      "JHS WITH SHS": 0,
+      "ES AND JHS": 0,
+      "PURELY JHS": 0,
+      "ALL OFFERING": 0,
+      "PURELY SHS": 0,
+      "ES WITH SHS": 0
+    },
+    "coverage": {
+      "orphanSchoolIds": 86
+    }
+  }
+}
