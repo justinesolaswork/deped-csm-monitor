@@ -82,8 +82,8 @@ export default function App() {
             <Typography component="h2" variant="h6">
               Class size and shifting · {scope.name}
             </Typography>
-            <Typography color="text.secondary" variant="body2">
-              Select a region or click any chart bar to drill down from national regions into local division profiles and school breakdowns.
+            <Typography color="text.secondary" sx={{ maxWidth: "70ch" }} variant="body2">
+              Select a region name to see its divisions, or a colored slice to list its schools.
             </Typography>
             {/* The top bar has no room for the snapshot date on phones, so it is repeated here. */}
             <Typography color="text.secondary" sx={{ display: { sm: "none" } }} variant="body2">

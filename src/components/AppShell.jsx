@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { useTheme } from "@mui/material/styles";
 import {
   AppBar,
+  ButtonBase,
   Box,
   Chip,
   Divider,
@@ -25,7 +27,11 @@ import { formatDate, formatNumber } from "../lib/format.js";
 import LineIcon, { iconPaths } from "./LineIcon.jsx";
 
 const TABS_HEIGHT = 48;
-const SIDEBAR_RAIL_WIDTH = 64;
+const OPEN_MS = 220;
+const EASE = "cubic-bezier(0.2, 0, 0, 1)";
+// Labels only fade; their space is always reserved, so nothing re-flows while the rail opens.
+const fade = { opacity: 0, transition: `opacity 140ms ease`, "@media (prefers-reduced-motion: reduce)": { transition: "none" } };
+const fadeIn = { ...fade, opacity: 1, transition: `opacity 160ms ease 70ms` };
 
 const fontMarks = fontSizes.map(({ label }, value) => ({ value, label }));
 
@@ -52,6 +58,23 @@ export default function AppShell({
 }) {
   const [activeId, choose] = useActiveSection(sections.map((s) => s.id));
   const [hovered, setHovered] = useState(false);
+  // Pinned keeps the rail open. It still overlays the page, so the main panel never moves.
+  const [pinned, setPinned] = useState(false);
+  const open = hovered || pinned;
+  // The toggle sits in the top bar and the panel below it; a short grace period lets the pointer cross the gap.
+  const closeTimer = useRef(null);
+  const openByHover = () => {
+    clearTimeout(closeTimer.current);
+    setHovered(true);
+  };
+  const closeByHover = () => {
+    clearTimeout(closeTimer.current);
+    closeTimer.current = setTimeout(() => setHovered(false), 140);
+  };
+  useEffect(() => () => clearTimeout(closeTimer.current), []);
+  const dark = useTheme().palette.mode === "dark";
+  // A solid blue panel with white ink, deeper than the top bar so the two read as separate layers.
+  const rail = { bg: dark ? "#13245f" : "#1a3cb0", ink: "#ffffff", inkSoft: "rgba(255,255,255,0.78)", line: "rgba(255,255,255,0.16)", active: "rgba(0,0,0,0.28)" };
 
   // Settings popover anchor
   const [settingsAnchor, setSettingsAnchor] = useState(null);
@@ -191,21 +214,66 @@ export default function AppShell({
         </Box>
       </Popover>
 
-      {/* ── Sidebar rail ─────────────────────────────────────────────────────
-          64px icon-only rail; expands to 240px on hover as an overlay.
-          Main content margin-left is permanently 64px — zero layout shift.
+      {/* ── Sidebar ──────────────────────────────────────────────────────────
+          Hidden until opened; then a 240px panel that overlays the page.
+          The page never has a sidebar margin, so nothing moves when it opens.
+          visibility:hidden while closed keeps its links out of the Tab order and away from screen readers.
       ──────────────────────────────────────────────────────────────────────── */}
+      {/* Left edge: a thin line the full height, with a small handle. Hovering anywhere along it opens the sidebar;
+          the handle is also the button for keyboard and touch users (click pins the sidebar open). */}
+      <Box
+        onMouseEnter={openByHover}
+        onMouseLeave={closeByHover}
+        sx={{
+          bottom: 0,
+          display: { md: "block", xs: "none" },
+          left: 0,
+          position: "fixed",
+          top: 64,
+          width: 28,
+          zIndex: (t) => t.zIndex.drawer,
+          "&::before": { bgcolor: rail.bg, bottom: 0, content: '""', left: 0, opacity: 0.55, position: "absolute", top: 0, width: 4 },
+        }}
+      >
+        <ButtonBase
+          aria-controls="sections-nav"
+          aria-expanded={pinned}
+          aria-label="Open sidebar"
+          onClick={() => setPinned(true)}
+          sx={{
+            alignItems: "center",
+            bgcolor: rail.bg,
+            borderRadius: "0 10px 10px 0",
+            color: rail.ink,
+            display: "flex",
+            height: 68,
+            justifyContent: "center",
+            left: 0,
+            position: "absolute",
+            top: "50%",
+            transform: "translateY(-50%)",
+            transition: `width 140ms ${EASE}`,
+            width: 24,
+            "&:hover, &:focus-visible": { width: 28 },
+            "&:focus-visible": { outline: "2px solid", outlineColor: "primary.main", outlineOffset: 2, width: 28 },
+          }}
+        >
+          <LineIcon sx={{ fontSize: 22 }} path={iconPaths.chevronRight} />
+        </ButtonBase>
+      </Box>
+
       <Box
         aria-label="Sections"
         component="nav"
-        onMouseEnter={() => setHovered(true)}
-        onMouseLeave={() => setHovered(false)}
+        id="sections-nav"
+        onMouseEnter={openByHover}
+        onMouseLeave={closeByHover}
         sx={{
-          bgcolor: "background.paper",
-          borderColor: "divider",
-          borderRight: 1,
+          bgcolor: rail.bg,
           bottom: 0,
-          boxShadow: hovered ? 6 : 0,
+          boxShadow: open ? 6 : 0,
+          clipPath: open ? "inset(0 -24px 0 0)" : "inset(0 100% 0 0)",
+          color: rail.ink,
           display: { md: "flex", xs: "none" },
           flexDirection: "column",
           left: 0,
@@ -213,48 +281,33 @@ export default function AppShell({
           overflowY: "auto",
           position: "fixed",
           top: 64,
-          transition: "width 260ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 260ms ease",
-          width: hovered ? SIDEBAR_WIDTH : SIDEBAR_RAIL_WIDTH,
+          transition: `clip-path ${OPEN_MS}ms ${EASE}, box-shadow ${OPEN_MS}ms ${EASE}, visibility 0s linear ${open ? "0s" : `${OPEN_MS}ms`}`,
+          visibility: open ? "visible" : "hidden",
+          width: SIDEBAR_WIDTH,
+          willChange: "clip-path",
           zIndex: (t) => t.zIndex.drawer + 1,
+          "@media (prefers-reduced-motion: reduce)": { transition: "none" },
         }}
       >
-        {/* Brand row */}
-        <Box
-          sx={{
-            alignItems: "center",
-            borderBottom: 1,
-            borderColor: "divider",
-            display: "flex",
-            gap: 1.5,
-            minHeight: 56,
-            overflow: "hidden",
-            px: 1.5,
-            py: 1,
-          }}
-        >
-          <LineIcon aria-hidden path={iconPaths.classSize} sx={{ color: "primary.main", flexShrink: 0, fontSize: 22 }} />
-          <Box
-            sx={{
-              maxWidth: hovered ? 180 : 0,
-              opacity: hovered ? 1 : 0,
-              overflow: "hidden",
-              transition: "opacity 180ms ease 60ms, max-width 260ms cubic-bezier(0.4, 0, 0.2, 1)",
-              whiteSpace: "nowrap",
-            }}
-          >
-            <Typography color="primary" sx={{ display: "block", lineHeight: 1.2 }} variant="overline">
-              DepEd
-            </Typography>
-            <Typography color="text.secondary" variant="caption">
-              Class size &amp; shifting
-            </Typography>
-          </Box>
+        {/* Pin: keeps the sidebar open. Unpinned, it closes when the pointer leaves. */}
+        <Box sx={{ display: "flex", justifyContent: "flex-end", px: 1, pt: 1 }}>
+          <Tooltip title={pinned ? "Unpin sidebar" : "Keep sidebar open"}>
+            <IconButton
+              aria-label={pinned ? "Unpin sidebar" : "Keep sidebar open"}
+              aria-pressed={pinned}
+              onClick={() => setPinned((value) => !value)}
+              size="small"
+              sx={{ bgcolor: pinned ? rail.active : "transparent", color: rail.ink, "&:hover": { bgcolor: rail.active } }}
+            >
+              <LineIcon fontSize="small" path={iconPaths.pin} sx={{ transform: pinned ? "none" : "rotate(45deg)" }} />
+            </IconButton>
+          </Tooltip>
         </Box>
 
         {/* Nav items */}
-        <List disablePadding sx={{ flex: 1, mt: 1 }}>
+        <List disablePadding sx={{ flex: 1, mt: 1, pointerEvents: open ? "auto" : "none" }}>
           {sections.map(({ id, label, icon }) => (
-            <Tooltip key={id} title={hovered ? "" : label} placement="right" arrow>
+            <Tooltip key={id} title="" placement="right" arrow>
               <ListItemButton
                 aria-current={id === activeId ? "location" : undefined}
                 component="a"
@@ -263,14 +316,18 @@ export default function AppShell({
                 selected={id === activeId}
                 sx={{
                   borderRadius: 1.5,
+                  color: rail.inkSoft,
                   justifyContent: "flex-start",
                   mb: 0.5,
                   minHeight: 44,
                   mx: 1,
                   px: 1,
+                  "&:hover": { bgcolor: "rgba(255,255,255,0.10)", color: rail.ink },
+                  "&.Mui-selected, &.Mui-selected:hover": { bgcolor: rail.active, color: rail.ink, "& .MuiTypography-root": { fontWeight: 700 } },
+                  "&:focus-visible": { outline: "2px solid #fff", outlineOffset: -2 },
                 }}
               >
-                <ListItemIcon sx={{ color: "inherit", flexShrink: 0, justifyContent: "center", minWidth: 36 }}>
+                <ListItemIcon sx={{ ...(open ? fadeIn : fade), color: "inherit", flexShrink: 0, justifyContent: "center", minWidth: 36 }}>
                   <LineIcon fontSize="small" path={icon} />
                 </ListItemIcon>
                 <ListItemText
@@ -278,10 +335,7 @@ export default function AppShell({
                   slotProps={{ primary: { variant: "body2", sx: { fontWeight: 500, whiteSpace: "nowrap" } } }}
                   sx={{
                     m: 0,
-                    maxWidth: hovered ? 160 : 0,
-                    opacity: hovered ? 1 : 0,
-                    overflow: "hidden",
-                    transition: "opacity 180ms ease 60ms, max-width 260ms cubic-bezier(0.4, 0, 0.2, 1)",
+                    ...(open ? fadeIn : fade),
                   }}
                 />
               </ListItemButton>
@@ -292,27 +346,24 @@ export default function AppShell({
         {/* "You are viewing" footer */}
         <Box
           sx={{
-            borderColor: "divider",
+            borderColor: rail.line,
             borderTop: 1,
-            maxHeight: hovered ? 120 : 0,
             mx: 1.5,
-            opacity: hovered ? 1 : 0,
-            overflow: "hidden",
-            py: hovered ? 2 : 0,
-            transition: "opacity 180ms ease 60ms, max-height 260ms cubic-bezier(0.4, 0, 0.2, 1), padding 260ms ease",
+            py: 2,
+            ...(open ? fadeIn : fade),
             whiteSpace: "nowrap",
           }}
         >
-          <Typography color="text.secondary" sx={{ display: "block" }} variant="overline">
+          <Typography sx={{ color: rail.inkSoft, display: "block" }} variant="overline">
             You are viewing
           </Typography>
           <Typography sx={{ fontWeight: 600 }} variant="body2">
             {scopeName}
           </Typography>
-          <Typography color="text.secondary" variant="body2">
+          <Typography sx={{ color: rail.inkSoft }} variant="body2">
             {formatNumber(schoolCount)} schools
           </Typography>
-          <Typography color="text.secondary" variant="body2">
+          <Typography sx={{ color: rail.inkSoft }} variant="body2">
             Snapshot · {formatDate(snapshotDate)}
           </Typography>
         </Box>
@@ -324,7 +375,7 @@ export default function AppShell({
         sx={{
           bgcolor: "background.default",
           minHeight: "100vh",
-          ml: { md: `${SIDEBAR_RAIL_WIDTH}px`, xs: 0 },
+          
           pb: { md: 3, xs: 2 },
           px: { md: 3, xs: 2 },
         }}

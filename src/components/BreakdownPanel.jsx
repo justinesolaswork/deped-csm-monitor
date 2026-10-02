@@ -141,7 +141,7 @@ export default function BreakdownPanel({
   return (
     <>
       <Panel action={viewToggle} caption={caption} id={id} title={title}>
-        <Stack direction={{ sm: "row", xs: "column" }} justifyContent="space-between" alignItems={{ sm: "center" }} spacing={1} sx={{ mb: 2 }}>
+        <Stack direction={{ sm: "row", xs: "column" }} justifyContent="space-between" alignItems={{ sm: "center" }} spacing={1} sx={{ mb: 1.5 }}>
           <Typography sx={{ fontWeight: 600 }} variant="body2">
             {scope.name}: {summarize(scopeRow, strata, unit)}
           </Typography>
@@ -160,7 +160,7 @@ export default function BreakdownPanel({
           )}
         </Stack>
 
-        <Stack alignItems={{ md: "center" }} direction={{ md: "row", xs: "column" }} justifyContent="space-between" spacing={2} sx={{ mb: 2 }}>
+        <Stack alignItems={{ md: "center" }} direction={{ md: "row", xs: "column" }} justifyContent="space-between" spacing={2} sx={{ mb: 1.5 }}>
           <StrataLegend
             ariaLabel={`Show or hide ${title.toLowerCase()} categories`}
             hidden={hidden}
