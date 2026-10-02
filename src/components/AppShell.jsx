@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { AppBar, Box, Chip, IconButton, List, ListItemButton, ListItemIcon, ListItemText, Slider, Tab, Tabs, Toolbar, Typography } from "@mui/material";
+import { AppBar, Box, Chip, Collapse, IconButton, List, ListItemButton, ListItemIcon, ListItemText, Slider, Tab, Tabs, Toolbar, Tooltip, Typography } from "@mui/material";
 import { useActiveSection } from "../hooks/useActiveSection.js";
 import { SIDEBAR_WIDTH } from "../layout.js";
 import { fontSizes } from "../lib/fontSize.js";
@@ -7,31 +7,36 @@ import { formatDate, formatNumber } from "../lib/format.js";
 import LineIcon, { iconPaths } from "./LineIcon.jsx";
 
 const TABS_HEIGHT = 48;
+const SIDEBAR_COLLAPSED_WIDTH = 64; // icon-only rail width
 
 const fontMarks = fontSizes.map(({ label }, value) => ({ value, label }));
 
+// Chevron icon paths
+const CHEVRON_LEFT  = "M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6z";
+const CHEVRON_RIGHT = "M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z";
+
 /**
- * The frame around the dashboard: top bar, section navigation and the main content area.
- * The sidebar auto-hides on desktop and slides in on hover without shifting the main panel.
- * sections is the list of { id, label, icon } to link to; each id must exist on the page.
- * scopeName and schoolCount fill the "You are viewing" block at the foot of the sidebar.
- * fontIndex and onFontIndexChange drive the text-size slider in the top bar; colorMode ("light" or "dark")
- * and onColorModeChange drive the button beside it.
+ * The frame around the dashboard: top bar, collapsible sidebar and the main content area.
+ * The sidebar toggles between a full labelled list and an icon-only rail.
+ * The main content shifts its left margin smoothly so nothing overlaps.
  */
 export default function AppShell({ sections, snapshotDate, scopeName, schoolCount, fontIndex, onFontIndexChange, colorMode, onColorModeChange, children }) {
-  const [activeId, choose] = useActiveSection(sections.map((section) => section.id));
-  // Controls sidebar visibility on desktop (hover zone triggers this)
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [activeId, choose] = useActiveSection(sections.map((s) => s.id));
+  const [expanded, setExpanded] = useState(true); // true = full, false = icon-only rail
+
+  const sidebarW = expanded ? SIDEBAR_WIDTH : SIDEBAR_COLLAPSED_WIDTH;
 
   return (
     <>
-      <AppBar position="fixed" sx={{ zIndex: (t) => t.zIndex.drawer + 2 }}>
+      {/* ── Top App Bar ──────────────────────────────────────────────────── */}
+      <AppBar position="fixed" sx={{ zIndex: (t) => t.zIndex.drawer + 1 }}>
         <Toolbar>
           <LineIcon aria-hidden path={iconPaths.classSize} sx={{ mr: 1 }} />
           <Typography component="h1" sx={{ flexGrow: 1, fontSize: "1.25rem", fontWeight: 600 }}>
             CSM Monitor
           </Typography>
-          {/* Text size: four steps, remembered in this browser. Step names show under the slider from 900px up. */}
+
+          {/* Text size slider */}
           <Box sx={{ alignItems: "center", display: "flex", gap: 2, mr: { sm: 3, xs: 2 }, width: { md: 330, sm: 150, xs: 88 } }}>
             <Typography aria-hidden sx={{ display: { md: "block", xs: "none" }, fontWeight: 500, whiteSpace: "nowrap" }} variant="body2">
               Text size
@@ -47,15 +52,17 @@ export default function AppShell({ sections, snapshotDate, scopeName, schoolCoun
               step={1}
               sx={{
                 color: "common.white",
-                "& .MuiSlider-markLabel": { color: "rgba(255, 255, 255, 0.85)", display: { md: "block", xs: "none" }, fontSize: "0.6875rem" },
-                "& .MuiSlider-mark": { backgroundColor: "rgba(255, 255, 255, 0.6)" },
+                "& .MuiSlider-markLabel": { color: "rgba(255,255,255,0.85)", display: { md: "block", xs: "none" }, fontSize: "0.6875rem" },
+                "& .MuiSlider-mark": { backgroundColor: "rgba(255,255,255,0.6)" },
                 "& .MuiSlider-rail": { opacity: 0.4 },
-                "& .Mui-focusVisible": { boxShadow: "0 0 0 6px rgba(255, 255, 255, 0.35)" },
+                "& .Mui-focusVisible": { boxShadow: "0 0 0 6px rgba(255,255,255,0.35)" },
               }}
               value={fontIndex}
               valueLabelDisplay="off"
             />
           </Box>
+
+          {/* Dark/light mode */}
           <IconButton
             aria-label={colorMode === "dark" ? "Switch to light mode" : "Switch to dark mode"}
             color="inherit"
@@ -65,20 +72,20 @@ export default function AppShell({ sections, snapshotDate, scopeName, schoolCoun
           >
             <LineIcon path={colorMode === "dark" ? iconPaths.sun : iconPaths.moon} />
           </IconButton>
+
           <Chip
             label={
               <>
-                <Box component="span" sx={{ display: { sm: "inline", xs: "none" } }}>
-                  Snapshot ·{" "}
-                </Box>
+                <Box component="span" sx={{ display: { sm: "inline", xs: "none" } }}>Snapshot ·{" "}</Box>
                 {formatDate(snapshotDate)}
               </>
             }
             size="small"
-            sx={{ bgcolor: "rgba(255, 255, 255, 0.18)", color: "#fff", display: { sm: "inline-flex", xs: "none" }, fontWeight: 500 }}
+            sx={{ bgcolor: "rgba(255,255,255,0.18)", color: "#fff", display: { sm: "inline-flex", xs: "none" }, fontWeight: 500 }}
           />
         </Toolbar>
-        {/* Narrow screens have no room for the sidebar, so the sections become a row of tabs. */}
+
+        {/* Mobile section tabs */}
         <Tabs
           aria-label="Sections"
           onChange={(_, id) => choose(id)}
@@ -95,53 +102,10 @@ export default function AppShell({ sections, snapshotDate, scopeName, schoolCoun
         </Tabs>
       </AppBar>
 
-      {/* ── Desktop auto-hide sidebar ─────────────────────────────────────────
-          The sidebar is position:fixed and overlays the main panel (no ml offset).
-          A thin invisible hover-zone sits on the left edge and triggers the open state.
-          The sidebar itself also keeps the state open while the pointer is inside it.
-          A backdrop dims the page when the sidebar is visible.
-      ─────────────────────────────────────────────────────────────────────── */}
-
-      {/* Hover trigger zone — always visible on the left edge, 12px wide */}
-      <Box
-        aria-hidden
-        onMouseEnter={() => setSidebarOpen(true)}
-        sx={{
-          bottom: 0,
-          display: { md: "block", xs: "none" },
-          left: 0,
-          position: "fixed",
-          top: 64,
-          width: 12,
-          zIndex: (t) => t.zIndex.drawer + 1,
-        }}
-      />
-
-      {/* Dimming backdrop — click to close */}
-      <Box
-        aria-hidden
-        onClick={() => setSidebarOpen(false)}
-        sx={{
-          bgcolor: "rgba(0,0,0,0.25)",
-          bottom: 0,
-          display: { md: "block", xs: "none" },
-          left: 0,
-          opacity: sidebarOpen ? 1 : 0,
-          pointerEvents: sidebarOpen ? "auto" : "none",
-          position: "fixed",
-          right: 0,
-          top: 0,
-          transition: "opacity 250ms ease",
-          zIndex: (t) => t.zIndex.drawer,
-        }}
-      />
-
-      {/* Sidebar panel */}
+      {/* ── Sidebar ──────────────────────────────────────────────────────── */}
       <Box
         aria-label="Sections"
         component="nav"
-        onMouseEnter={() => setSidebarOpen(true)}
-        onMouseLeave={() => setSidebarOpen(false)}
         sx={{
           bgcolor: "background.paper",
           borderColor: "divider",
@@ -150,44 +114,118 @@ export default function AppShell({ sections, snapshotDate, scopeName, schoolCoun
           display: { md: "flex", xs: "none" },
           flexDirection: "column",
           left: 0,
+          overflowX: "hidden",
           overflowY: "auto",
           position: "fixed",
-          px: 1.5,
           top: 64,
-          transform: sidebarOpen ? "translateX(0)" : `translateX(-${SIDEBAR_WIDTH}px)`,
-          transition: "transform 260ms cubic-bezier(0.4, 0, 0.2, 1)",
-          width: SIDEBAR_WIDTH,
-          zIndex: (t) => t.zIndex.drawer + 1,
-          // Subtle shadow so the sidebar feels elevated above content
-          boxShadow: sidebarOpen ? 8 : 0,
+          transition: "width 260ms cubic-bezier(0.4, 0, 0.2, 1)",
+          width: sidebarW,
+          zIndex: (t) => t.zIndex.drawer,
         }}
       >
-        <Typography color="primary" sx={{ display: "block", pt: 2.5, px: 1.5 }} variant="overline">
-          DepEd
-        </Typography>
-        <Typography color="text.secondary" sx={{ display: "block", pb: 1, px: 1.5 }} variant="caption">
-          Class size &amp; shifting
-        </Typography>
-        <List disablePadding>
-          {sections.map(({ id, label, icon }) => (
-            <ListItemButton
-              aria-current={id === activeId ? "location" : undefined}
-              component="a"
-              href={`#${id}`}
-              key={id}
-              onClick={() => { choose(id); setSidebarOpen(false); }}
-              selected={id === activeId}
-              sx={{ mb: 0.5 }}
+        {/* Toggle button row */}
+        <Box
+          sx={{
+            alignItems: "center",
+            borderBottom: 1,
+            borderColor: "divider",
+            display: "flex",
+            justifyContent: expanded ? "space-between" : "center",
+            px: expanded ? 2 : 0,
+            py: 1.5,
+            minHeight: 52,
+          }}
+        >
+          {expanded && (
+            <Box>
+              <Typography color="primary" sx={{ display: "block", lineHeight: 1.2 }} variant="overline">
+                DepEd
+              </Typography>
+              <Typography color="text.secondary" variant="caption">
+                Class size &amp; shifting
+              </Typography>
+            </Box>
+          )}
+          <Tooltip title={expanded ? "Collapse sidebar" : "Expand sidebar"} placement="right">
+            <IconButton
+              aria-label={expanded ? "Collapse sidebar" : "Expand sidebar"}
+              id="sidebar-toggle-btn"
+              onClick={() => setExpanded((v) => !v)}
+              size="small"
+              sx={{
+                border: 1,
+                borderColor: "divider",
+                borderRadius: 1.5,
+                color: "text.secondary",
+                flexShrink: 0,
+                "&:hover": { bgcolor: "action.hover", color: "primary.main" },
+              }}
             >
-              <ListItemIcon sx={{ color: "inherit", minWidth: 36 }}>
-                <LineIcon fontSize="small" path={icon} />
-              </ListItemIcon>
-              <ListItemText primary={label} slotProps={{ primary: { variant: "body2", sx: { fontWeight: 500 } } }} />
-            </ListItemButton>
+              <LineIcon fontSize="small" path={expanded ? CHEVRON_LEFT : CHEVRON_RIGHT} />
+            </IconButton>
+          </Tooltip>
+        </Box>
+
+        {/* Nav items */}
+        <List disablePadding sx={{ mt: 1, flex: 1 }}>
+          {sections.map(({ id, label, icon }) => (
+            <Tooltip key={id} title={expanded ? "" : label} placement="right" arrow>
+              <ListItemButton
+                aria-current={id === activeId ? "location" : undefined}
+                component="a"
+                href={`#${id}`}
+                onClick={() => choose(id)}
+                selected={id === activeId}
+                sx={{
+                  borderRadius: 1.5,
+                  mb: 0.5,
+                  minHeight: 44,
+                  mx: 1,
+                  px: expanded ? 1.5 : 1,
+                  justifyContent: expanded ? "flex-start" : "center",
+                  transition: "padding 260ms cubic-bezier(0.4, 0, 0.2, 1)",
+                }}
+              >
+                <ListItemIcon
+                  sx={{
+                    color: "inherit",
+                    justifyContent: "center",
+                    minWidth: expanded ? 36 : "auto",
+                    transition: "min-width 260ms cubic-bezier(0.4, 0, 0.2, 1)",
+                  }}
+                >
+                  <LineIcon fontSize="small" path={icon} />
+                </ListItemIcon>
+
+                {/* Label fades in/out with the sidebar */}
+                <ListItemText
+                  primary={label}
+                  slotProps={{ primary: { variant: "body2", sx: { fontWeight: 500, whiteSpace: "nowrap" } } }}
+                  sx={{
+                    maxWidth: expanded ? 160 : 0,
+                    opacity: expanded ? 1 : 0,
+                    overflow: "hidden",
+                    transition: "opacity 200ms ease, max-width 260ms cubic-bezier(0.4, 0, 0.2, 1)",
+                    m: 0,
+                  }}
+                />
+              </ListItemButton>
+            </Tooltip>
           ))}
         </List>
-        {/* What the page is currently showing, kept in view while reading. */}
-        <Box sx={{ borderColor: "divider", borderTop: 1, mt: "auto", mx: 1.5, py: 2 }}>
+
+        {/* "You are viewing" footer — only shown when expanded */}
+        <Box
+          sx={{
+            borderColor: "divider",
+            borderTop: 1,
+            mx: 1.5,
+            opacity: expanded ? 1 : 0,
+            overflow: "hidden",
+            py: 2,
+            transition: "opacity 180ms ease",
+          }}
+        >
           <Typography color="text.secondary" sx={{ display: "block" }} variant="overline">
             You are viewing
           </Typography>
@@ -203,9 +241,18 @@ export default function AppShell({ sections, snapshotDate, scopeName, schoolCoun
         </Box>
       </Box>
 
-      {/* Main content — always full width, no left margin offset */}
-      <Box component="main" sx={{ bgcolor: "background.default", minHeight: "100vh", pb: { md: 3, xs: 2 }, px: { md: 3, xs: 2 } }}>
-        {/* Spacers the height of the fixed top bar (and, on narrow screens, its tabs). */}
+      {/* ── Main content — shifts with sidebar width ──────────────────────── */}
+      <Box
+        component="main"
+        sx={{
+          bgcolor: "background.default",
+          minHeight: "100vh",
+          ml: { md: `${sidebarW}px`, xs: 0 },
+          pb: { md: 3, xs: 2 },
+          px: { md: 3, xs: 2 },
+          transition: "margin-left 260ms cubic-bezier(0.4, 0, 0.2, 1)",
+        }}
+      >
         <Toolbar />
         <Box sx={{ display: { md: "none" }, height: TABS_HEIGHT }} />
         {children}
