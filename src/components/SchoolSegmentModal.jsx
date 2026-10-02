@@ -20,7 +20,9 @@ import {
 import { shiftStrata, sizeStrata } from "../data/categories.js";
 import { filterSchools, schoolsInSegment, sortSchools, toSchoolRows } from "../data/selectors.js";
 import { useRegionSchools } from "../hooks/useRegionSchools.js";
+import { csvFileName, downloadCsv, toCsv } from "../lib/csv.js";
 import { formatNumber } from "../lib/format.js";
+import DownloadCsvButton from "./DownloadCsvButton.jsx";
 
 const ROWS_PER_PAGE = [25, 50, 100];
 const figures = { fontVariantNumeric: "tabular-nums", whiteSpace: "nowrap" };
@@ -62,6 +64,12 @@ export default function SchoolSegmentModal({ area, areaIsRegion, field, measureK
       </TableSortLabel>
     </TableCell>
   );
+
+  const download = () => {
+    const headers = ["Region", "Division", "School ID", "School", ...strata.map(({ label }) => label)];
+    const lines = rows.map((row) => [regionName, row.division, row.id, row.name, ...strata.map(({ field: f }) => row[f])]);
+    downloadCsv(csvFileName("schools", area, clicked.label), toCsv(headers, lines));
+  };
 
   const unit = measureKey === "shifting" ? "grade levels" : "classes";
   return (
@@ -145,6 +153,8 @@ export default function SchoolSegmentModal({ area, areaIsRegion, field, measureK
         )}
       </DialogContent>
       <DialogActions>
+        <DownloadCsvButton disabled={status !== "ready" || rows.length === 0} onDownload={download} />
+        <Box sx={{ flexGrow: 1 }} />
         <Button color="inherit" onClick={onClose}>
           Close
         </Button>

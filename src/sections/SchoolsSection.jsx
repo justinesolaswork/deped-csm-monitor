@@ -19,11 +19,13 @@ import {
   ToggleButtonGroup,
   Typography,
 } from "@mui/material";
+import DownloadCsvButton from "../components/DownloadCsvButton.jsx";
 import Panel from "../components/Panel.jsx";
 import { shiftStrata, sizeStrata } from "../data/categories.js";
 import { filterSchools, sortSchools, toSchoolRows } from "../data/selectors.js";
 import { useNearViewport } from "../hooks/useNearViewport.js";
 import { useRegionSchools } from "../hooks/useRegionSchools.js";
+import { csvFileName, downloadCsv, toCsv } from "../lib/csv.js";
 import { formatNumber } from "../lib/format.js";
 
 const ALL_DIVISIONS = "";
@@ -112,7 +114,7 @@ function SchoolList({ scope, regions, onSelectRegion, selectedDivision, onSelect
   const sortable = ["id", "name", ...view.columns.map((column) => column.field)];
   const activeSort = sortable.includes(sort.by) ? sort : { by: "name", dir: "asc" };
 
-  const allRows = useMemo(() => files.flatMap((file) => toSchoolRows(file, sizeStrata, shiftStrata)), [files]);
+  const allRows = useMemo(() => files.flatMap((file) => toSchoolRows(file, sizeStrata, shiftStrata).map((row) => ({ ...row, region: file.region }))), [files]);
   const rows = useMemo(
     () => sortSchools(filterSchools(allRows, division, search), { by: activeSort.by, dir: activeSort.dir }),
     [allRows, division, search, activeSort.by, activeSort.dir],
@@ -121,6 +123,13 @@ function SchoolList({ scope, regions, onSelectRegion, selectedDivision, onSelect
   const lastPage = Math.max(0, Math.ceil(rows.length / rowsPerPage) - 1);
   const shownPage = Math.min(page, lastPage);
   const pageRows = rows.slice(shownPage * rowsPerPage, (shownPage + 1) * rowsPerPage);
+
+  // Every school the filters leave (not just this page), in the current order.
+  const download = () => {
+    const headers = ["Region", "Division", "School ID", "School", ...view.columns.map((column) => column.label)];
+    const lines = rows.map((row) => [row.region, row.division, row.id, row.name, ...view.columns.map((column) => row[column.field])]);
+    downloadCsv(csvFileName("schools", view.label, division || scope.name), toCsv(headers, lines));
+  };
 
   const sortBy = (by) => {
     const isText = by === "id" || by === "name";
@@ -195,6 +204,7 @@ function SchoolList({ scope, regions, onSelectRegion, selectedDivision, onSelect
           type="search"
           value={search}
         />
+        <DownloadCsvButton disabled={status !== "ready" || rows.length === 0} onDownload={download} />
       </Stack>
 
       {status === "loading" && message("Loading schools…")}

@@ -17,6 +17,7 @@ export const iconPaths = {
   panelOpen: "M5 4h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zM9 4v16M14 9l3 3-3 3",
   panelClose: "M5 4h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zM9 4v16M17 9l-3 3 3 3",
   chevronRight: "M9 6l6 6-6 6",
+  download: "M12 4v11M7 11l5 5 5-5M5 20h14",
   back: "M19 12H5M12 19l-7-7 7-7",
   // Shifting schedule icons
   single: "M12 6v6l4 2M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18z",

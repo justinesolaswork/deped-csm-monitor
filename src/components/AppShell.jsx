@@ -72,9 +72,19 @@ export default function AppShell({
     closeTimer.current = setTimeout(() => setHovered(false), 140);
   };
   useEffect(() => () => clearTimeout(closeTimer.current), []);
-  const dark = useTheme().palette.mode === "dark";
+  const theme = useTheme();
+  const dark = theme.palette.mode === "dark";
   // A solid blue panel with white ink, deeper than the top bar so the two read as separate layers.
-  const rail = { bg: dark ? "#13245f" : "#1a3cb0", ink: "#ffffff", inkSoft: "rgba(255,255,255,0.78)", line: "rgba(255,255,255,0.16)", active: "rgba(0,0,0,0.28)" };
+  const rail = {
+    bg: dark ? "rgba(24, 32, 51, 0.7)" : "rgba(255, 255, 255, 0.7)",
+    ink: theme.palette.text.primary,
+    inkSoft: theme.palette.text.secondary,
+    line: theme.palette.divider,
+    active: dark ? "rgba(124, 156, 255, 0.2)" : "rgba(51, 102, 255, 0.12)",
+    accent: theme.palette.primary.main,
+  };
+  // The frosted-glass look shared by the sidebar and the handle.
+  const glass = { backdropFilter: "blur(16px) saturate(160%)", WebkitBackdropFilter: "blur(16px) saturate(160%)" };
 
   // Settings popover anchor
   const [settingsAnchor, setSettingsAnchor] = useState(null);
@@ -120,7 +130,7 @@ export default function AppShell({
           onChange={(_, id) => choose(id)}
           role="navigation"
           scrollButtons={false}
-          sx={{ display: { md: "none" }, minHeight: TABS_HEIGHT, "& .MuiTabs-indicator": { bgcolor: "#fff", height: 3 } }}
+          sx={{ display: { md: "none" }, minHeight: TABS_HEIGHT, "& .MuiTabs-indicator": { bgcolor: "primary.main", height: 3 } }}
           textColor="inherit"
           value={activeId}
           variant="scrollable"
@@ -232,7 +242,7 @@ export default function AppShell({
           top: 64,
           width: 28,
           zIndex: (t) => t.zIndex.drawer,
-          "&::before": { bgcolor: rail.bg, bottom: 0, content: '""', left: 0, opacity: 0.55, position: "absolute", top: 0, width: 4 },
+          "&::before": { bgcolor: rail.accent, bottom: 0, content: '""', left: 0, opacity: 0.45, position: "absolute", top: 0, width: 4 },
         }}
       >
         <ButtonBase
@@ -242,7 +252,11 @@ export default function AppShell({
           onClick={() => setPinned(true)}
           sx={{
             alignItems: "center",
+            ...glass,
             bgcolor: rail.bg,
+            border: 1,
+            borderColor: rail.line,
+            borderLeft: 0,
             borderRadius: "0 10px 10px 0",
             color: rail.ink,
             display: "flex",
@@ -252,10 +266,11 @@ export default function AppShell({
             position: "absolute",
             top: "50%",
             transform: "translateY(-50%)",
-            transition: `width 140ms ${EASE}`,
+            transformOrigin: "left center",
+            transition: `transform 140ms ${EASE}`,
             width: 24,
-            "&:hover, &:focus-visible": { width: 28 },
-            "&:focus-visible": { outline: "2px solid", outlineColor: "primary.main", outlineOffset: 2, width: 28 },
+            "&:hover, &:focus-visible": { transform: "translateY(-50%) scaleX(1.17)" },
+            "&:focus-visible": { outline: "2px solid", outlineColor: "primary.main", outlineOffset: 2, transform: "translateY(-50%) scaleX(1.17)" },
           }}
         >
           <LineIcon sx={{ fontSize: 22 }} path={iconPaths.chevronRight} />
@@ -269,7 +284,10 @@ export default function AppShell({
         onMouseEnter={openByHover}
         onMouseLeave={closeByHover}
         sx={{
+          ...glass,
           bgcolor: rail.bg,
+          borderRight: 1,
+          borderColor: rail.line,
           bottom: 0,
           boxShadow: open ? 6 : 0,
           clipPath: open ? "inset(0 -24px 0 0)" : "inset(0 100% 0 0)",
@@ -290,7 +308,7 @@ export default function AppShell({
         }}
       >
         {/* Pin: keeps the sidebar open. Unpinned, it closes when the pointer leaves. */}
-        <Box sx={{ display: "flex", justifyContent: "flex-end", px: 1, pt: 1 }}>
+        <Box sx={{ display: "flex", justifyContent: "flex-end", px: 1, pt: 0.5 }}>
           <Tooltip title={pinned ? "Unpin sidebar" : "Keep sidebar open"}>
             <IconButton
               aria-label={pinned ? "Unpin sidebar" : "Keep sidebar open"}
@@ -322,9 +340,9 @@ export default function AppShell({
                   minHeight: 44,
                   mx: 1,
                   px: 1,
-                  "&:hover": { bgcolor: "rgba(255,255,255,0.10)", color: rail.ink },
-                  "&.Mui-selected, &.Mui-selected:hover": { bgcolor: rail.active, color: rail.ink, "& .MuiTypography-root": { fontWeight: 700 } },
-                  "&:focus-visible": { outline: "2px solid #fff", outlineOffset: -2 },
+                  "&:hover": { bgcolor: rail.active, color: rail.ink },
+                  "&.Mui-selected, &.Mui-selected:hover": { bgcolor: rail.active, color: rail.accent, "& .MuiTypography-root": { fontWeight: 700 } },
+                  "&:focus-visible": { outline: `2px solid ${rail.accent}`, outlineOffset: -2 },
                 }}
               >
                 <ListItemIcon sx={{ ...(open ? fadeIn : fade), color: "inherit", flexShrink: 0, justifyContent: "center", minWidth: 36 }}>

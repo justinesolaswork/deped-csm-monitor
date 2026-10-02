@@ -208,3 +208,12 @@ test("schoolsInSegment: keeps schools with a count in the slice, optionally for 
   assert.deepEqual(schoolsInSegment(rows, "", "above").map((r) => r.id), ["1", "4"]);
   assert.deepEqual(schoolsInSegment(rows, "B", "above").map((r) => r.id), ["4"]);
 });
+
+test("csv: cells with commas, quotes and line breaks are quoted", async () => {
+  const { csvCell, toCsv, csvFileName } = await import("../src/lib/csv.js");
+  assert.equal(csvCell('He said "hi", ok'), '"He said ""hi"", ok"');
+  assert.equal(csvCell(null), "");
+  assert.equal(csvCell(12), "12");
+  assert.equal(toCsv(["a", "b"], [["x,y", 2]]), 'a,b\r\n"x,y",2');
+  assert.equal(csvFileName("Class-size profile", "Region V"), "class-size-profile-region-v");
+});

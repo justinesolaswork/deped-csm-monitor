@@ -12,7 +12,7 @@ const modes = {
     ink: "#1f2a44",
     inkMuted: "#5d6b82",
     divider: "#e6eaf2",
-    appBar: "#1a3cb0",
+    appBar: "rgba(255, 255, 255, 0.7)",
     selectedTint: "#e5ecff",
     selectedInk: "#3366ff",
     selection: "#cdd9ff",
@@ -27,7 +27,7 @@ const modes = {
     ink: "#e6ebf5",
     inkMuted: "#9aa8c0",
     divider: "#2a3550",
-    appBar: "#13245f",
+    appBar: "rgba(24, 32, 51, 0.7)",
     selectedTint: "rgba(124, 156, 255, 0.16)",
     selectedInk: "#a9bdff",
     selection: "#2f4380",
@@ -76,7 +76,19 @@ export function buildTheme(chartScale = 1, mode = "light") {
         defaultProps: { elevation: 0 },
         styleOverrides: { root: { boxShadow: c.cardShadow } },
       },
-      MuiAppBar: { styleOverrides: { root: { boxShadow: c.barShadow }, colorPrimary: { backgroundColor: c.appBar } } },
+      MuiAppBar: {
+        styleOverrides: {
+          root: { boxShadow: c.barShadow },
+          // Frosted glass: translucent surface, blurred page behind, dark ink.
+          colorPrimary: {
+            backdropFilter: "blur(16px) saturate(160%)",
+            backgroundColor: c.appBar,
+            borderBottom: `1px solid ${c.divider}`,
+            color: c.ink,
+            WebkitBackdropFilter: "blur(16px) saturate(160%)",
+          },
+        },
+      },
       MuiListItemButton: {
         styleOverrides: {
           root: {
