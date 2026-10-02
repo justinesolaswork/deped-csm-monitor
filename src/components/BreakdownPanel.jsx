@@ -10,10 +10,11 @@ import {
   Stack,
   ToggleButton,
   ToggleButtonGroup,
+  Tooltip,
   Typography,
 } from "@mui/material";
 import { resolveSort, sortRows, toStackRow, toStackRows, toggleHidden, valueKey } from "../data/selectors.js";
-import { areaPhrase, formatNumber, formatPercent } from "../lib/format.js";
+import { areaPhrase, downloadCsv, formatNumber, formatPercent } from "../lib/format.js";
 import BreakdownTable from "./BreakdownTable.jsx";
 import DrilldownModal from "./DrilldownModal.jsx";
 import LineIcon, { iconPaths } from "./LineIcon.jsx";
@@ -104,11 +105,37 @@ export default function BreakdownPanel({
     setSort(activeSort.by === by ? { by, dir: activeSort.dir === "asc" ? "desc" : "asc" } : { by, dir: fresh });
   };
 
+  // Derive a clean filename from the panel title and current scope name.
+  const safeName = (s) => s.replace(/[^a-z0-9]+/gi, "-").replace(/^-|-$/g, "").toLowerCase();
+  const handleDownload = () =>
+    downloadCsv({
+      rows,
+      strata,
+      hidden,
+      measure,
+      unit,
+      areaLabel,
+      filename: `${safeName(title)}-${safeName(scope.name)}`,
+    });
+
   const viewToggle = (
-    <ToggleButtonGroup aria-label={`${title} view`} color="primary" exclusive onChange={(_, next) => next && setView(next)} size="small" value={view}>
-      <ToggleButton value="chart">Chart</ToggleButton>
-      <ToggleButton value="table">Table</ToggleButton>
-    </ToggleButtonGroup>
+    <Stack alignItems="center" direction="row" spacing={1}>
+      <ToggleButtonGroup aria-label={`${title} view`} color="primary" exclusive onChange={(_, next) => next && setView(next)} size="small" value={view}>
+        <ToggleButton value="chart">Chart</ToggleButton>
+        <ToggleButton value="table">Table</ToggleButton>
+      </ToggleButtonGroup>
+      <Tooltip title={`Download current ${title.toLowerCase()} data as CSV`}>
+        <Button
+          id={`${id}-download-csv`}
+          onClick={handleDownload}
+          size="small"
+          startIcon={<LineIcon path="M12 16l-5-5 1.4-1.4 2.6 2.6V4h2v8.2l2.6-2.6L17 11l-5 5zM5 20v-2h14v2H5z" />}
+          variant="outlined"
+        >
+          CSV
+        </Button>
+      </Tooltip>
+    </Stack>
   );
 
   return (
