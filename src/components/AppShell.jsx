@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { AppBar, Box, Chip, IconButton, List, ListItemButton, ListItemIcon, ListItemText, Slider, Tab, Tabs, Toolbar, Typography } from "@mui/material";
 import { useActiveSection } from "../hooks/useActiveSection.js";
 import { SIDEBAR_WIDTH } from "../layout.js";
@@ -11,6 +12,7 @@ const fontMarks = fontSizes.map(({ label }, value) => ({ value, label }));
 
 /**
  * The frame around the dashboard: top bar, section navigation and the main content area.
+ * The sidebar auto-hides on desktop and slides in on hover without shifting the main panel.
  * sections is the list of { id, label, icon } to link to; each id must exist on the page.
  * scopeName and schoolCount fill the "You are viewing" block at the foot of the sidebar.
  * fontIndex and onFontIndexChange drive the text-size slider in the top bar; colorMode ("light" or "dark")
@@ -18,10 +20,12 @@ const fontMarks = fontSizes.map(({ label }, value) => ({ value, label }));
  */
 export default function AppShell({ sections, snapshotDate, scopeName, schoolCount, fontIndex, onFontIndexChange, colorMode, onColorModeChange, children }) {
   const [activeId, choose] = useActiveSection(sections.map((section) => section.id));
+  // Controls sidebar visibility on desktop (hover zone triggers this)
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
     <>
-      <AppBar position="fixed" sx={{ zIndex: (t) => t.zIndex.drawer + 1 }}>
+      <AppBar position="fixed" sx={{ zIndex: (t) => t.zIndex.drawer + 2 }}>
         <Toolbar>
           <LineIcon aria-hidden path={iconPaths.classSize} sx={{ mr: 1 }} />
           <Typography component="h1" sx={{ flexGrow: 1, fontSize: "1.25rem", fontWeight: 600 }}>
@@ -91,10 +95,72 @@ export default function AppShell({ sections, snapshotDate, scopeName, schoolCoun
         </Tabs>
       </AppBar>
 
+      {/* ── Desktop auto-hide sidebar ─────────────────────────────────────────
+          The sidebar is position:fixed and overlays the main panel (no ml offset).
+          A thin invisible hover-zone sits on the left edge and triggers the open state.
+          The sidebar itself also keeps the state open while the pointer is inside it.
+          A backdrop dims the page when the sidebar is visible.
+      ─────────────────────────────────────────────────────────────────────── */}
+
+      {/* Hover trigger zone — always visible on the left edge, 12px wide */}
+      <Box
+        aria-hidden
+        onMouseEnter={() => setSidebarOpen(true)}
+        sx={{
+          bottom: 0,
+          display: { md: "block", xs: "none" },
+          left: 0,
+          position: "fixed",
+          top: 64,
+          width: 12,
+          zIndex: (t) => t.zIndex.drawer + 1,
+        }}
+      />
+
+      {/* Dimming backdrop — click to close */}
+      <Box
+        aria-hidden
+        onClick={() => setSidebarOpen(false)}
+        sx={{
+          bgcolor: "rgba(0,0,0,0.25)",
+          bottom: 0,
+          display: { md: "block", xs: "none" },
+          left: 0,
+          opacity: sidebarOpen ? 1 : 0,
+          pointerEvents: sidebarOpen ? "auto" : "none",
+          position: "fixed",
+          right: 0,
+          top: 0,
+          transition: "opacity 250ms ease",
+          zIndex: (t) => t.zIndex.drawer,
+        }}
+      />
+
+      {/* Sidebar panel */}
       <Box
         aria-label="Sections"
         component="nav"
-        sx={{ bgcolor: "background.paper", borderColor: "divider", borderRight: 1, bottom: 0, display: { md: "flex", xs: "none" }, flexDirection: "column", left: 0, overflowY: "auto", position: "fixed", px: 1.5, top: 64, width: SIDEBAR_WIDTH }}
+        onMouseEnter={() => setSidebarOpen(true)}
+        onMouseLeave={() => setSidebarOpen(false)}
+        sx={{
+          bgcolor: "background.paper",
+          borderColor: "divider",
+          borderRight: 1,
+          bottom: 0,
+          display: { md: "flex", xs: "none" },
+          flexDirection: "column",
+          left: 0,
+          overflowY: "auto",
+          position: "fixed",
+          px: 1.5,
+          top: 64,
+          transform: sidebarOpen ? "translateX(0)" : `translateX(-${SIDEBAR_WIDTH}px)`,
+          transition: "transform 260ms cubic-bezier(0.4, 0, 0.2, 1)",
+          width: SIDEBAR_WIDTH,
+          zIndex: (t) => t.zIndex.drawer + 1,
+          // Subtle shadow so the sidebar feels elevated above content
+          boxShadow: sidebarOpen ? 8 : 0,
+        }}
       >
         <Typography color="primary" sx={{ display: "block", pt: 2.5, px: 1.5 }} variant="overline">
           DepEd
@@ -109,7 +175,7 @@ export default function AppShell({ sections, snapshotDate, scopeName, schoolCoun
               component="a"
               href={`#${id}`}
               key={id}
-              onClick={() => choose(id)}
+              onClick={() => { choose(id); setSidebarOpen(false); }}
               selected={id === activeId}
               sx={{ mb: 0.5 }}
             >
@@ -137,7 +203,8 @@ export default function AppShell({ sections, snapshotDate, scopeName, schoolCoun
         </Box>
       </Box>
 
-      <Box component="main" sx={{ bgcolor: "background.default", minHeight: "100vh", ml: { md: `${SIDEBAR_WIDTH}px` }, pb: { md: 3, xs: 2 }, px: { md: 3, xs: 2 } }}>
+      {/* Main content — always full width, no left margin offset */}
+      <Box component="main" sx={{ bgcolor: "background.default", minHeight: "100vh", pb: { md: 3, xs: 2 }, px: { md: 3, xs: 2 } }}>
         {/* Spacers the height of the fixed top bar (and, on narrow screens, its tabs). */}
         <Toolbar />
         <Box sx={{ display: { md: "none" }, height: TABS_HEIGHT }} />
