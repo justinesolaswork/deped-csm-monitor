@@ -6,9 +6,12 @@ const figures = { fontVariantNumeric: "tabular-nums", whiteSpace: "nowrap" };
 
 // Hover card for one bar. Lists every slice (hidden ones too) with the current measure first.
 // Recharts passes `active` and `label`; the rest comes from StackedBarChart.
-export default function ChartTooltip({ active, label, rows, strata, measure, unit }) {
+export default function ChartTooltip({ active, label, rows, strata, measure, unit, childLabel, onSelectRow }) {
   const row = active ? rows.find((item) => item.name === label) : null;
   if (!row) return null;
+
+  const canClick = Boolean(onSelectRow);
+  const hintText = childLabel === "region" ? `Click to drill down into ${row.name}` : `Click to inspect ${row.name} profile`;
 
   return (
     <Paper sx={{ border: 1, borderColor: "divider", boxShadow: "0 6px 20px rgba(31, 42, 68, 0.14)", minWidth: 250, px: 1.5, py: 1.25 }}>
@@ -48,6 +51,16 @@ export default function ChartTooltip({ active, label, rows, strata, measure, uni
           {formatNumber(row.total)} {unit}
         </Typography>
       </Stack>
+      {canClick && (
+        <Typography
+          color="primary.main"
+          variant="caption"
+          sx={{ display: "block", mt: 1, pt: 0.75, borderTop: 1, borderColor: "divider", fontWeight: 600, textAlign: "center" }}
+        >
+          💡 {hintText}
+        </Typography>
+      )}
     </Paper>
   );
 }
+

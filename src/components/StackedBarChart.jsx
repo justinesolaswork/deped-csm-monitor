@@ -22,7 +22,7 @@ function ActiveRowTracker({ onChange }) {
  * rows come from toStackRows(); strata says which slices exist; hidden lists the slices switched off.
  * When onSelectRow is given, a row can be chosen with a click or with Enter.
  */
-export default function StackedBarChart({ ariaLabel, rows, strata, hidden, measure, unit, onSelectRow }) {
+export default function StackedBarChart({ ariaLabel, rows, strata, hidden, measure, unit, onSelectRow, childLabel }) {
   const theme = useTheme();
   const scale = theme.chartScale ?? 1; // the reader's text size, so rows and labels grow with it
   const isPhone = useMediaQuery(theme.breakpoints.down("sm"));
@@ -90,7 +90,7 @@ export default function StackedBarChart({ ariaLabel, rows, strata, hidden, measu
             width={axisWidth}
           />
           <Tooltip
-            content={<ChartTooltip measure={measure} rows={rows} strata={strata} unit={unit} />}
+            content={<ChartTooltip childLabel={childLabel} measure={measure} onSelectRow={onSelectRow} rows={rows} strata={strata} unit={unit} />}
             cursor={{ fill: theme.chart.track }}
             isAnimationActive={false}
             wrapperStyle={{ outline: "none", zIndex: 2 }}

@@ -38,8 +38,17 @@ export default function BreakdownTable({ ariaLabel, areaLabel, rows, strata, hid
             <TableRow hover key={row.name}>
               <TableCell component="th" scope="row" sx={{ whiteSpace: "nowrap" }}>
                 {onSelectRow ? (
-                  <Link component="button" onClick={() => onSelectRow(row.name)} sx={{ font: "inherit", textAlign: "left" }} type="button" underline="hover">
-                    {row.name}
+                  <Link
+                    component="button"
+                    onClick={() => onSelectRow(row.name)}
+                    sx={{ font: "inherit", textAlign: "left", display: "inline-flex", alignItems: "center", gap: 0.75, fontWeight: 600 }}
+                    type="button"
+                    underline="hover"
+                  >
+                    <span>{row.name}</span>
+                    <Box component="span" sx={{ fontSize: "0.75rem", opacity: 0.75 }}>
+                      ↗
+                    </Box>
                   </Link>
                 ) : (
                   row.name

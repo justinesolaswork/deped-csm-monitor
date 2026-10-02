@@ -48,7 +48,7 @@ const views = {
 };
 
 // School-level detail: one row per school in the chosen region (or in all regions), for class size or for shifting.
-export default function SchoolsSection({ scope, regions, onSelectRegion }) {
+export default function SchoolsSection({ scope, regions, onSelectRegion, selectedDivision, onSelectDivision }) {
   const [view, setView] = useState("classSize");
   const [nearRef, near] = useNearViewport();
 
@@ -66,17 +66,25 @@ export default function SchoolsSection({ scope, regions, onSelectRegion }) {
     <Panel action={viewToggle} caption={`${views[view].caption} A dash means the school has no record.`} id="schools" title="Schools breakdown">
       {/* The school lists are large, so nothing loads until the reader scrolls near this card. */}
       <Box ref={nearRef}>
-        <SchoolList enabled={near} onSelectRegion={onSelectRegion} regions={regions} scope={scope} view={views[view]} />
+        <SchoolList
+          enabled={near}
+          onSelectDivision={onSelectDivision}
+          onSelectRegion={onSelectRegion}
+          regions={regions}
+          scope={scope}
+          selectedDivision={selectedDivision}
+          view={views[view]}
+        />
       </Box>
     </Panel>
   );
 }
 
-function SchoolList({ scope, regions, onSelectRegion, view, enabled }) {
+function SchoolList({ scope, regions, onSelectRegion, selectedDivision, onSelectDivision, view, enabled }) {
   const hasRegion = scope.level === "region";
   // One region's schools, or every region's when "All regions" is chosen.
   const { status, files } = useRegionSchools(hasRegion ? [scope.name] : scope.children.map((region) => region.name), enabled);
-  const [division, setDivision] = useState(ALL_DIVISIONS);
+  const [division, setDivision] = useState(selectedDivision || ALL_DIVISIONS);
   const [search, setSearch] = useState("");
   const [sort, setSort] = useState({ by: "name", dir: "asc" });
   const [page, setPage] = useState(0);
@@ -87,10 +95,17 @@ function SchoolList({ scope, regions, onSelectRegion, view, enabled }) {
   const [shownRegion, setShownRegion] = useState(scope.name);
   if (shownRegion !== scope.name) {
     setShownRegion(scope.name);
-    setDivision(ALL_DIVISIONS);
+    setDivision(selectedDivision || ALL_DIVISIONS);
     setSearch("");
     setSort({ by: "name", dir: "asc" });
     setPage(0);
+  }
+
+  // Synchronize division if selected externally (e.g. via chart drilldown)
+  const [prevSelectedDiv, setPrevSelectedDiv] = useState(selectedDivision);
+  if (selectedDivision !== prevSelectedDiv) {
+    setPrevSelectedDiv(selectedDivision);
+    if (selectedDivision) setDivision(selectedDivision);
   }
 
   // A sort on a column the other view does not have falls back to the school name.

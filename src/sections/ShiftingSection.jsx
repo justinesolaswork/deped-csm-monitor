@@ -5,7 +5,7 @@ import { areaPhrase } from "../lib/format.js";
 // Single shift is about 97% of records and would swamp the exceptions, so it starts hidden.
 const HIDDEN_AT_START = ["single"];
 
-export default function ShiftingSection({ scope, measure, onSelectRegion }) {
+export default function ShiftingSection({ scope, measure, onSelectRegion, onSelectDivision }) {
   return (
     <BreakdownPanel
       caption={`School-by-grade records by shift type and ${areaPhrase(scope)}. A school can run different shifts in different grades.`}
@@ -15,6 +15,7 @@ export default function ShiftingSection({ scope, measure, onSelectRegion }) {
       measure={measure}
       measureKey="shifting"
       onSelectRegion={onSelectRegion}
+      onSelectDivision={onSelectDivision}
       scope={scope}
       strata={shiftStrata}
       title="Shifting schedules"

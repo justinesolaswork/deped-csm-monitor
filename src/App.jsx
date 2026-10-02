@@ -43,12 +43,21 @@ const twoColumns = { alignItems: "start", display: "grid", gap: 3, gridTemplateC
 export default function App() {
   const [region, setRegion] = useQueryState("region", NATIONAL, isRegion);
   const [measure, setMeasure] = useQueryState("measure", "share", isMeasure);
+  const [selectedDivision, setSelectedDivision] = useState("");
+
   const scope = useMemo(() => getScope(data, region), [region]);
   const [fontIndex, setFontIndex] = useFontSize();
   const [colorMode, setColorMode] = useColorMode();
   const theme = useMemo(() => buildTheme(fontSizes[fontIndex].scale, colorMode), [fontIndex, colorMode]);
-  // Class size and shifting always compare regions, even with one region selected.
-  const regionScope = useMemo(() => withRegionRows(data, scope), [scope]);
+
+  const handleRegionChange = (newRegion) => {
+    setSelectedDivision("");
+    setRegion(newRegion);
+  };
+
+  const handleSelectDivision = (divName) => {
+    setSelectedDivision(divName);
+  };
 
   return (
     <ThemeProvider theme={theme}>
@@ -66,7 +75,7 @@ export default function App() {
         <FilterBar
           measure={measure}
           onMeasureChange={(next) => setMeasure(next, { replace: true })}
-          onRegionChange={setRegion}
+          onRegionChange={handleRegionChange}
           regions={regions}
           scope={scope}
         />
@@ -76,7 +85,7 @@ export default function App() {
               Class size and shifting · {scope.name}
             </Typography>
             <Typography color="text.secondary" variant="body2">
-              The overview, data coverage and schools follow the region you pick. The class-size and shifting charts always compare every region.
+              Select a region or click any chart bar to drill down from national regions into local division profiles and school breakdowns.
             </Typography>
             {/* The top bar has no room for the snapshot date on phones, so it is repeated here. */}
             <Typography color="text.secondary" sx={{ display: { sm: "none" } }} variant="body2">
@@ -84,10 +93,16 @@ export default function App() {
             </Typography>
           </Box>
           <OverviewMetrics scope={scope} />
-          <ClassSizeSection measure={measure} onSelectRegion={setRegion} scope={regionScope} />
-          <ShiftingSection measure={measure} onSelectRegion={setRegion} scope={regionScope} />
+          <ClassSizeSection measure={measure} onSelectDivision={handleSelectDivision} onSelectRegion={handleRegionChange} scope={scope} />
+          <ShiftingSection measure={measure} onSelectDivision={handleSelectDivision} onSelectRegion={handleRegionChange} scope={scope} />
           <Box sx={twoColumns}>
-            <SchoolsSection onSelectRegion={setRegion} regions={regions} scope={scope} />
+            <SchoolsSection
+              onSelectDivision={handleSelectDivision}
+              onSelectRegion={handleRegionChange}
+              regions={regions}
+              scope={scope}
+              selectedDivision={selectedDivision}
+            />
             <CoverageSection scope={scope} unmatched={data.unmatched} />
           </Box>
         </Stack>
