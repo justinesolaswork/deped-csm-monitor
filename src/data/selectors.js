@@ -117,6 +117,11 @@ export function filterSchools(rows, division, search) {
   );
 }
 
+/** The schools with at least one count in one stratum, inside one division ("" for the whole region). */
+export function schoolsInSegment(rows, division, field) {
+  return rows.filter((row) => (!division || row.division === division) && row[field] > 0);
+}
+
 // One shared collator: calling String.localeCompare with options builds a new one for every
 // comparison, which took many seconds to sort the 46,000 schools of "All regions".
 const collator = new Intl.Collator("en", { numeric: true });

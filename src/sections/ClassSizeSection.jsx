@@ -6,7 +6,7 @@ import { areaPhrase } from "../lib/format.js";
 export default function ClassSizeSection({ scope, measure, onSelectRegion, onSelectDivision }) {
   return (
     <BreakdownPanel
-      caption={`Classes above, within and less than standard, by ${areaPhrase(scope)}`}
+      caption={`Classes less than, within and above standard, by ${areaPhrase(scope)}`}
       defaultSort={{ by: "above", dir: "desc" }}
       id="class-size"
       measure={measure}

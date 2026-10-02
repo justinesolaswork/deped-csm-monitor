@@ -136,28 +136,28 @@ export default function DrilldownModal({ open, onClose, target, parentRegion, on
               </Typography>
             ) : (
               <Stack spacing={1.5}>
-                {/* Visual Bar Stack */}
+                {/* Visual Bar Stack: Less than Standard (red), Within Standard (green), Above Standard (blue) */}
                 <Box sx={{ display: "flex", height: 16, borderRadius: 1, overflow: "hidden", mb: 1 }}>
                   <Box
                     sx={{
-                      width: `${(aboveCount / totalClasses) * 100}%`,
-                      bgcolor: sizeStrata.find((s) => s.field === "above")?.color || "#d32f2f",
+                      width: `${(belowCount / totalClasses) * 100}%`,
+                      bgcolor: sizeStrata.find((s) => s.field === "below")?.color || "#d93a3f",
                     }}
-                    title={`Above Standard: ${formatNumber(aboveCount)} (${formatPercent((aboveCount / totalClasses) * 100)})`}
+                    title={`Less than Standard: ${formatNumber(belowCount)} (${formatPercent((belowCount / totalClasses) * 100)})`}
                   />
                   <Box
                     sx={{
                       width: `${(withinCount / totalClasses) * 100}%`,
-                      bgcolor: sizeStrata.find((s) => s.field === "within")?.color || "#2e7d32",
+                      bgcolor: sizeStrata.find((s) => s.field === "within")?.color || "#008556",
                     }}
                     title={`Within Standard: ${formatNumber(withinCount)} (${formatPercent((withinCount / totalClasses) * 100)})`}
                   />
                   <Box
                     sx={{
-                      width: `${(belowCount / totalClasses) * 100}%`,
-                      bgcolor: sizeStrata.find((s) => s.field === "below")?.color || "#0288d1",
+                      width: `${(aboveCount / totalClasses) * 100}%`,
+                      bgcolor: sizeStrata.find((s) => s.field === "above")?.color || "#1976d2",
                     }}
-                    title={`Less than Standard: ${formatNumber(belowCount)} (${formatPercent((belowCount / totalClasses) * 100)})`}
+                    title={`Above Standard: ${formatNumber(aboveCount)} (${formatPercent((aboveCount / totalClasses) * 100)})`}
                   />
                 </Box>
 

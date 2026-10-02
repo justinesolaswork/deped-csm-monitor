@@ -8,9 +8,9 @@
 import { palette } from "../theme/palette.js";
 
 export const sizeStrata = [
-  { key: "Above Standard", field: "above", label: "Above standard", color: palette.above },
-  { key: "Within Standard", field: "within", label: "Within standard", color: palette.within },
   { key: "Less than Standard", field: "below", label: "Less than standard", color: palette.below },
+  { key: "Within Standard", field: "within", label: "Within standard", color: palette.within },
+  { key: "Above Standard", field: "above", label: "Above standard", color: palette.above },
 ];
 
 export const shiftStrata = [

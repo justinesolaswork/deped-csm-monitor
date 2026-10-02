@@ -22,7 +22,7 @@ function ActiveRowTracker({ onChange }) {
  * rows come from toStackRows(); strata says which slices exist; hidden lists the slices switched off.
  * When onSelectRow is given, a row can be chosen with a click or with Enter.
  */
-export default function StackedBarChart({ ariaLabel, rows, strata, hidden, measure, unit, onSelectRow, childLabel }) {
+export default function StackedBarChart({ ariaLabel, rows, strata, hidden, measure, unit, onSelectRow, onSelectSegment, childLabel }) {
   const theme = useTheme();
   const scale = theme.chartScale ?? 1; // the reader's text size, so rows and labels grow with it
   const isPhone = useMediaQuery(theme.breakpoints.down("sm"));
@@ -83,8 +83,24 @@ export default function StackedBarChart({ ariaLabel, rows, strata, hidden, measu
             axisLine={false}
             dataKey="name"
             interval={0}
-            tick={{ fill: theme.palette.text.primary, fontSize: 13 * scale }}
-            tickFormatter={shorten}
+            tick={({ x, y, payload }) => (
+              <text
+                dominantBaseline="central"
+                fill={onSelectRow ? theme.palette.primary.main : theme.palette.text.primary}
+                fontSize={13 * scale}
+                onClick={(event) => {
+                  event.stopPropagation();
+                  select(payload.value);
+                }}
+                style={{ cursor: onSelectRow ? "pointer" : "default", textDecoration: onSelectRow ? "underline" : "none", textUnderlineOffset: 3 }}
+                textAnchor="end"
+                x={x}
+                y={y}
+              >
+                {onSelectRow && <title>{childLabel === "region" ? `Show divisions in ${payload.value}` : `Inspect ${payload.value}`}</title>}
+                {shorten(String(payload.value))}
+              </text>
+            )}
             tickLine={false}
             type="category"
             width={axisWidth}
@@ -99,7 +115,16 @@ export default function StackedBarChart({ ariaLabel, rows, strata, hidden, measu
           {/* The surface-colored stroke leaves a 2px gap between slices; only the end of the whole bar is rounded. */}
           <BarStack radius={[0, 4, 4, 0]}>
             {visible.map(({ field, label, color }) => (
-              <Bar dataKey={valueKey(field, measure)} fill={color} key={field} name={label} stroke={theme.palette.background.paper} strokeWidth={2} />
+              <Bar dataKey={valueKey(field, measure)} fill={color} key={field} name={label}
+                onClick={
+                  onSelectSegment
+                    ? (data, _index, event) => {
+                        event?.stopPropagation?.(); // a slice click lists schools; it must not also drill into the row
+                        onSelectSegment(String(data?.payload?.name ?? data?.name), field);
+                      }
+                    : undefined
+                }
+                stroke={theme.palette.background.paper} strokeWidth={2} />
             ))}
           </BarStack>
         </BarChart>

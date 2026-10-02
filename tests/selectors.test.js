@@ -9,6 +9,7 @@ import {
   regionOptions,
   resolveSort,
   schoolsFileName,
+  schoolsInSegment,
   sortRows,
   sortSchools,
   toSchoolRows,
@@ -195,4 +196,15 @@ test("formatting", () => {
   assert.equal(formatPercent(10.79), "10.8%");
   assert.equal(formatPercent(100), "100.0%");
   assert.equal(formatDate("2026-09-28"), "28 Sep 2026");
+});
+
+test("schoolsInSegment: keeps schools with a count in the slice, optionally for one division", () => {
+  const rows = [
+    { id: "1", division: "A", above: 2 },
+    { id: "2", division: "A", above: 0 },
+    { id: "3", division: "B", above: null },
+    { id: "4", division: "B", above: 5 },
+  ];
+  assert.deepEqual(schoolsInSegment(rows, "", "above").map((r) => r.id), ["1", "4"]);
+  assert.deepEqual(schoolsInSegment(rows, "B", "above").map((r) => r.id), ["4"]);
 });

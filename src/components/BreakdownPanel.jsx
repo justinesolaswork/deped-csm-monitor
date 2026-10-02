@@ -19,6 +19,7 @@ import DrilldownModal from "./DrilldownModal.jsx";
 import LineIcon, { iconPaths } from "./LineIcon.jsx";
 import Panel from "./Panel.jsx";
 import StackedBarChart from "./StackedBarChart.jsx";
+import SchoolSegmentModal from "./SchoolSegmentModal.jsx";
 import StrataLegend from "./StrataLegend.jsx";
 
 const capitalize = (text) => text[0].toUpperCase() + text.slice(1);
@@ -55,6 +56,8 @@ export default function BreakdownPanel({
 
   // Modal drilldown state for division / region inspection
   const [inspectTarget, setInspectTarget] = useState(null);
+  // The bar slice whose schools are listed in a modal: { area, field }
+  const [segment, setSegment] = useState(null);
 
   const activeSort = resolveSort(sort, strata, hidden);
   const rows = useMemo(
@@ -83,7 +86,9 @@ export default function BreakdownPanel({
     }
   };
 
-  const handleFocusDivision = (divisionName) => {
+  const handleSelectSegment = (area, field) => setSegment({ area, field });
+
+  const handleFocusDivision =(divisionName) => {
     // Scroll to schools table and focus division
     const schoolsSection = document.getElementById("schools");
     if (schoolsSection) {
@@ -161,6 +166,7 @@ export default function BreakdownPanel({
             hidden={hidden}
             measure={measure}
             onSelectRow={handleSelectRow}
+            onSelectSegment={handleSelectSegment}
             rows={rows}
             strata={strata}
             unit={unit}
@@ -183,10 +189,21 @@ export default function BreakdownPanel({
 
         <Typography color="text.secondary" sx={{ display: "block", mt: 1.5 }} variant="caption">
           {scope.childLabel === "region"
-            ? "💡 Select a region bar or row to drill down into its school divisions."
-            : `💡 Select a division bar or row to inspect its detailed profile and schools.`}
+            ? "💡 Select a region name to see its divisions, or a colored slice to list its schools."
+            : "💡 Select a division name to inspect its profile, or a colored slice to list its schools."}
         </Typography>
       </Panel>
+
+      {segment && (
+        <SchoolSegmentModal
+          area={segment.area}
+          areaIsRegion={scope.childLabel === "region"}
+          field={segment.field}
+          measureKey={measureKey}
+          onClose={() => setSegment(null)}
+          regionName={scope.childLabel === "region" ? segment.area : scope.name}
+        />
+      )}
 
       {inspectTarget && (
         <DrilldownModal
