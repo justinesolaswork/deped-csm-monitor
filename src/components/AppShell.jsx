@@ -67,7 +67,7 @@ export default function AppShell({
         <Toolbar>
           <LineIcon aria-hidden path={iconPaths.classSize} sx={{ mr: 1 }} />
           <Typography component="h1" sx={{ flexGrow: 1, fontSize: "1.25rem", fontWeight: 600 }}>
-            CSM Monitor
+            DepEd Class Size &amp; Modality Monitor
           </Typography>
 
           {/* ⚙ Settings button — opens the popover */}
