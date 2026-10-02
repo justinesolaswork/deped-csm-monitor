@@ -13,6 +13,10 @@ export const iconPaths = {
   within: "M20 6L9 17l-5-5",
   below: "M3 7l6 6 4-4 8 8M15 17h6v-6",
   back: "M19 12H5M12 19l-7-7 7-7",
+  // Shifting schedule icons
+  single: "M12 6v6l4 2M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18z",
+  double: "M8 6v12M16 6v12M4 9h16M4 15h16",
+  triple: "M5 6v12M12 6v12M19 6v12M3 9h18M3 15h18",
 };
 
 export default function LineIcon({ path, ...props }) {
