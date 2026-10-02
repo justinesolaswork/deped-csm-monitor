@@ -11,7 +11,6 @@ import { useQueryState } from "./hooks/useQueryState.js";
 import { fontSizes } from "./lib/fontSize.js";
 import { formatDate } from "./lib/format.js";
 import ClassSizeSection from "./sections/ClassSizeSection.jsx";
-import CoverageSection from "./sections/CoverageSection.jsx";
 import OverviewMetrics from "./sections/OverviewMetrics.jsx";
 import SchoolsSection from "./sections/SchoolsSection.jsx";
 import ShiftingSection from "./sections/ShiftingSection.jsx";
@@ -28,11 +27,10 @@ const sections = [
   { id: "class-size", label: "Class size", icon: iconPaths.classSize },
   { id: "shifting", label: "Shifting", icon: iconPaths.shifting },
   { id: "schools", label: "Schools", icon: iconPaths.schools },
-  { id: "coverage", label: "Data coverage", icon: iconPaths.coverage },
 ];
 
 // A wide card beside a narrow one; they stack on smaller screens.
-const twoColumns = { alignItems: "start", display: "grid", gap: 3, gridTemplateColumns: { lg: "minmax(0, 2fr) minmax(0, 1fr)", xs: "minmax(0, 1fr)" } };
+
 
 /**
  * The whole dashboard. It owns the two choices every section shares:
@@ -95,16 +93,13 @@ export default function App() {
           <OverviewMetrics scope={scope} />
           <ClassSizeSection measure={measure} onSelectDivision={handleSelectDivision} onSelectRegion={handleRegionChange} scope={scope} />
           <ShiftingSection measure={measure} onSelectDivision={handleSelectDivision} onSelectRegion={handleRegionChange} scope={scope} />
-          <Box sx={twoColumns}>
-            <SchoolsSection
-              onSelectDivision={handleSelectDivision}
-              onSelectRegion={handleRegionChange}
-              regions={regions}
-              scope={scope}
-              selectedDivision={selectedDivision}
-            />
-            <CoverageSection scope={scope} unmatched={data.unmatched} />
-          </Box>
+          <SchoolsSection
+            onSelectDivision={handleSelectDivision}
+            onSelectRegion={handleRegionChange}
+            regions={regions}
+            scope={scope}
+            selectedDivision={selectedDivision}
+          />
         </Stack>
       </AppShell>
     </ThemeProvider>
