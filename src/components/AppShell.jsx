@@ -1,5 +1,23 @@
 import { useState } from "react";
-import { AppBar, Box, Chip, IconButton, List, ListItemButton, ListItemIcon, ListItemText, Slider, Tab, Tabs, Toolbar, Tooltip, Typography } from "@mui/material";
+import {
+  AppBar,
+  Box,
+  Chip,
+  Divider,
+  IconButton,
+  List,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+  Paper,
+  Popover,
+  Slider,
+  Tab,
+  Tabs,
+  Toolbar,
+  Tooltip,
+  Typography,
+} from "@mui/material";
 import { useActiveSection } from "../hooks/useActiveSection.js";
 import { SIDEBAR_WIDTH } from "../layout.js";
 import { fontSizes } from "../lib/fontSize.js";
@@ -7,26 +25,40 @@ import { formatDate, formatNumber } from "../lib/format.js";
 import LineIcon, { iconPaths } from "./LineIcon.jsx";
 
 const TABS_HEIGHT = 48;
-/** Width of the always-visible icon rail. Main content margin is fixed to this so the page never shifts. */
 const SIDEBAR_RAIL_WIDTH = 64;
 
 const fontMarks = fontSizes.map(({ label }, value) => ({ value, label }));
 
+// Gear / settings icon path
+const SETTINGS_PATH =
+  "M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.92c.04-.34.07-.69.07-1.08s-.03-.74-.07-1.08l2.33-1.82a.55.55 0 0 0 .13-.7l-2.2-3.82a.55.55 0 0 0-.67-.24l-2.75 1.1a8 8 0 0 0-1.87-1.09l-.41-2.92A.54.54 0 0 0 14 3h-4a.54.54 0 0 0-.54.46l-.41 2.92A8 8 0 0 0 7.18 7.47L4.43 6.37a.55.55 0 0 0-.67.24L1.56 10.43a.54.54 0 0 0 .13.7l2.33 1.82c-.04.34-.06.69-.06 1.05s.02.71.06 1.05l-2.33 1.82a.54.54 0 0 0-.13.7l2.2 3.82c.13.25.42.34.67.24l2.75-1.1a8 8 0 0 0 1.87 1.09l.41 2.92c.07.28.3.46.54.46h4c.25 0 .47-.18.54-.46l.41-2.92a8 8 0 0 0 1.87-1.09l2.75 1.1c.25.1.54.01.67-.24l2.2-3.82a.54.54 0 0 0-.13-.7l-2.33-1.82z";
+
 /**
  * The frame around the dashboard: top bar, auto-expanding sidebar rail and the main content area.
  *
- * Desktop behaviour:
- *   - A 64px icon-only rail is always visible.
- *   - Hovering the rail expands it to the full 240px label view (overlays content, no layout shift).
- *   - Moving the pointer away collapses it back to the rail.
- *   - No toggle button — fully automatic.
+ * The text-size slider, dark/light toggle and snapshot date are hidden inside a
+ * settings popover (⚙ gear icon) in the top-right corner so the toolbar stays clean.
  *
- * Mobile behaviour:
- *   - Sidebar is hidden; sections are exposed as horizontal tabs in the top bar.
+ * Desktop sidebar: 64px icon-only rail that auto-expands to 240px on hover.
+ * Mobile: horizontal tabs in the top bar.
  */
-export default function AppShell({ sections, snapshotDate, scopeName, schoolCount, fontIndex, onFontIndexChange, colorMode, onColorModeChange, children }) {
+export default function AppShell({
+  sections,
+  snapshotDate,
+  scopeName,
+  schoolCount,
+  fontIndex,
+  onFontIndexChange,
+  colorMode,
+  onColorModeChange,
+  children,
+}) {
   const [activeId, choose] = useActiveSection(sections.map((s) => s.id));
   const [hovered, setHovered] = useState(false);
+
+  // Settings popover anchor
+  const [settingsAnchor, setSettingsAnchor] = useState(null);
+  const settingsOpen = Boolean(settingsAnchor);
 
   return (
     <>
@@ -38,53 +70,20 @@ export default function AppShell({ sections, snapshotDate, scopeName, schoolCoun
             CSM Monitor
           </Typography>
 
-          {/* Text size slider */}
-          <Box sx={{ alignItems: "center", display: "flex", gap: 2, mr: { sm: 3, xs: 2 }, width: { md: 330, sm: 150, xs: 88 } }}>
-            <Typography aria-hidden sx={{ display: { md: "block", xs: "none" }, fontWeight: 500, whiteSpace: "nowrap" }} variant="body2">
-              Text size
-            </Typography>
-            <Slider
-              aria-label="Text size"
-              getAriaValueText={(value) => fontSizes[value].label}
-              marks={fontMarks}
-              max={fontSizes.length - 1}
-              min={0}
-              onChange={(_, value) => onFontIndexChange(value)}
-              size="small"
-              step={1}
-              sx={{
-                color: "common.white",
-                "& .MuiSlider-markLabel": { color: "rgba(255,255,255,0.85)", display: { md: "block", xs: "none" }, fontSize: "0.6875rem" },
-                "& .MuiSlider-mark": { backgroundColor: "rgba(255,255,255,0.6)" },
-                "& .MuiSlider-rail": { opacity: 0.4 },
-                "& .Mui-focusVisible": { boxShadow: "0 0 0 6px rgba(255,255,255,0.35)" },
-              }}
-              value={fontIndex}
-              valueLabelDisplay="off"
-            />
-          </Box>
-
-          {/* Dark / light toggle */}
-          <IconButton
-            aria-label={colorMode === "dark" ? "Switch to light mode" : "Switch to dark mode"}
-            color="inherit"
-            onClick={() => onColorModeChange(colorMode === "dark" ? "light" : "dark")}
-            sx={{ mr: { sm: 2, xs: 0 } }}
-            title={colorMode === "dark" ? "Switch to light mode" : "Switch to dark mode"}
-          >
-            <LineIcon path={colorMode === "dark" ? iconPaths.sun : iconPaths.moon} />
-          </IconButton>
-
-          <Chip
-            label={
-              <>
-                <Box component="span" sx={{ display: { sm: "inline", xs: "none" } }}>Snapshot ·{" "}</Box>
-                {formatDate(snapshotDate)}
-              </>
-            }
-            size="small"
-            sx={{ bgcolor: "rgba(255,255,255,0.18)", color: "#fff", display: { sm: "inline-flex", xs: "none" }, fontWeight: 500 }}
-          />
+          {/* ⚙ Settings button — opens the popover */}
+          <Tooltip title="Settings">
+            <IconButton
+              aria-controls={settingsOpen ? "settings-popover" : undefined}
+              aria-expanded={settingsOpen}
+              aria-haspopup="true"
+              aria-label="Open settings"
+              color="inherit"
+              id="settings-btn"
+              onClick={(e) => setSettingsAnchor(e.currentTarget)}
+            >
+              <LineIcon path={SETTINGS_PATH} />
+            </IconButton>
+          </Tooltip>
         </Toolbar>
 
         {/* Mobile section tabs */}
@@ -99,16 +98,97 @@ export default function AppShell({ sections, snapshotDate, scopeName, schoolCoun
           variant="scrollable"
         >
           {sections.map(({ id, label }) => (
-            <Tab component="a" href={`#${id}`} key={id} label={label} sx={{ minHeight: TABS_HEIGHT, opacity: 1, "&.Mui-selected": { fontWeight: 600 } }} value={id} />
+            <Tab
+              component="a"
+              href={`#${id}`}
+              key={id}
+              label={label}
+              sx={{ minHeight: TABS_HEIGHT, opacity: 1, "&.Mui-selected": { fontWeight: 600 } }}
+              value={id}
+            />
           ))}
         </Tabs>
       </AppBar>
 
+      {/* ── Settings Popover ─────────────────────────────────────────────── */}
+      <Popover
+        anchorEl={settingsAnchor}
+        anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
+        id="settings-popover"
+        onClose={() => setSettingsAnchor(null)}
+        open={settingsOpen}
+        transformOrigin={{ horizontal: "right", vertical: "top" }}
+        slotProps={{ paper: { sx: { borderRadius: 2, minWidth: 280, mt: 0.5 } } }}
+      >
+        <Box sx={{ px: 2.5, pt: 2, pb: 0.5 }}>
+          <Typography sx={{ fontWeight: 600 }} variant="body2">
+            Settings
+          </Typography>
+        </Box>
+        <Divider sx={{ mt: 1 }} />
+
+        {/* Text size */}
+        <Box sx={{ px: 2.5, py: 2 }}>
+          <Typography color="text.secondary" gutterBottom variant="caption">
+            Text size
+          </Typography>
+          <Slider
+            aria-label="Text size"
+            getAriaValueText={(v) => fontSizes[v].label}
+            marks={fontMarks}
+            max={fontSizes.length - 1}
+            min={0}
+            onChange={(_, v) => onFontIndexChange(v)}
+            size="small"
+            step={1}
+            sx={{ "& .MuiSlider-markLabel": { fontSize: "0.6875rem" } }}
+            value={fontIndex}
+            valueLabelDisplay="off"
+          />
+        </Box>
+
+        <Divider />
+
+        {/* Dark / light mode */}
+        <Box
+          sx={{
+            alignItems: "center",
+            display: "flex",
+            justifyContent: "space-between",
+            px: 2.5,
+            py: 1.5,
+          }}
+        >
+          <Typography variant="body2">
+            {colorMode === "dark" ? "Dark mode" : "Light mode"}
+          </Typography>
+          <Tooltip title={colorMode === "dark" ? "Switch to light mode" : "Switch to dark mode"}>
+            <IconButton
+              aria-label={colorMode === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+              onClick={() => onColorModeChange(colorMode === "dark" ? "light" : "dark")}
+              size="small"
+            >
+              <LineIcon path={colorMode === "dark" ? iconPaths.sun : iconPaths.moon} />
+            </IconButton>
+          </Tooltip>
+        </Box>
+
+        <Divider />
+
+        {/* Snapshot date */}
+        <Box sx={{ px: 2.5, py: 1.5 }}>
+          <Typography color="text.secondary" variant="caption">
+            Snapshot date
+          </Typography>
+          <Typography sx={{ fontWeight: 500 }} variant="body2">
+            {formatDate(snapshotDate)}
+          </Typography>
+        </Box>
+      </Popover>
+
       {/* ── Sidebar rail ─────────────────────────────────────────────────────
-          Always occupies SIDEBAR_RAIL_WIDTH on screen. On hover it expands to
-          SIDEBAR_WIDTH and slides over the main content (position:fixed + z-index).
-          The main content margin-left is permanently SIDEBAR_RAIL_WIDTH so it
-          never moves regardless of hover state.
+          64px icon-only rail; expands to 240px on hover as an overlay.
+          Main content margin-left is permanently 64px — zero layout shift.
       ──────────────────────────────────────────────────────────────────────── */}
       <Box
         aria-label="Sections"
@@ -133,7 +213,7 @@ export default function AppShell({ sections, snapshotDate, scopeName, schoolCoun
           zIndex: (t) => t.zIndex.drawer + 1,
         }}
       >
-        {/* Brand row — label fades in beside icon when expanded */}
+        {/* Brand row */}
         <Box
           sx={{
             alignItems: "center",
@@ -147,7 +227,6 @@ export default function AppShell({ sections, snapshotDate, scopeName, schoolCoun
             py: 1,
           }}
         >
-          {/* Static icon acts as the brand mark in collapsed state */}
           <LineIcon aria-hidden path={iconPaths.classSize} sx={{ color: "primary.main", flexShrink: 0, fontSize: 22 }} />
           <Box
             sx={{
@@ -189,8 +268,6 @@ export default function AppShell({ sections, snapshotDate, scopeName, schoolCoun
                 <ListItemIcon sx={{ color: "inherit", flexShrink: 0, justifyContent: "center", minWidth: 36 }}>
                   <LineIcon fontSize="small" path={icon} />
                 </ListItemIcon>
-
-                {/* Label — fades in when hovered */}
                 <ListItemText
                   primary={label}
                   slotProps={{ primary: { variant: "body2", sx: { fontWeight: 500, whiteSpace: "nowrap" } } }}
@@ -207,7 +284,7 @@ export default function AppShell({ sections, snapshotDate, scopeName, schoolCoun
           ))}
         </List>
 
-        {/* "You are viewing" footer — fades in when expanded */}
+        {/* "You are viewing" footer */}
         <Box
           sx={{
             borderColor: "divider",
@@ -236,10 +313,7 @@ export default function AppShell({ sections, snapshotDate, scopeName, schoolCoun
         </Box>
       </Box>
 
-      {/* ── Main content ─────────────────────────────────────────────────────
-          Fixed margin-left = SIDEBAR_RAIL_WIDTH. The sidebar expands as an
-          overlay so this value never needs to change — zero layout shift.
-      ──────────────────────────────────────────────────────────────────────── */}
+      {/* ── Main content ─────────────────────────────────────────────────── */}
       <Box
         component="main"
         sx={{
