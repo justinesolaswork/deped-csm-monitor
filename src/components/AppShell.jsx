@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { AppBar, Box, Chip, Collapse, IconButton, List, ListItemButton, ListItemIcon, ListItemText, Slider, Tab, Tabs, Toolbar, Tooltip, Typography } from "@mui/material";
+import { AppBar, Box, Chip, IconButton, List, ListItemButton, ListItemIcon, ListItemText, Slider, Tab, Tabs, Toolbar, Tooltip, Typography } from "@mui/material";
 import { useActiveSection } from "../hooks/useActiveSection.js";
 import { SIDEBAR_WIDTH } from "../layout.js";
 import { fontSizes } from "../lib/fontSize.js";
@@ -7,24 +7,26 @@ import { formatDate, formatNumber } from "../lib/format.js";
 import LineIcon, { iconPaths } from "./LineIcon.jsx";
 
 const TABS_HEIGHT = 48;
-const SIDEBAR_COLLAPSED_WIDTH = 64; // icon-only rail width
+/** Width of the always-visible icon rail. Main content margin is fixed to this so the page never shifts. */
+const SIDEBAR_RAIL_WIDTH = 64;
 
 const fontMarks = fontSizes.map(({ label }, value) => ({ value, label }));
 
-// Chevron icon paths
-const CHEVRON_LEFT  = "M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6z";
-const CHEVRON_RIGHT = "M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z";
-
 /**
- * The frame around the dashboard: top bar, collapsible sidebar and the main content area.
- * The sidebar toggles between a full labelled list and an icon-only rail.
- * The main content shifts its left margin smoothly so nothing overlaps.
+ * The frame around the dashboard: top bar, auto-expanding sidebar rail and the main content area.
+ *
+ * Desktop behaviour:
+ *   - A 64px icon-only rail is always visible.
+ *   - Hovering the rail expands it to the full 240px label view (overlays content, no layout shift).
+ *   - Moving the pointer away collapses it back to the rail.
+ *   - No toggle button — fully automatic.
+ *
+ * Mobile behaviour:
+ *   - Sidebar is hidden; sections are exposed as horizontal tabs in the top bar.
  */
 export default function AppShell({ sections, snapshotDate, scopeName, schoolCount, fontIndex, onFontIndexChange, colorMode, onColorModeChange, children }) {
   const [activeId, choose] = useActiveSection(sections.map((s) => s.id));
-  const [expanded, setExpanded] = useState(true); // true = full, false = icon-only rail
-
-  const sidebarW = expanded ? SIDEBAR_WIDTH : SIDEBAR_COLLAPSED_WIDTH;
+  const [hovered, setHovered] = useState(false);
 
   return (
     <>
@@ -62,7 +64,7 @@ export default function AppShell({ sections, snapshotDate, scopeName, schoolCoun
             />
           </Box>
 
-          {/* Dark/light mode */}
+          {/* Dark / light toggle */}
           <IconButton
             aria-label={colorMode === "dark" ? "Switch to light mode" : "Switch to dark mode"}
             color="inherit"
@@ -102,15 +104,23 @@ export default function AppShell({ sections, snapshotDate, scopeName, schoolCoun
         </Tabs>
       </AppBar>
 
-      {/* ── Sidebar ──────────────────────────────────────────────────────── */}
+      {/* ── Sidebar rail ─────────────────────────────────────────────────────
+          Always occupies SIDEBAR_RAIL_WIDTH on screen. On hover it expands to
+          SIDEBAR_WIDTH and slides over the main content (position:fixed + z-index).
+          The main content margin-left is permanently SIDEBAR_RAIL_WIDTH so it
+          never moves regardless of hover state.
+      ──────────────────────────────────────────────────────────────────────── */}
       <Box
         aria-label="Sections"
         component="nav"
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
         sx={{
           bgcolor: "background.paper",
           borderColor: "divider",
           borderRight: 1,
           bottom: 0,
+          boxShadow: hovered ? 6 : 0,
           display: { md: "flex", xs: "none" },
           flexDirection: "column",
           left: 0,
@@ -118,58 +128,49 @@ export default function AppShell({ sections, snapshotDate, scopeName, schoolCoun
           overflowY: "auto",
           position: "fixed",
           top: 64,
-          transition: "width 260ms cubic-bezier(0.4, 0, 0.2, 1)",
-          width: sidebarW,
-          zIndex: (t) => t.zIndex.drawer,
+          transition: "width 260ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 260ms ease",
+          width: hovered ? SIDEBAR_WIDTH : SIDEBAR_RAIL_WIDTH,
+          zIndex: (t) => t.zIndex.drawer + 1,
         }}
       >
-        {/* Toggle button row */}
+        {/* Brand row — label fades in beside icon when expanded */}
         <Box
           sx={{
             alignItems: "center",
             borderBottom: 1,
             borderColor: "divider",
             display: "flex",
-            justifyContent: expanded ? "space-between" : "center",
-            px: expanded ? 2 : 0,
-            py: 1.5,
-            minHeight: 52,
+            gap: 1.5,
+            minHeight: 56,
+            overflow: "hidden",
+            px: 1.5,
+            py: 1,
           }}
         >
-          {expanded && (
-            <Box>
-              <Typography color="primary" sx={{ display: "block", lineHeight: 1.2 }} variant="overline">
-                DepEd
-              </Typography>
-              <Typography color="text.secondary" variant="caption">
-                Class size &amp; shifting
-              </Typography>
-            </Box>
-          )}
-          <Tooltip title={expanded ? "Collapse sidebar" : "Expand sidebar"} placement="right">
-            <IconButton
-              aria-label={expanded ? "Collapse sidebar" : "Expand sidebar"}
-              id="sidebar-toggle-btn"
-              onClick={() => setExpanded((v) => !v)}
-              size="small"
-              sx={{
-                border: 1,
-                borderColor: "divider",
-                borderRadius: 1.5,
-                color: "text.secondary",
-                flexShrink: 0,
-                "&:hover": { bgcolor: "action.hover", color: "primary.main" },
-              }}
-            >
-              <LineIcon fontSize="small" path={expanded ? CHEVRON_LEFT : CHEVRON_RIGHT} />
-            </IconButton>
-          </Tooltip>
+          {/* Static icon acts as the brand mark in collapsed state */}
+          <LineIcon aria-hidden path={iconPaths.classSize} sx={{ color: "primary.main", flexShrink: 0, fontSize: 22 }} />
+          <Box
+            sx={{
+              maxWidth: hovered ? 180 : 0,
+              opacity: hovered ? 1 : 0,
+              overflow: "hidden",
+              transition: "opacity 180ms ease 60ms, max-width 260ms cubic-bezier(0.4, 0, 0.2, 1)",
+              whiteSpace: "nowrap",
+            }}
+          >
+            <Typography color="primary" sx={{ display: "block", lineHeight: 1.2 }} variant="overline">
+              DepEd
+            </Typography>
+            <Typography color="text.secondary" variant="caption">
+              Class size &amp; shifting
+            </Typography>
+          </Box>
         </Box>
 
         {/* Nav items */}
-        <List disablePadding sx={{ mt: 1, flex: 1 }}>
+        <List disablePadding sx={{ flex: 1, mt: 1 }}>
           {sections.map(({ id, label, icon }) => (
-            <Tooltip key={id} title={expanded ? "" : label} placement="right" arrow>
+            <Tooltip key={id} title={hovered ? "" : label} placement="right" arrow>
               <ListItemButton
                 aria-current={id === activeId ? "location" : undefined}
                 component="a"
@@ -178,35 +179,27 @@ export default function AppShell({ sections, snapshotDate, scopeName, schoolCoun
                 selected={id === activeId}
                 sx={{
                   borderRadius: 1.5,
+                  justifyContent: "flex-start",
                   mb: 0.5,
                   minHeight: 44,
                   mx: 1,
-                  px: expanded ? 1.5 : 1,
-                  justifyContent: expanded ? "flex-start" : "center",
-                  transition: "padding 260ms cubic-bezier(0.4, 0, 0.2, 1)",
+                  px: 1,
                 }}
               >
-                <ListItemIcon
-                  sx={{
-                    color: "inherit",
-                    justifyContent: "center",
-                    minWidth: expanded ? 36 : "auto",
-                    transition: "min-width 260ms cubic-bezier(0.4, 0, 0.2, 1)",
-                  }}
-                >
+                <ListItemIcon sx={{ color: "inherit", flexShrink: 0, justifyContent: "center", minWidth: 36 }}>
                   <LineIcon fontSize="small" path={icon} />
                 </ListItemIcon>
 
-                {/* Label fades in/out with the sidebar */}
+                {/* Label — fades in when hovered */}
                 <ListItemText
                   primary={label}
                   slotProps={{ primary: { variant: "body2", sx: { fontWeight: 500, whiteSpace: "nowrap" } } }}
                   sx={{
-                    maxWidth: expanded ? 160 : 0,
-                    opacity: expanded ? 1 : 0,
-                    overflow: "hidden",
-                    transition: "opacity 200ms ease, max-width 260ms cubic-bezier(0.4, 0, 0.2, 1)",
                     m: 0,
+                    maxWidth: hovered ? 160 : 0,
+                    opacity: hovered ? 1 : 0,
+                    overflow: "hidden",
+                    transition: "opacity 180ms ease 60ms, max-width 260ms cubic-bezier(0.4, 0, 0.2, 1)",
                   }}
                 />
               </ListItemButton>
@@ -214,16 +207,18 @@ export default function AppShell({ sections, snapshotDate, scopeName, schoolCoun
           ))}
         </List>
 
-        {/* "You are viewing" footer — only shown when expanded */}
+        {/* "You are viewing" footer — fades in when expanded */}
         <Box
           sx={{
             borderColor: "divider",
             borderTop: 1,
+            maxHeight: hovered ? 120 : 0,
             mx: 1.5,
-            opacity: expanded ? 1 : 0,
+            opacity: hovered ? 1 : 0,
             overflow: "hidden",
-            py: 2,
-            transition: "opacity 180ms ease",
+            py: hovered ? 2 : 0,
+            transition: "opacity 180ms ease 60ms, max-height 260ms cubic-bezier(0.4, 0, 0.2, 1), padding 260ms ease",
+            whiteSpace: "nowrap",
           }}
         >
           <Typography color="text.secondary" sx={{ display: "block" }} variant="overline">
@@ -241,16 +236,18 @@ export default function AppShell({ sections, snapshotDate, scopeName, schoolCoun
         </Box>
       </Box>
 
-      {/* ── Main content — shifts with sidebar width ──────────────────────── */}
+      {/* ── Main content ─────────────────────────────────────────────────────
+          Fixed margin-left = SIDEBAR_RAIL_WIDTH. The sidebar expands as an
+          overlay so this value never needs to change — zero layout shift.
+      ──────────────────────────────────────────────────────────────────────── */}
       <Box
         component="main"
         sx={{
           bgcolor: "background.default",
           minHeight: "100vh",
-          ml: { md: `${sidebarW}px`, xs: 0 },
+          ml: { md: `${SIDEBAR_RAIL_WIDTH}px`, xs: 0 },
           pb: { md: 3, xs: 2 },
           px: { md: 3, xs: 2 },
-          transition: "margin-left 260ms cubic-bezier(0.4, 0, 0.2, 1)",
         }}
       >
         <Toolbar />
