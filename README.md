@@ -2,6 +2,12 @@
 
 A dashboard for DepEd class size and shifting schedules, built from three official CSV snapshots dated 28 September 2026.
 
+## Open it online
+
+**https://justinesolaswork.github.io/deped-csm-monitor/**
+
+The address ends in `deped-csm-monitor`. If the last word is misspelt (for example `deped-csm-monior`), GitHub shows its "There isn't a GitHub Pages site here" page, so open the link above instead of typing the address by hand.
+
 ## Start the dashboard
 
 Double-click **`start_dashboard.bat`**. A black window opens, then your browser opens the dashboard at http://localhost:5173/.
