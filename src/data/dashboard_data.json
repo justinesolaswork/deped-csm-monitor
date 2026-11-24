@@ -37,6 +37,16 @@
       "PURELY SHS": 283,
       "ES WITH SHS": 2
     },
+    "classSizeSchools": {
+      "Less than Standard": 44084,
+      "Within Standard": 20167,
+      "Above Standard": 12190
+    },
+    "shiftingSchools": {
+      "Single Shift": 40370,
+      "Double Shift": 1875,
+      "Triple Shift": 107
+    },
     "coverage": {
       "schools": 45934,
       "withClassSize": 44286,
@@ -69,6 +79,16 @@
         "PURELY SHS": 3,
         "ES WITH SHS": 0
       },
+      "classSizeSchools": {
+        "Less than Standard": 1784,
+        "Within Standard": 301,
+        "Above Standard": 147
+      },
+      "shiftingSchools": {
+        "Single Shift": 1683,
+        "Double Shift": 5,
+        "Triple Shift": 0
+      },
       "coverage": {
         "schools": 1842,
         "withClassSize": 1785,
@@ -96,6 +116,16 @@
             "ALL OFFERING": 4,
             "PURELY SHS": 0,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 308,
+            "Within Standard": 41,
+            "Above Standard": 17
+          },
+          "shiftingSchools": {
+            "Single Shift": 281,
+            "Double Shift": 0,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 317,
@@ -125,6 +155,16 @@
             "PURELY SHS": 0,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 193,
+            "Within Standard": 27,
+            "Above Standard": 6
+          },
+          "shiftingSchools": {
+            "Single Shift": 186,
+            "Double Shift": 0,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 200,
             "withClassSize": 193,
@@ -152,6 +192,16 @@
             "ALL OFFERING": 0,
             "PURELY SHS": 0,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 64,
+            "Within Standard": 52,
+            "Above Standard": 32
+          },
+          "shiftingSchools": {
+            "Single Shift": 61,
+            "Double Shift": 3,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 67,
@@ -181,6 +231,16 @@
             "PURELY SHS": 0,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 414,
+            "Within Standard": 85,
+            "Above Standard": 50
+          },
+          "shiftingSchools": {
+            "Single Shift": 381,
+            "Double Shift": 2,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 430,
             "withClassSize": 414,
@@ -208,6 +268,16 @@
             "ALL OFFERING": 1,
             "PURELY SHS": 1,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 262,
+            "Within Standard": 36,
+            "Above Standard": 15
+          },
+          "shiftingSchools": {
+            "Single Shift": 254,
+            "Double Shift": 0,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 266,
@@ -237,6 +307,16 @@
             "PURELY SHS": 1,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 184,
+            "Within Standard": 17,
+            "Above Standard": 11
+          },
+          "shiftingSchools": {
+            "Single Shift": 177,
+            "Double Shift": 0,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 193,
             "withClassSize": 185,
@@ -265,6 +345,16 @@
             "PURELY SHS": 1,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 258,
+            "Within Standard": 19,
+            "Above Standard": 5
+          },
+          "shiftingSchools": {
+            "Single Shift": 246,
+            "Double Shift": 0,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 266,
             "withClassSize": 258,
@@ -292,6 +382,16 @@
             "ALL OFFERING": 1,
             "PURELY SHS": 0,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 101,
+            "Within Standard": 24,
+            "Above Standard": 11
+          },
+          "shiftingSchools": {
+            "Single Shift": 97,
+            "Double Shift": 0,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 103,
@@ -323,6 +423,16 @@
         "PURELY SHS": 5,
         "ES WITH SHS": 0
       },
+      "classSizeSchools": {
+        "Less than Standard": 2058,
+        "Within Standard": 870,
+        "Above Standard": 497
+      },
+      "shiftingSchools": {
+        "Single Shift": 1937,
+        "Double Shift": 40,
+        "Triple Shift": 1
+      },
       "coverage": {
         "schools": 2106,
         "withClassSize": 2062,
@@ -350,6 +460,16 @@
             "ALL OFFERING": 6,
             "PURELY SHS": 1,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 206,
+            "Within Standard": 100,
+            "Above Standard": 59
+          },
+          "shiftingSchools": {
+            "Single Shift": 190,
+            "Double Shift": 1,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 209,
@@ -379,6 +499,16 @@
             "PURELY SHS": 0,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 492,
+            "Within Standard": 197,
+            "Above Standard": 145
+          },
+          "shiftingSchools": {
+            "Single Shift": 467,
+            "Double Shift": 9,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 520,
             "withClassSize": 493,
@@ -406,6 +536,16 @@
             "ALL OFFERING": 0,
             "PURELY SHS": 0,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 70,
+            "Within Standard": 32,
+            "Above Standard": 18
+          },
+          "shiftingSchools": {
+            "Single Shift": 63,
+            "Double Shift": 1,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 71,
@@ -435,6 +575,16 @@
             "PURELY SHS": 1,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 69,
+            "Within Standard": 28,
+            "Above Standard": 19
+          },
+          "shiftingSchools": {
+            "Single Shift": 66,
+            "Double Shift": 1,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 70,
             "withClassSize": 69,
@@ -462,6 +612,16 @@
             "ALL OFFERING": 6,
             "PURELY SHS": 0,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 138,
+            "Within Standard": 87,
+            "Above Standard": 36
+          },
+          "shiftingSchools": {
+            "Single Shift": 129,
+            "Double Shift": 12,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 138,
@@ -491,6 +651,16 @@
             "PURELY SHS": 1,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 35,
+            "Within Standard": 20,
+            "Above Standard": 7
+          },
+          "shiftingSchools": {
+            "Single Shift": 30,
+            "Double Shift": 1,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 35,
             "withClassSize": 35,
@@ -518,6 +688,16 @@
             "ALL OFFERING": 0,
             "PURELY SHS": 1,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 140,
+            "Within Standard": 31,
+            "Above Standard": 11
+          },
+          "shiftingSchools": {
+            "Single Shift": 133,
+            "Double Shift": 1,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 144,
@@ -547,6 +727,16 @@
             "PURELY SHS": 0,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 144,
+            "Within Standard": 54,
+            "Above Standard": 25
+          },
+          "shiftingSchools": {
+            "Single Shift": 134,
+            "Double Shift": 1,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 145,
             "withClassSize": 144,
@@ -574,6 +764,16 @@
             "ALL OFFERING": 0,
             "PURELY SHS": 0,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 84,
+            "Within Standard": 45,
+            "Above Standard": 25
+          },
+          "shiftingSchools": {
+            "Single Shift": 75,
+            "Double Shift": 1,
+            "Triple Shift": 1
           },
           "coverage": {
             "schools": 87,
@@ -603,6 +803,16 @@
             "PURELY SHS": 1,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 200,
+            "Within Standard": 76,
+            "Above Standard": 43
+          },
+          "shiftingSchools": {
+            "Single Shift": 192,
+            "Double Shift": 0,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 202,
             "withClassSize": 201,
@@ -631,6 +841,16 @@
             "PURELY SHS": 0,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 448,
+            "Within Standard": 180,
+            "Above Standard": 98
+          },
+          "shiftingSchools": {
+            "Single Shift": 431,
+            "Double Shift": 6,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 453,
             "withClassSize": 450,
@@ -658,6 +878,16 @@
             "ALL OFFERING": 1,
             "PURELY SHS": 0,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 32,
+            "Within Standard": 20,
+            "Above Standard": 11
+          },
+          "shiftingSchools": {
+            "Single Shift": 27,
+            "Double Shift": 6,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 32,
@@ -689,6 +919,16 @@
         "PURELY SHS": 4,
         "ES WITH SHS": 0
       },
+      "classSizeSchools": {
+        "Less than Standard": 2360,
+        "Within Standard": 975,
+        "Above Standard": 643
+      },
+      "shiftingSchools": {
+        "Single Shift": 2148,
+        "Double Shift": 45,
+        "Triple Shift": 0
+      },
       "coverage": {
         "schools": 2414,
         "withClassSize": 2367,
@@ -716,6 +956,16 @@
             "ALL OFFERING": 0,
             "PURELY SHS": 0,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 57,
+            "Within Standard": 31,
+            "Above Standard": 20
+          },
+          "shiftingSchools": {
+            "Single Shift": 53,
+            "Double Shift": 2,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 59,
@@ -745,6 +995,16 @@
             "PURELY SHS": 1,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 222,
+            "Within Standard": 70,
+            "Above Standard": 27
+          },
+          "shiftingSchools": {
+            "Single Shift": 208,
+            "Double Shift": 1,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 229,
             "withClassSize": 222,
@@ -772,6 +1032,16 @@
             "ALL OFFERING": 1,
             "PURELY SHS": 0,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 356,
+            "Within Standard": 189,
+            "Above Standard": 133
+          },
+          "shiftingSchools": {
+            "Single Shift": 334,
+            "Double Shift": 8,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 366,
@@ -801,6 +1071,16 @@
             "PURELY SHS": 0,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 544,
+            "Within Standard": 226,
+            "Above Standard": 130
+          },
+          "shiftingSchools": {
+            "Single Shift": 496,
+            "Double Shift": 8,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 549,
             "withClassSize": 544,
@@ -828,6 +1108,16 @@
             "ALL OFFERING": 1,
             "PURELY SHS": 1,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 814,
+            "Within Standard": 316,
+            "Above Standard": 255
+          },
+          "shiftingSchools": {
+            "Single Shift": 728,
+            "Double Shift": 11,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 840,
@@ -857,6 +1147,16 @@
             "PURELY SHS": 1,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 100,
+            "Within Standard": 63,
+            "Above Standard": 48
+          },
+          "shiftingSchools": {
+            "Single Shift": 94,
+            "Double Shift": 7,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 101,
             "withClassSize": 100,
@@ -884,6 +1184,16 @@
             "ALL OFFERING": 0,
             "PURELY SHS": 1,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 267,
+            "Within Standard": 80,
+            "Above Standard": 30
+          },
+          "shiftingSchools": {
+            "Single Shift": 235,
+            "Double Shift": 8,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 270,
@@ -915,6 +1225,16 @@
         "PURELY SHS": 46,
         "ES WITH SHS": 0
       },
+      "classSizeSchools": {
+        "Less than Standard": 784,
+        "Within Standard": 698,
+        "Above Standard": 467
+      },
+      "shiftingSchools": {
+        "Single Shift": 668,
+        "Double Shift": 243,
+        "Triple Shift": 12
+      },
       "coverage": {
         "schools": 827,
         "withClassSize": 814,
@@ -942,6 +1262,16 @@
             "ALL OFFERING": 1,
             "PURELY SHS": 6,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 87,
+            "Within Standard": 78,
+            "Above Standard": 53
+          },
+          "shiftingSchools": {
+            "Single Shift": 65,
+            "Double Shift": 36,
+            "Triple Shift": 1
           },
           "coverage": {
             "schools": 89,
@@ -971,6 +1301,16 @@
             "PURELY SHS": 2,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 12,
+            "Within Standard": 10,
+            "Above Standard": 5
+          },
+          "shiftingSchools": {
+            "Single Shift": 13,
+            "Double Shift": 0,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 13,
             "withClassSize": 12,
@@ -998,6 +1338,16 @@
             "ALL OFFERING": 0,
             "PURELY SHS": 5,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 38,
+            "Within Standard": 36,
+            "Above Standard": 25
+          },
+          "shiftingSchools": {
+            "Single Shift": 32,
+            "Double Shift": 8,
+            "Triple Shift": 1
           },
           "coverage": {
             "schools": 40,
@@ -1027,6 +1377,16 @@
             "PURELY SHS": 3,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 23,
+            "Within Standard": 18,
+            "Above Standard": 5
+          },
+          "shiftingSchools": {
+            "Single Shift": 20,
+            "Double Shift": 7,
+            "Triple Shift": 1
+          },
           "coverage": {
             "schools": 23,
             "withClassSize": 23,
@@ -1054,6 +1414,16 @@
             "ALL OFFERING": 0,
             "PURELY SHS": 2,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 40,
+            "Within Standard": 32,
+            "Above Standard": 17
+          },
+          "shiftingSchools": {
+            "Single Shift": 34,
+            "Double Shift": 16,
+            "Triple Shift": 1
           },
           "coverage": {
             "schools": 42,
@@ -1083,6 +1453,16 @@
             "PURELY SHS": 1,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 23,
+            "Within Standard": 19,
+            "Above Standard": 8
+          },
+          "shiftingSchools": {
+            "Single Shift": 21,
+            "Double Shift": 4,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 24,
             "withClassSize": 23,
@@ -1110,6 +1490,16 @@
             "ALL OFFERING": 3,
             "PURELY SHS": 2,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 103,
+            "Within Standard": 85,
+            "Above Standard": 45
+          },
+          "shiftingSchools": {
+            "Single Shift": 86,
+            "Double Shift": 35,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 105,
@@ -1139,6 +1529,16 @@
             "PURELY SHS": 0,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 31,
+            "Within Standard": 29,
+            "Above Standard": 20
+          },
+          "shiftingSchools": {
+            "Single Shift": 28,
+            "Double Shift": 7,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 33,
             "withClassSize": 33,
@@ -1166,6 +1566,16 @@
             "ALL OFFERING": 1,
             "PURELY SHS": 2,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 27,
+            "Within Standard": 27,
+            "Above Standard": 23
+          },
+          "shiftingSchools": {
+            "Single Shift": 20,
+            "Double Shift": 14,
+            "Triple Shift": 1
           },
           "coverage": {
             "schools": 28,
@@ -1195,6 +1605,16 @@
             "PURELY SHS": 2,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 25,
+            "Within Standard": 20,
+            "Above Standard": 14
+          },
+          "shiftingSchools": {
+            "Single Shift": 18,
+            "Double Shift": 15,
+            "Triple Shift": 2
+          },
           "coverage": {
             "schools": 25,
             "withClassSize": 25,
@@ -1222,6 +1642,16 @@
             "ALL OFFERING": 0,
             "PURELY SHS": 2,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 40,
+            "Within Standard": 36,
+            "Above Standard": 25
+          },
+          "shiftingSchools": {
+            "Single Shift": 36,
+            "Double Shift": 14,
+            "Triple Shift": 1
           },
           "coverage": {
             "schools": 43,
@@ -1251,6 +1681,16 @@
             "PURELY SHS": 0,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 27,
+            "Within Standard": 25,
+            "Above Standard": 22
+          },
+          "shiftingSchools": {
+            "Single Shift": 27,
+            "Double Shift": 10,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 29,
             "withClassSize": 29,
@@ -1278,6 +1718,16 @@
             "ALL OFFERING": 0,
             "PURELY SHS": 2,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 36,
+            "Within Standard": 42,
+            "Above Standard": 23
+          },
+          "shiftingSchools": {
+            "Single Shift": 33,
+            "Double Shift": 9,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 44,
@@ -1307,6 +1757,16 @@
             "PURELY SHS": 11,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 150,
+            "Within Standard": 132,
+            "Above Standard": 95
+          },
+          "shiftingSchools": {
+            "Single Shift": 126,
+            "Double Shift": 35,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 157,
             "withClassSize": 154,
@@ -1335,6 +1795,16 @@
             "PURELY SHS": 2,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 56,
+            "Within Standard": 51,
+            "Above Standard": 37
+          },
+          "shiftingSchools": {
+            "Single Shift": 52,
+            "Double Shift": 16,
+            "Triple Shift": 1
+          },
           "coverage": {
             "schools": 62,
             "withClassSize": 61,
@@ -1362,6 +1832,16 @@
             "ALL OFFERING": 0,
             "PURELY SHS": 4,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 66,
+            "Within Standard": 58,
+            "Above Standard": 50
+          },
+          "shiftingSchools": {
+            "Single Shift": 57,
+            "Double Shift": 17,
+            "Triple Shift": 3
           },
           "coverage": {
             "schools": 70,
@@ -1393,6 +1873,16 @@
         "PURELY SHS": 8,
         "ES WITH SHS": 0
       },
+      "classSizeSchools": {
+        "Less than Standard": 2206,
+        "Within Standard": 1244,
+        "Above Standard": 758
+      },
+      "shiftingSchools": {
+        "Single Shift": 2031,
+        "Double Shift": 39,
+        "Triple Shift": 1
+      },
       "coverage": {
         "schools": 2253,
         "withClassSize": 2214,
@@ -1420,6 +1910,16 @@
             "ALL OFFERING": 2,
             "PURELY SHS": 1,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 67,
+            "Within Standard": 62,
+            "Above Standard": 35
+          },
+          "shiftingSchools": {
+            "Single Shift": 56,
+            "Double Shift": 13,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 70,
@@ -1449,6 +1949,16 @@
             "PURELY SHS": 1,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 45,
+            "Within Standard": 32,
+            "Above Standard": 18
+          },
+          "shiftingSchools": {
+            "Single Shift": 39,
+            "Double Shift": 1,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 47,
             "withClassSize": 45,
@@ -1476,6 +1986,16 @@
             "ALL OFFERING": 10,
             "PURELY SHS": 0,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 56,
+            "Within Standard": 38,
+            "Above Standard": 26
+          },
+          "shiftingSchools": {
+            "Single Shift": 50,
+            "Double Shift": 0,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 57,
@@ -1505,6 +2025,16 @@
             "PURELY SHS": 0,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 105,
+            "Within Standard": 62,
+            "Above Standard": 50
+          },
+          "shiftingSchools": {
+            "Single Shift": 93,
+            "Double Shift": 3,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 105,
             "withClassSize": 105,
@@ -1532,6 +2062,16 @@
             "ALL OFFERING": 0,
             "PURELY SHS": 0,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 69,
+            "Within Standard": 40,
+            "Above Standard": 23
+          },
+          "shiftingSchools": {
+            "Single Shift": 52,
+            "Double Shift": 0,
+            "Triple Shift": 1
           },
           "coverage": {
             "schools": 69,
@@ -1561,6 +2101,16 @@
             "PURELY SHS": 0,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 38,
+            "Within Standard": 23,
+            "Above Standard": 14
+          },
+          "shiftingSchools": {
+            "Single Shift": 32,
+            "Double Shift": 1,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 38,
             "withClassSize": 38,
@@ -1588,6 +2138,16 @@
             "ALL OFFERING": 0,
             "PURELY SHS": 1,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 24,
+            "Within Standard": 20,
+            "Above Standard": 21
+          },
+          "shiftingSchools": {
+            "Single Shift": 20,
+            "Double Shift": 0,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 26,
@@ -1617,6 +2177,16 @@
             "PURELY SHS": 0,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 42,
+            "Within Standard": 28,
+            "Above Standard": 13
+          },
+          "shiftingSchools": {
+            "Single Shift": 41,
+            "Double Shift": 3,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 42,
             "withClassSize": 42,
@@ -1644,6 +2214,16 @@
             "ALL OFFERING": 0,
             "PURELY SHS": 1,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 97,
+            "Within Standard": 47,
+            "Above Standard": 36
+          },
+          "shiftingSchools": {
+            "Single Shift": 96,
+            "Double Shift": 1,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 104,
@@ -1673,6 +2253,16 @@
             "PURELY SHS": 0,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 55,
+            "Within Standard": 35,
+            "Above Standard": 14
+          },
+          "shiftingSchools": {
+            "Single Shift": 46,
+            "Double Shift": 1,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 57,
             "withClassSize": 55,
@@ -1700,6 +2290,16 @@
             "ALL OFFERING": 1,
             "PURELY SHS": 0,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 93,
+            "Within Standard": 64,
+            "Above Standard": 42
+          },
+          "shiftingSchools": {
+            "Single Shift": 87,
+            "Double Shift": 1,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 95,
@@ -1729,6 +2329,16 @@
             "PURELY SHS": 0,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 29,
+            "Within Standard": 12,
+            "Above Standard": 4
+          },
+          "shiftingSchools": {
+            "Single Shift": 30,
+            "Double Shift": 0,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 31,
             "withClassSize": 29,
@@ -1756,6 +2366,16 @@
             "ALL OFFERING": 0,
             "PURELY SHS": 1,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 574,
+            "Within Standard": 318,
+            "Above Standard": 193
+          },
+          "shiftingSchools": {
+            "Single Shift": 538,
+            "Double Shift": 6,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 576,
@@ -1785,6 +2405,16 @@
             "PURELY SHS": 2,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 507,
+            "Within Standard": 260,
+            "Above Standard": 157
+          },
+          "shiftingSchools": {
+            "Single Shift": 476,
+            "Double Shift": 4,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 516,
             "withClassSize": 509,
@@ -1812,6 +2442,16 @@
             "ALL OFFERING": 3,
             "PURELY SHS": 1,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 66,
+            "Within Standard": 43,
+            "Above Standard": 20
+          },
+          "shiftingSchools": {
+            "Single Shift": 60,
+            "Double Shift": 1,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 67,
@@ -1841,6 +2481,16 @@
             "PURELY SHS": 0,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 63,
+            "Within Standard": 35,
+            "Above Standard": 24
+          },
+          "shiftingSchools": {
+            "Single Shift": 55,
+            "Double Shift": 0,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 65,
             "withClassSize": 64,
@@ -1868,6 +2518,16 @@
             "ALL OFFERING": 8,
             "PURELY SHS": 0,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 39,
+            "Within Standard": 22,
+            "Above Standard": 19
+          },
+          "shiftingSchools": {
+            "Single Shift": 37,
+            "Double Shift": 1,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 40,
@@ -1897,6 +2557,16 @@
             "PURELY SHS": 0,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 43,
+            "Within Standard": 19,
+            "Above Standard": 10
+          },
+          "shiftingSchools": {
+            "Single Shift": 43,
+            "Double Shift": 0,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 49,
             "withClassSize": 44,
@@ -1924,6 +2594,16 @@
             "ALL OFFERING": 5,
             "PURELY SHS": 0,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 75,
+            "Within Standard": 23,
+            "Above Standard": 7
+          },
+          "shiftingSchools": {
+            "Single Shift": 69,
+            "Double Shift": 1,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 78,
@@ -1953,6 +2633,16 @@
             "PURELY SHS": 0,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 93,
+            "Within Standard": 41,
+            "Above Standard": 24
+          },
+          "shiftingSchools": {
+            "Single Shift": 87,
+            "Double Shift": 0,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 95,
             "withClassSize": 93,
@@ -1980,6 +2670,16 @@
             "ALL OFFERING": 1,
             "PURELY SHS": 0,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 26,
+            "Within Standard": 20,
+            "Above Standard": 8
+          },
+          "shiftingSchools": {
+            "Single Shift": 24,
+            "Double Shift": 2,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 26,
@@ -2011,6 +2711,16 @@
         "PURELY SHS": 6,
         "ES WITH SHS": 0
       },
+      "classSizeSchools": {
+        "Less than Standard": 2790,
+        "Within Standard": 1044,
+        "Above Standard": 462
+      },
+      "shiftingSchools": {
+        "Single Shift": 2540,
+        "Double Shift": 32,
+        "Triple Shift": 0
+      },
       "coverage": {
         "schools": 2865,
         "withClassSize": 2795,
@@ -2038,6 +2748,16 @@
             "ALL OFFERING": 1,
             "PURELY SHS": 0,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 46,
+            "Within Standard": 22,
+            "Above Standard": 12
+          },
+          "shiftingSchools": {
+            "Single Shift": 36,
+            "Double Shift": 0,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 46,
@@ -2067,6 +2787,16 @@
             "PURELY SHS": 2,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 33,
+            "Within Standard": 11,
+            "Above Standard": 2
+          },
+          "shiftingSchools": {
+            "Single Shift": 33,
+            "Double Shift": 0,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 33,
             "withClassSize": 33,
@@ -2094,6 +2824,16 @@
             "ALL OFFERING": 0,
             "PURELY SHS": 0,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 32,
+            "Within Standard": 7,
+            "Above Standard": 5
+          },
+          "shiftingSchools": {
+            "Single Shift": 32,
+            "Double Shift": 0,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 34,
@@ -2123,6 +2863,16 @@
             "PURELY SHS": 0,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 39,
+            "Within Standard": 31,
+            "Above Standard": 17
+          },
+          "shiftingSchools": {
+            "Single Shift": 38,
+            "Double Shift": 3,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 39,
             "withClassSize": 39,
@@ -2150,6 +2900,16 @@
             "ALL OFFERING": 8,
             "PURELY SHS": 0,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 360,
+            "Within Standard": 61,
+            "Above Standard": 20
+          },
+          "shiftingSchools": {
+            "Single Shift": 327,
+            "Double Shift": 1,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 364,
@@ -2179,6 +2939,16 @@
             "PURELY SHS": 0,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 497,
+            "Within Standard": 112,
+            "Above Standard": 54
+          },
+          "shiftingSchools": {
+            "Single Shift": 461,
+            "Double Shift": 1,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 506,
             "withClassSize": 499,
@@ -2206,6 +2976,16 @@
             "ALL OFFERING": 16,
             "PURELY SHS": 4,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 380,
+            "Within Standard": 136,
+            "Above Standard": 71
+          },
+          "shiftingSchools": {
+            "Single Shift": 330,
+            "Double Shift": 7,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 386,
@@ -2235,6 +3015,16 @@
             "PURELY SHS": 0,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 40,
+            "Within Standard": 17,
+            "Above Standard": 5
+          },
+          "shiftingSchools": {
+            "Single Shift": 36,
+            "Double Shift": 0,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 40,
             "withClassSize": 40,
@@ -2262,6 +3052,16 @@
             "ALL OFFERING": 32,
             "PURELY SHS": 0,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 649,
+            "Within Standard": 313,
+            "Above Standard": 127
+          },
+          "shiftingSchools": {
+            "Single Shift": 602,
+            "Double Shift": 8,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 662,
@@ -2291,6 +3091,16 @@
             "PURELY SHS": 0,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 550,
+            "Within Standard": 245,
+            "Above Standard": 103
+          },
+          "shiftingSchools": {
+            "Single Shift": 497,
+            "Double Shift": 6,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 561,
             "withClassSize": 551,
@@ -2318,6 +3128,16 @@
             "ALL OFFERING": 4,
             "PURELY SHS": 0,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 76,
+            "Within Standard": 47,
+            "Above Standard": 23
+          },
+          "shiftingSchools": {
+            "Single Shift": 65,
+            "Double Shift": 1,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 76,
@@ -2347,6 +3167,16 @@
             "PURELY SHS": 0,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 32,
+            "Within Standard": 10,
+            "Above Standard": 6
+          },
+          "shiftingSchools": {
+            "Single Shift": 30,
+            "Double Shift": 4,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 33,
             "withClassSize": 32,
@@ -2375,6 +3205,16 @@
             "PURELY SHS": 0,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 35,
+            "Within Standard": 20,
+            "Above Standard": 15
+          },
+          "shiftingSchools": {
+            "Single Shift": 37,
+            "Double Shift": 0,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 64,
             "withClassSize": 35,
@@ -2402,6 +3242,16 @@
             "ALL OFFERING": 0,
             "PURELY SHS": 0,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 21,
+            "Within Standard": 12,
+            "Above Standard": 2
+          },
+          "shiftingSchools": {
+            "Single Shift": 16,
+            "Double Shift": 1,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 21,
@@ -2433,6 +3283,16 @@
         "PURELY SHS": 12,
         "ES WITH SHS": 0
       },
+      "classSizeSchools": {
+        "Less than Standard": 2489,
+        "Within Standard": 848,
+        "Above Standard": 376
+      },
+      "shiftingSchools": {
+        "Single Shift": 2266,
+        "Double Shift": 29,
+        "Triple Shift": 2
+      },
       "coverage": {
         "schools": 2546,
         "withClassSize": 2491,
@@ -2460,6 +3320,16 @@
             "ALL OFFERING": 2,
             "PURELY SHS": 0,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 24,
+            "Within Standard": 2,
+            "Above Standard": 0
+          },
+          "shiftingSchools": {
+            "Single Shift": 25,
+            "Double Shift": 0,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 27,
@@ -2489,6 +3359,16 @@
             "PURELY SHS": 0,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 796,
+            "Within Standard": 266,
+            "Above Standard": 110
+          },
+          "shiftingSchools": {
+            "Single Shift": 751,
+            "Double Shift": 6,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 810,
             "withClassSize": 796,
@@ -2516,6 +3396,16 @@
             "ALL OFFERING": 0,
             "PURELY SHS": 1,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 80,
+            "Within Standard": 43,
+            "Above Standard": 19
+          },
+          "shiftingSchools": {
+            "Single Shift": 72,
+            "Double Shift": 3,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 80,
@@ -2545,6 +3435,16 @@
             "PURELY SHS": 0,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 95,
+            "Within Standard": 25,
+            "Above Standard": 10
+          },
+          "shiftingSchools": {
+            "Single Shift": 89,
+            "Double Shift": 2,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 98,
             "withClassSize": 95,
@@ -2572,6 +3472,16 @@
             "ALL OFFERING": 19,
             "PURELY SHS": 8,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 865,
+            "Within Standard": 270,
+            "Above Standard": 120
+          },
+          "shiftingSchools": {
+            "Single Shift": 752,
+            "Double Shift": 8,
+            "Triple Shift": 1
           },
           "coverage": {
             "schools": 884,
@@ -2601,6 +3511,16 @@
             "PURELY SHS": 1,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 368,
+            "Within Standard": 123,
+            "Above Standard": 59
+          },
+          "shiftingSchools": {
+            "Single Shift": 359,
+            "Double Shift": 5,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 384,
             "withClassSize": 368,
@@ -2628,6 +3548,16 @@
             "ALL OFFERING": 16,
             "PURELY SHS": 0,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 186,
+            "Within Standard": 54,
+            "Above Standard": 20
+          },
+          "shiftingSchools": {
+            "Single Shift": 152,
+            "Double Shift": 2,
+            "Triple Shift": 1
           },
           "coverage": {
             "schools": 187,
@@ -2657,6 +3587,16 @@
             "PURELY SHS": 0,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 40,
+            "Within Standard": 32,
+            "Above Standard": 20
+          },
+          "shiftingSchools": {
+            "Single Shift": 35,
+            "Double Shift": 2,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 41,
             "withClassSize": 41,
@@ -2684,6 +3624,16 @@
             "ALL OFFERING": 1,
             "PURELY SHS": 2,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 35,
+            "Within Standard": 33,
+            "Above Standard": 18
+          },
+          "shiftingSchools": {
+            "Single Shift": 31,
+            "Double Shift": 1,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 35,
@@ -2715,6 +3665,16 @@
         "PURELY SHS": 38,
         "ES WITH SHS": 0
       },
+      "classSizeSchools": {
+        "Less than Standard": 3655,
+        "Within Standard": 2422,
+        "Above Standard": 1473
+      },
+      "shiftingSchools": {
+        "Single Shift": 3308,
+        "Double Shift": 373,
+        "Triple Shift": 32
+      },
       "coverage": {
         "schools": 3761,
         "withClassSize": 3670,
@@ -2742,6 +3702,16 @@
             "ALL OFFERING": 6,
             "PURELY SHS": 1,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 50,
+            "Within Standard": 44,
+            "Above Standard": 24
+          },
+          "shiftingSchools": {
+            "Single Shift": 40,
+            "Double Shift": 20,
+            "Triple Shift": 3
           },
           "coverage": {
             "schools": 52,
@@ -2771,6 +3741,16 @@
             "PURELY SHS": 1,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 159,
+            "Within Standard": 63,
+            "Above Standard": 36
+          },
+          "shiftingSchools": {
+            "Single Shift": 151,
+            "Double Shift": 0,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 176,
             "withClassSize": 159,
@@ -2798,6 +3778,16 @@
             "ALL OFFERING": 0,
             "PURELY SHS": 1,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 24,
+            "Within Standard": 19,
+            "Above Standard": 14
+          },
+          "shiftingSchools": {
+            "Single Shift": 19,
+            "Double Shift": 1,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 24,
@@ -2827,6 +3817,16 @@
             "PURELY SHS": 4,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 213,
+            "Within Standard": 165,
+            "Above Standard": 112
+          },
+          "shiftingSchools": {
+            "Single Shift": 199,
+            "Double Shift": 25,
+            "Triple Shift": 2
+          },
           "coverage": {
             "schools": 215,
             "withClassSize": 213,
@@ -2854,6 +3854,16 @@
             "ALL OFFERING": 1,
             "PURELY SHS": 2,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 491,
+            "Within Standard": 403,
+            "Above Standard": 263
+          },
+          "shiftingSchools": {
+            "Single Shift": 450,
+            "Double Shift": 94,
+            "Triple Shift": 4
           },
           "coverage": {
             "schools": 512,
@@ -2883,6 +3893,16 @@
             "PURELY SHS": 1,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 63,
+            "Within Standard": 53,
+            "Above Standard": 46
+          },
+          "shiftingSchools": {
+            "Single Shift": 57,
+            "Double Shift": 16,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 65,
             "withClassSize": 64,
@@ -2910,6 +3930,16 @@
             "ALL OFFERING": 0,
             "PURELY SHS": 1,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 29,
+            "Within Standard": 26,
+            "Above Standard": 11
+          },
+          "shiftingSchools": {
+            "Single Shift": 26,
+            "Double Shift": 5,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 30,
@@ -2939,6 +3969,16 @@
             "PURELY SHS": 0,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 58,
+            "Within Standard": 55,
+            "Above Standard": 44
+          },
+          "shiftingSchools": {
+            "Single Shift": 38,
+            "Double Shift": 33,
+            "Triple Shift": 13
+          },
           "coverage": {
             "schools": 59,
             "withClassSize": 58,
@@ -2966,6 +4006,16 @@
             "ALL OFFERING": 0,
             "PURELY SHS": 0,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 40,
+            "Within Standard": 29,
+            "Above Standard": 19
+          },
+          "shiftingSchools": {
+            "Single Shift": 34,
+            "Double Shift": 2,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 41,
@@ -2995,6 +4045,16 @@
             "PURELY SHS": 1,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 53,
+            "Within Standard": 42,
+            "Above Standard": 21
+          },
+          "shiftingSchools": {
+            "Single Shift": 38,
+            "Double Shift": 21,
+            "Triple Shift": 1
+          },
           "coverage": {
             "schools": 54,
             "withClassSize": 53,
@@ -3022,6 +4082,16 @@
             "ALL OFFERING": 2,
             "PURELY SHS": 1,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 55,
+            "Within Standard": 36,
+            "Above Standard": 25
+          },
+          "shiftingSchools": {
+            "Single Shift": 44,
+            "Double Shift": 14,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 57,
@@ -3051,6 +4121,16 @@
             "PURELY SHS": 2,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 31,
+            "Within Standard": 29,
+            "Above Standard": 16
+          },
+          "shiftingSchools": {
+            "Single Shift": 25,
+            "Double Shift": 11,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 32,
             "withClassSize": 31,
@@ -3078,6 +4158,16 @@
             "ALL OFFERING": 5,
             "PURELY SHS": 11,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 753,
+            "Within Standard": 403,
+            "Above Standard": 256
+          },
+          "shiftingSchools": {
+            "Single Shift": 721,
+            "Double Shift": 10,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 764,
@@ -3107,6 +4197,16 @@
             "PURELY SHS": 4,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 38,
+            "Within Standard": 32,
+            "Above Standard": 10
+          },
+          "shiftingSchools": {
+            "Single Shift": 33,
+            "Double Shift": 10,
+            "Triple Shift": 2
+          },
           "coverage": {
             "schools": 40,
             "withClassSize": 39,
@@ -3134,6 +4234,16 @@
             "ALL OFFERING": 4,
             "PURELY SHS": 3,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 544,
+            "Within Standard": 373,
+            "Above Standard": 217
+          },
+          "shiftingSchools": {
+            "Single Shift": 503,
+            "Double Shift": 52,
+            "Triple Shift": 2
           },
           "coverage": {
             "schools": 572,
@@ -3163,6 +4273,16 @@
             "PURELY SHS": 2,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 46,
+            "Within Standard": 40,
+            "Above Standard": 30
+          },
+          "shiftingSchools": {
+            "Single Shift": 43,
+            "Double Shift": 15,
+            "Triple Shift": 4
+          },
           "coverage": {
             "schools": 46,
             "withClassSize": 46,
@@ -3190,6 +4310,16 @@
             "ALL OFFERING": 1,
             "PURELY SHS": 1,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 59,
+            "Within Standard": 44,
+            "Above Standard": 21
+          },
+          "shiftingSchools": {
+            "Single Shift": 55,
+            "Double Shift": 1,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 61,
@@ -3219,6 +4349,16 @@
             "PURELY SHS": 1,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 38,
+            "Within Standard": 19,
+            "Above Standard": 14
+          },
+          "shiftingSchools": {
+            "Single Shift": 34,
+            "Double Shift": 0,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 38,
             "withClassSize": 38,
@@ -3246,6 +4386,16 @@
             "ALL OFFERING": 14,
             "PURELY SHS": 1,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 498,
+            "Within Standard": 283,
+            "Above Standard": 171
+          },
+          "shiftingSchools": {
+            "Single Shift": 444,
+            "Double Shift": 21,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 508,
@@ -3275,6 +4425,16 @@
             "PURELY SHS": 0,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 98,
+            "Within Standard": 77,
+            "Above Standard": 47
+          },
+          "shiftingSchools": {
+            "Single Shift": 81,
+            "Double Shift": 8,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 99,
             "withClassSize": 98,
@@ -3302,6 +4462,16 @@
             "ALL OFFERING": 12,
             "PURELY SHS": 0,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 315,
+            "Within Standard": 187,
+            "Above Standard": 76
+          },
+          "shiftingSchools": {
+            "Single Shift": 273,
+            "Double Shift": 14,
+            "Triple Shift": 1
           },
           "coverage": {
             "schools": 316,
@@ -3333,6 +4503,16 @@
         "PURELY SHS": 96,
         "ES WITH SHS": 0
       },
+      "classSizeSchools": {
+        "Less than Standard": 3432,
+        "Within Standard": 2402,
+        "Above Standard": 1638
+      },
+      "shiftingSchools": {
+        "Single Shift": 3033,
+        "Double Shift": 508,
+        "Triple Shift": 40
+      },
       "coverage": {
         "schools": 3590,
         "withClassSize": 3519,
@@ -3360,6 +4540,16 @@
             "ALL OFFERING": 0,
             "PURELY SHS": 1,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 60,
+            "Within Standard": 52,
+            "Above Standard": 53
+          },
+          "shiftingSchools": {
+            "Single Shift": 47,
+            "Double Shift": 26,
+            "Triple Shift": 4
           },
           "coverage": {
             "schools": 68,
@@ -3389,6 +4579,16 @@
             "PURELY SHS": 5,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 41,
+            "Within Standard": 39,
+            "Above Standard": 33
+          },
+          "shiftingSchools": {
+            "Single Shift": 28,
+            "Double Shift": 21,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 44,
             "withClassSize": 44,
@@ -3416,6 +4616,16 @@
             "ALL OFFERING": 1,
             "PURELY SHS": 30,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 681,
+            "Within Standard": 433,
+            "Above Standard": 236
+          },
+          "shiftingSchools": {
+            "Single Shift": 647,
+            "Double Shift": 29,
+            "Triple Shift": 1
           },
           "coverage": {
             "schools": 702,
@@ -3445,6 +4655,16 @@
             "PURELY SHS": 4,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 105,
+            "Within Standard": 56,
+            "Above Standard": 20
+          },
+          "shiftingSchools": {
+            "Single Shift": 91,
+            "Double Shift": 5,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 109,
             "withClassSize": 105,
@@ -3472,6 +4692,16 @@
             "ALL OFFERING": 0,
             "PURELY SHS": 3,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 40,
+            "Within Standard": 35,
+            "Above Standard": 17
+          },
+          "shiftingSchools": {
+            "Single Shift": 26,
+            "Double Shift": 19,
+            "Triple Shift": 1
           },
           "coverage": {
             "schools": 41,
@@ -3501,6 +4731,16 @@
             "PURELY SHS": 2,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 27,
+            "Within Standard": 26,
+            "Above Standard": 25
+          },
+          "shiftingSchools": {
+            "Single Shift": 21,
+            "Double Shift": 14,
+            "Triple Shift": 1
+          },
           "coverage": {
             "schools": 29,
             "withClassSize": 29,
@@ -3528,6 +4768,16 @@
             "ALL OFFERING": 0,
             "PURELY SHS": 1,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 38,
+            "Within Standard": 27,
+            "Above Standard": 13
+          },
+          "shiftingSchools": {
+            "Single Shift": 29,
+            "Double Shift": 6,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 38,
@@ -3557,6 +4807,16 @@
             "PURELY SHS": 0,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 69,
+            "Within Standard": 67,
+            "Above Standard": 46
+          },
+          "shiftingSchools": {
+            "Single Shift": 62,
+            "Double Shift": 34,
+            "Triple Shift": 3
+          },
           "coverage": {
             "schools": 73,
             "withClassSize": 73,
@@ -3584,6 +4844,16 @@
             "ALL OFFERING": 0,
             "PURELY SHS": 1,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 11,
+            "Within Standard": 10,
+            "Above Standard": 9
+          },
+          "shiftingSchools": {
+            "Single Shift": 7,
+            "Double Shift": 4,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 11,
@@ -3613,6 +4883,16 @@
             "PURELY SHS": 5,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 303,
+            "Within Standard": 258,
+            "Above Standard": 218
+          },
+          "shiftingSchools": {
+            "Single Shift": 257,
+            "Double Shift": 78,
+            "Triple Shift": 7
+          },
           "coverage": {
             "schools": 323,
             "withClassSize": 322,
@@ -3640,6 +4920,16 @@
             "ALL OFFERING": 0,
             "PURELY SHS": 0,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 15,
+            "Within Standard": 10,
+            "Above Standard": 1
+          },
+          "shiftingSchools": {
+            "Single Shift": 9,
+            "Double Shift": 7,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 15,
@@ -3669,6 +4959,16 @@
             "PURELY SHS": 3,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 43,
+            "Within Standard": 41,
+            "Above Standard": 30
+          },
+          "shiftingSchools": {
+            "Single Shift": 25,
+            "Double Shift": 23,
+            "Triple Shift": 4
+          },
           "coverage": {
             "schools": 45,
             "withClassSize": 44,
@@ -3696,6 +4996,16 @@
             "ALL OFFERING": 0,
             "PURELY SHS": 2,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 32,
+            "Within Standard": 30,
+            "Above Standard": 37
+          },
+          "shiftingSchools": {
+            "Single Shift": 22,
+            "Double Shift": 24,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 41,
@@ -3725,6 +5035,16 @@
             "PURELY SHS": 4,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 35,
+            "Within Standard": 34,
+            "Above Standard": 29
+          },
+          "shiftingSchools": {
+            "Single Shift": 27,
+            "Double Shift": 16,
+            "Triple Shift": 2
+          },
           "coverage": {
             "schools": 38,
             "withClassSize": 37,
@@ -3752,6 +5072,16 @@
             "ALL OFFERING": 0,
             "PURELY SHS": 16,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 339,
+            "Within Standard": 214,
+            "Above Standard": 136
+          },
+          "shiftingSchools": {
+            "Single Shift": 286,
+            "Double Shift": 33,
+            "Triple Shift": 2
           },
           "coverage": {
             "schools": 345,
@@ -3781,6 +5111,16 @@
             "PURELY SHS": 1,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 82,
+            "Within Standard": 72,
+            "Above Standard": 34
+          },
+          "shiftingSchools": {
+            "Single Shift": 73,
+            "Double Shift": 15,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 85,
             "withClassSize": 82,
@@ -3808,6 +5148,16 @@
             "ALL OFFERING": 0,
             "PURELY SHS": 0,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 53,
+            "Within Standard": 47,
+            "Above Standard": 30
+          },
+          "shiftingSchools": {
+            "Single Shift": 46,
+            "Double Shift": 10,
+            "Triple Shift": 1
           },
           "coverage": {
             "schools": 54,
@@ -3837,6 +5187,16 @@
             "PURELY SHS": 1,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 930,
+            "Within Standard": 500,
+            "Above Standard": 306
+          },
+          "shiftingSchools": {
+            "Single Shift": 885,
+            "Double Shift": 22,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 958,
             "withClassSize": 932,
@@ -3864,6 +5224,16 @@
             "ALL OFFERING": 1,
             "PURELY SHS": 12,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 274,
+            "Within Standard": 243,
+            "Above Standard": 224
+          },
+          "shiftingSchools": {
+            "Single Shift": 224,
+            "Double Shift": 84,
+            "Triple Shift": 10
           },
           "coverage": {
             "schools": 308,
@@ -3893,6 +5263,16 @@
             "PURELY SHS": 2,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 79,
+            "Within Standard": 66,
+            "Above Standard": 32
+          },
+          "shiftingSchools": {
+            "Single Shift": 70,
+            "Double Shift": 11,
+            "Triple Shift": 2
+          },
           "coverage": {
             "schools": 81,
             "withClassSize": 81,
@@ -3920,6 +5300,16 @@
             "ALL OFFERING": 0,
             "PURELY SHS": 1,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 27,
+            "Within Standard": 25,
+            "Above Standard": 18
+          },
+          "shiftingSchools": {
+            "Single Shift": 20,
+            "Double Shift": 10,
+            "Triple Shift": 2
           },
           "coverage": {
             "schools": 28,
@@ -3949,6 +5339,16 @@
             "PURELY SHS": 1,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 24,
+            "Within Standard": 22,
+            "Above Standard": 21
+          },
+          "shiftingSchools": {
+            "Single Shift": 16,
+            "Double Shift": 14,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 28,
             "withClassSize": 27,
@@ -3976,6 +5376,16 @@
             "ALL OFFERING": 0,
             "PURELY SHS": 1,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 31,
+            "Within Standard": 29,
+            "Above Standard": 24
+          },
+          "shiftingSchools": {
+            "Single Shift": 31,
+            "Double Shift": 1,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 32,
@@ -4005,6 +5415,16 @@
             "PURELY SHS": 0,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 58,
+            "Within Standard": 47,
+            "Above Standard": 34
+          },
+          "shiftingSchools": {
+            "Single Shift": 50,
+            "Double Shift": 1,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 59,
             "withClassSize": 58,
@@ -4032,6 +5452,16 @@
             "ALL OFFERING": 1,
             "PURELY SHS": 0,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 35,
+            "Within Standard": 19,
+            "Above Standard": 12
+          },
+          "shiftingSchools": {
+            "Single Shift": 34,
+            "Double Shift": 1,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 35,
@@ -4063,6 +5493,16 @@
         "PURELY SHS": 9,
         "ES WITH SHS": 0
       },
+      "classSizeSchools": {
+        "Less than Standard": 3793,
+        "Within Standard": 1609,
+        "Above Standard": 791
+      },
+      "shiftingSchools": {
+        "Single Shift": 3407,
+        "Double Shift": 66,
+        "Triple Shift": 0
+      },
       "coverage": {
         "schools": 3889,
         "withClassSize": 3799,
@@ -4090,6 +5530,16 @@
             "ALL OFFERING": 3,
             "PURELY SHS": 1,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 551,
+            "Within Standard": 202,
+            "Above Standard": 77
+          },
+          "shiftingSchools": {
+            "Single Shift": 473,
+            "Double Shift": 12,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 562,
@@ -4119,6 +5569,16 @@
             "PURELY SHS": 1,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 315,
+            "Within Standard": 161,
+            "Above Standard": 87
+          },
+          "shiftingSchools": {
+            "Single Shift": 289,
+            "Double Shift": 6,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 319,
             "withClassSize": 316,
@@ -4146,6 +5606,16 @@
             "ALL OFFERING": 7,
             "PURELY SHS": 1,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 1074,
+            "Within Standard": 494,
+            "Above Standard": 241
+          },
+          "shiftingSchools": {
+            "Single Shift": 962,
+            "Double Shift": 21,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 1101,
@@ -4175,6 +5645,16 @@
             "PURELY SHS": 0,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 258,
+            "Within Standard": 65,
+            "Above Standard": 27
+          },
+          "shiftingSchools": {
+            "Single Shift": 242,
+            "Double Shift": 2,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 268,
             "withClassSize": 258,
@@ -4202,6 +5682,16 @@
             "ALL OFFERING": 2,
             "PURELY SHS": 1,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 50,
+            "Within Standard": 24,
+            "Above Standard": 8
+          },
+          "shiftingSchools": {
+            "Single Shift": 43,
+            "Double Shift": 2,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 51,
@@ -4231,6 +5721,16 @@
             "PURELY SHS": 0,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 55,
+            "Within Standard": 46,
+            "Above Standard": 33
+          },
+          "shiftingSchools": {
+            "Single Shift": 45,
+            "Double Shift": 9,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 58,
             "withClassSize": 55,
@@ -4258,6 +5758,16 @@
             "ALL OFFERING": 0,
             "PURELY SHS": 0,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 66,
+            "Within Standard": 41,
+            "Above Standard": 17
+          },
+          "shiftingSchools": {
+            "Single Shift": 61,
+            "Double Shift": 2,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 67,
@@ -4287,6 +5797,16 @@
             "PURELY SHS": 1,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 690,
+            "Within Standard": 263,
+            "Above Standard": 130
+          },
+          "shiftingSchools": {
+            "Single Shift": 632,
+            "Double Shift": 5,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 707,
             "withClassSize": 690,
@@ -4314,6 +5834,16 @@
             "ALL OFFERING": 1,
             "PURELY SHS": 1,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 45,
+            "Within Standard": 27,
+            "Above Standard": 13
+          },
+          "shiftingSchools": {
+            "Single Shift": 30,
+            "Double Shift": 0,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 46,
@@ -4343,6 +5873,16 @@
             "PURELY SHS": 0,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 43,
+            "Within Standard": 36,
+            "Above Standard": 20
+          },
+          "shiftingSchools": {
+            "Single Shift": 42,
+            "Double Shift": 1,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 45,
             "withClassSize": 44,
@@ -4370,6 +5910,16 @@
             "ALL OFFERING": 2,
             "PURELY SHS": 0,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 515,
+            "Within Standard": 183,
+            "Above Standard": 101
+          },
+          "shiftingSchools": {
+            "Single Shift": 479,
+            "Double Shift": 3,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 531,
@@ -4399,6 +5949,16 @@
             "PURELY SHS": 3,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 81,
+            "Within Standard": 33,
+            "Above Standard": 28
+          },
+          "shiftingSchools": {
+            "Single Shift": 67,
+            "Double Shift": 1,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 83,
             "withClassSize": 82,
@@ -4426,6 +5986,16 @@
             "ALL OFFERING": 0,
             "PURELY SHS": 0,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 50,
+            "Within Standard": 34,
+            "Above Standard": 9
+          },
+          "shiftingSchools": {
+            "Single Shift": 42,
+            "Double Shift": 2,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 51,
@@ -4457,6 +6027,16 @@
         "PURELY SHS": 0,
         "ES WITH SHS": 0
       },
+      "classSizeSchools": {
+        "Less than Standard": 2806,
+        "Within Standard": 871,
+        "Above Standard": 435
+      },
+      "shiftingSchools": {
+        "Single Shift": 2628,
+        "Double Shift": 25,
+        "Triple Shift": 0
+      },
       "coverage": {
         "schools": 2840,
         "withClassSize": 2807,
@@ -4484,6 +6064,16 @@
             "ALL OFFERING": 31,
             "PURELY SHS": 0,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 374,
+            "Within Standard": 111,
+            "Above Standard": 57
+          },
+          "shiftingSchools": {
+            "Single Shift": 349,
+            "Double Shift": 2,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 380,
@@ -4513,6 +6103,16 @@
             "PURELY SHS": 0,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 531,
+            "Within Standard": 132,
+            "Above Standard": 64
+          },
+          "shiftingSchools": {
+            "Single Shift": 502,
+            "Double Shift": 3,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 538,
             "withClassSize": 531,
@@ -4540,6 +6140,16 @@
             "ALL OFFERING": 1,
             "PURELY SHS": 0,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 468,
+            "Within Standard": 109,
+            "Above Standard": 42
+          },
+          "shiftingSchools": {
+            "Single Shift": 435,
+            "Double Shift": 4,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 471,
@@ -4569,6 +6179,16 @@
             "PURELY SHS": 0,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 116,
+            "Within Standard": 35,
+            "Above Standard": 12
+          },
+          "shiftingSchools": {
+            "Single Shift": 112,
+            "Double Shift": 1,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 116,
             "withClassSize": 116,
@@ -4596,6 +6216,16 @@
             "ALL OFFERING": 4,
             "PURELY SHS": 0,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 1157,
+            "Within Standard": 379,
+            "Above Standard": 193
+          },
+          "shiftingSchools": {
+            "Single Shift": 1085,
+            "Double Shift": 7,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 1174,
@@ -4625,6 +6255,16 @@
             "PURELY SHS": 0,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 65,
+            "Within Standard": 47,
+            "Above Standard": 36
+          },
+          "shiftingSchools": {
+            "Single Shift": 54,
+            "Double Shift": 5,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 65,
             "withClassSize": 65,
@@ -4653,6 +6293,16 @@
             "PURELY SHS": 0,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 45,
+            "Within Standard": 22,
+            "Above Standard": 11
+          },
+          "shiftingSchools": {
+            "Single Shift": 43,
+            "Double Shift": 0,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 46,
             "withClassSize": 45,
@@ -4680,6 +6330,16 @@
             "ALL OFFERING": 6,
             "PURELY SHS": 0,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 50,
+            "Within Standard": 36,
+            "Above Standard": 20
+          },
+          "shiftingSchools": {
+            "Single Shift": 48,
+            "Double Shift": 3,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 50,
@@ -4711,6 +6371,16 @@
         "PURELY SHS": 8,
         "ES WITH SHS": 2
       },
+      "classSizeSchools": {
+        "Less than Standard": 2759,
+        "Within Standard": 1271,
+        "Above Standard": 812
+      },
+      "shiftingSchools": {
+        "Single Shift": 2498,
+        "Double Shift": 188,
+        "Triple Shift": 7
+      },
       "coverage": {
         "schools": 2840,
         "withClassSize": 2774,
@@ -4738,6 +6408,16 @@
             "ALL OFFERING": 2,
             "PURELY SHS": 1,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 38,
+            "Within Standard": 29,
+            "Above Standard": 20
+          },
+          "shiftingSchools": {
+            "Single Shift": 35,
+            "Double Shift": 3,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 38,
@@ -4767,6 +6447,16 @@
             "PURELY SHS": 0,
             "ES WITH SHS": 2
           },
+          "classSizeSchools": {
+            "Less than Standard": 1107,
+            "Within Standard": 269,
+            "Above Standard": 113
+          },
+          "shiftingSchools": {
+            "Single Shift": 1013,
+            "Double Shift": 8,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 1131,
             "withClassSize": 1108,
@@ -4794,6 +6484,16 @@
             "ALL OFFERING": 2,
             "PURELY SHS": 1,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 50,
+            "Within Standard": 36,
+            "Above Standard": 29
+          },
+          "shiftingSchools": {
+            "Single Shift": 44,
+            "Double Shift": 3,
+            "Triple Shift": 1
           },
           "coverage": {
             "schools": 50,
@@ -4823,6 +6523,16 @@
             "PURELY SHS": 4,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 1109,
+            "Within Standard": 574,
+            "Above Standard": 366
+          },
+          "shiftingSchools": {
+            "Single Shift": 1027,
+            "Double Shift": 55,
+            "Triple Shift": 3
+          },
           "coverage": {
             "schools": 1143,
             "withClassSize": 1114,
@@ -4850,6 +6560,16 @@
             "ALL OFFERING": 13,
             "PURELY SHS": 0,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 102,
+            "Within Standard": 84,
+            "Above Standard": 74
+          },
+          "shiftingSchools": {
+            "Single Shift": 91,
+            "Double Shift": 40,
+            "Triple Shift": 2
           },
           "coverage": {
             "schools": 107,
@@ -4879,6 +6599,16 @@
             "PURELY SHS": 1,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 54,
+            "Within Standard": 37,
+            "Above Standard": 24
+          },
+          "shiftingSchools": {
+            "Single Shift": 43,
+            "Double Shift": 5,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 55,
             "withClassSize": 54,
@@ -4906,6 +6636,16 @@
             "ALL OFFERING": 6,
             "PURELY SHS": 1,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 61,
+            "Within Standard": 42,
+            "Above Standard": 28
+          },
+          "shiftingSchools": {
+            "Single Shift": 58,
+            "Double Shift": 4,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 61,
@@ -4935,6 +6675,16 @@
             "PURELY SHS": 0,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 67,
+            "Within Standard": 60,
+            "Above Standard": 54
+          },
+          "shiftingSchools": {
+            "Single Shift": 54,
+            "Double Shift": 24,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 70,
             "withClassSize": 70,
@@ -4962,6 +6712,16 @@
             "ALL OFFERING": 0,
             "PURELY SHS": 0,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 45,
+            "Within Standard": 37,
+            "Above Standard": 27
+          },
+          "shiftingSchools": {
+            "Single Shift": 31,
+            "Double Shift": 21,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 48,
@@ -4991,6 +6751,16 @@
             "PURELY SHS": 0,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 25,
+            "Within Standard": 21,
+            "Above Standard": 7
+          },
+          "shiftingSchools": {
+            "Single Shift": 22,
+            "Double Shift": 3,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 26,
             "withClassSize": 26,
@@ -5019,6 +6789,16 @@
             "PURELY SHS": 0,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 43,
+            "Within Standard": 33,
+            "Above Standard": 31
+          },
+          "shiftingSchools": {
+            "Single Shift": 27,
+            "Double Shift": 16,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 44,
             "withClassSize": 43,
@@ -5046,6 +6826,16 @@
             "ALL OFFERING": 0,
             "PURELY SHS": 0,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 58,
+            "Within Standard": 49,
+            "Above Standard": 39
+          },
+          "shiftingSchools": {
+            "Single Shift": 53,
+            "Double Shift": 6,
+            "Triple Shift": 1
           },
           "coverage": {
             "schools": 67,
@@ -5077,6 +6867,16 @@
         "PURELY SHS": 22,
         "ES WITH SHS": 0
       },
+      "classSizeSchools": {
+        "Less than Standard": 3476,
+        "Within Standard": 884,
+        "Above Standard": 493
+      },
+      "shiftingSchools": {
+        "Single Shift": 3379,
+        "Double Shift": 24,
+        "Triple Shift": 2
+      },
       "coverage": {
         "schools": 4196,
         "withClassSize": 3480,
@@ -5104,6 +6904,16 @@
             "ALL OFFERING": 2,
             "PURELY SHS": 1,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 79,
+            "Within Standard": 21,
+            "Above Standard": 9
+          },
+          "shiftingSchools": {
+            "Single Shift": 68,
+            "Double Shift": 0,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 82,
@@ -5133,6 +6943,16 @@
             "PURELY SHS": 0,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 140,
+            "Within Standard": 47,
+            "Above Standard": 18
+          },
+          "shiftingSchools": {
+            "Single Shift": 130,
+            "Double Shift": 3,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 143,
             "withClassSize": 140,
@@ -5160,6 +6980,16 @@
             "ALL OFFERING": 0,
             "PURELY SHS": 0,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 56,
+            "Within Standard": 15,
+            "Above Standard": 7
+          },
+          "shiftingSchools": {
+            "Single Shift": 54,
+            "Double Shift": 1,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 58,
@@ -5189,6 +7019,16 @@
             "PURELY SHS": 1,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 172,
+            "Within Standard": 49,
+            "Above Standard": 30
+          },
+          "shiftingSchools": {
+            "Single Shift": 163,
+            "Double Shift": 1,
+            "Triple Shift": 1
+          },
           "coverage": {
             "schools": 174,
             "withClassSize": 172,
@@ -5216,6 +7056,16 @@
             "ALL OFFERING": 0,
             "PURELY SHS": 0,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 11,
+            "Within Standard": 6,
+            "Above Standard": 3
+          },
+          "shiftingSchools": {
+            "Single Shift": 12,
+            "Double Shift": 0,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 58,
@@ -5245,6 +7095,16 @@
             "PURELY SHS": 1,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 132,
+            "Within Standard": 27,
+            "Above Standard": 13
+          },
+          "shiftingSchools": {
+            "Single Shift": 187,
+            "Double Shift": 1,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 466,
             "withClassSize": 132,
@@ -5272,6 +7132,16 @@
             "ALL OFFERING": 1,
             "PURELY SHS": 12,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 1258,
+            "Within Standard": 327,
+            "Above Standard": 183
+          },
+          "shiftingSchools": {
+            "Single Shift": 1200,
+            "Double Shift": 9,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 1286,
@@ -5301,6 +7171,16 @@
             "PURELY SHS": 1,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 75,
+            "Within Standard": 7,
+            "Above Standard": 2
+          },
+          "shiftingSchools": {
+            "Single Shift": 71,
+            "Double Shift": 0,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 76,
             "withClassSize": 75,
@@ -5328,6 +7208,16 @@
             "ALL OFFERING": 2,
             "PURELY SHS": 3,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 348,
+            "Within Standard": 103,
+            "Above Standard": 63
+          },
+          "shiftingSchools": {
+            "Single Shift": 341,
+            "Double Shift": 6,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 610,
@@ -5357,6 +7247,16 @@
             "PURELY SHS": 2,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 97,
+            "Within Standard": 64,
+            "Above Standard": 46
+          },
+          "shiftingSchools": {
+            "Single Shift": 82,
+            "Double Shift": 0,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 98,
             "withClassSize": 97,
@@ -5384,6 +7284,16 @@
             "ALL OFFERING": 10,
             "PURELY SHS": 0,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 719,
+            "Within Standard": 127,
+            "Above Standard": 63
+          },
+          "shiftingSchools": {
+            "Single Shift": 700,
+            "Double Shift": 2,
+            "Triple Shift": 1
           },
           "coverage": {
             "schools": 742,
@@ -5413,6 +7323,16 @@
             "PURELY SHS": 0,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 331,
+            "Within Standard": 48,
+            "Above Standard": 26
+          },
+          "shiftingSchools": {
+            "Single Shift": 321,
+            "Double Shift": 1,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 343,
             "withClassSize": 331,
@@ -5440,6 +7360,16 @@
             "ALL OFFERING": 1,
             "PURELY SHS": 1,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 58,
+            "Within Standard": 43,
+            "Above Standard": 30
+          },
+          "shiftingSchools": {
+            "Single Shift": 50,
+            "Double Shift": 0,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 60,
@@ -5471,6 +7401,16 @@
         "PURELY SHS": 6,
         "ES WITH SHS": 0
       },
+      "classSizeSchools": {
+        "Less than Standard": 2844,
+        "Within Standard": 1198,
+        "Above Standard": 787
+      },
+      "shiftingSchools": {
+        "Single Shift": 2746,
+        "Double Shift": 53,
+        "Triple Shift": 2
+      },
       "coverage": {
         "schools": 3024,
         "withClassSize": 2913,
@@ -5498,6 +7438,16 @@
             "ALL OFFERING": 4,
             "PURELY SHS": 0,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 60,
+            "Within Standard": 30,
+            "Above Standard": 15
+          },
+          "shiftingSchools": {
+            "Single Shift": 53,
+            "Double Shift": 3,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 61,
@@ -5527,6 +7477,16 @@
             "PURELY SHS": 0,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 48,
+            "Within Standard": 31,
+            "Above Standard": 22
+          },
+          "shiftingSchools": {
+            "Single Shift": 33,
+            "Double Shift": 0,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 48,
             "withClassSize": 48,
@@ -5554,6 +7514,16 @@
             "ALL OFFERING": 2,
             "PURELY SHS": 0,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 61,
+            "Within Standard": 29,
+            "Above Standard": 24
+          },
+          "shiftingSchools": {
+            "Single Shift": 60,
+            "Double Shift": 1,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 66,
@@ -5583,6 +7553,16 @@
             "PURELY SHS": 0,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 80,
+            "Within Standard": 57,
+            "Above Standard": 39
+          },
+          "shiftingSchools": {
+            "Single Shift": 74,
+            "Double Shift": 8,
+            "Triple Shift": 1
+          },
           "coverage": {
             "schools": 82,
             "withClassSize": 80,
@@ -5610,6 +7590,16 @@
             "ALL OFFERING": 0,
             "PURELY SHS": 0,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 393,
+            "Within Standard": 199,
+            "Above Standard": 192
+          },
+          "shiftingSchools": {
+            "Single Shift": 429,
+            "Double Shift": 14,
+            "Triple Shift": 1
           },
           "coverage": {
             "schools": 460,
@@ -5639,6 +7629,16 @@
             "PURELY SHS": 2,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 204,
+            "Within Standard": 149,
+            "Above Standard": 140
+          },
+          "shiftingSchools": {
+            "Single Shift": 186,
+            "Double Shift": 22,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 222,
             "withClassSize": 217,
@@ -5666,6 +7666,16 @@
             "ALL OFFERING": 14,
             "PURELY SHS": 1,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 734,
+            "Within Standard": 278,
+            "Above Standard": 161
+          },
+          "shiftingSchools": {
+            "Single Shift": 690,
+            "Double Shift": 3,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 766,
@@ -5695,6 +7705,16 @@
             "PURELY SHS": 1,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 775,
+            "Within Standard": 217,
+            "Above Standard": 92
+          },
+          "shiftingSchools": {
+            "Single Shift": 757,
+            "Double Shift": 1,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 811,
             "withClassSize": 776,
@@ -5722,6 +7742,16 @@
             "ALL OFFERING": 1,
             "PURELY SHS": 2,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 489,
+            "Within Standard": 208,
+            "Above Standard": 102
+          },
+          "shiftingSchools": {
+            "Single Shift": 464,
+            "Double Shift": 1,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 508,
@@ -5753,6 +7783,16 @@
         "PURELY SHS": 11,
         "ES WITH SHS": 0
       },
+      "classSizeSchools": {
+        "Less than Standard": 2471,
+        "Within Standard": 1163,
+        "Above Standard": 779
+      },
+      "shiftingSchools": {
+        "Single Shift": 2266,
+        "Double Shift": 84,
+        "Triple Shift": 1
+      },
       "coverage": {
         "schools": 2539,
         "withClassSize": 2479,
@@ -5780,6 +7820,16 @@
             "ALL OFFERING": 37,
             "PURELY SHS": 0,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 629,
+            "Within Standard": 320,
+            "Above Standard": 219
+          },
+          "shiftingSchools": {
+            "Single Shift": 589,
+            "Double Shift": 13,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 654,
@@ -5809,6 +7859,16 @@
             "PURELY SHS": 0,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 112,
+            "Within Standard": 90,
+            "Above Standard": 70
+          },
+          "shiftingSchools": {
+            "Single Shift": 97,
+            "Double Shift": 25,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 115,
             "withClassSize": 113,
@@ -5836,6 +7896,16 @@
             "ALL OFFERING": 5,
             "PURELY SHS": 0,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 66,
+            "Within Standard": 24,
+            "Above Standard": 11
+          },
+          "shiftingSchools": {
+            "Single Shift": 58,
+            "Double Shift": 0,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 66,
@@ -5865,6 +7935,16 @@
             "PURELY SHS": 0,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 24,
+            "Within Standard": 20,
+            "Above Standard": 16
+          },
+          "shiftingSchools": {
+            "Single Shift": 20,
+            "Double Shift": 3,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 24,
             "withClassSize": 24,
@@ -5892,6 +7972,16 @@
             "ALL OFFERING": 13,
             "PURELY SHS": 0,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 93,
+            "Within Standard": 31,
+            "Above Standard": 16
+          },
+          "shiftingSchools": {
+            "Single Shift": 82,
+            "Double Shift": 5,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 97,
@@ -5921,6 +8011,16 @@
             "PURELY SHS": 0,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 111,
+            "Within Standard": 71,
+            "Above Standard": 56
+          },
+          "shiftingSchools": {
+            "Single Shift": 97,
+            "Double Shift": 7,
+            "Triple Shift": 1
+          },
           "coverage": {
             "schools": 113,
             "withClassSize": 111,
@@ -5948,6 +8048,16 @@
             "ALL OFFERING": 14,
             "PURELY SHS": 0,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 370,
+            "Within Standard": 203,
+            "Above Standard": 148
+          },
+          "shiftingSchools": {
+            "Single Shift": 354,
+            "Double Shift": 5,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 384,
@@ -5977,6 +8087,16 @@
             "PURELY SHS": 1,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 86,
+            "Within Standard": 49,
+            "Above Standard": 37
+          },
+          "shiftingSchools": {
+            "Single Shift": 73,
+            "Double Shift": 2,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 87,
             "withClassSize": 87,
@@ -6004,6 +8124,16 @@
             "ALL OFFERING": 9,
             "PURELY SHS": 0,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 327,
+            "Within Standard": 53,
+            "Above Standard": 25
+          },
+          "shiftingSchools": {
+            "Single Shift": 307,
+            "Double Shift": 1,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 338,
@@ -6033,6 +8163,16 @@
             "PURELY SHS": 10,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 416,
+            "Within Standard": 184,
+            "Above Standard": 109
+          },
+          "shiftingSchools": {
+            "Single Shift": 369,
+            "Double Shift": 21,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 422,
             "withClassSize": 416,
@@ -6060,6 +8200,16 @@
             "ALL OFFERING": 3,
             "PURELY SHS": 0,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 50,
+            "Within Standard": 17,
+            "Above Standard": 6
+          },
+          "shiftingSchools": {
+            "Single Shift": 50,
+            "Double Shift": 0,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 51,
@@ -6089,6 +8239,16 @@
             "PURELY SHS": 0,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 58,
+            "Within Standard": 28,
+            "Above Standard": 18
+          },
+          "shiftingSchools": {
+            "Single Shift": 55,
+            "Double Shift": 0,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 58,
             "withClassSize": 58,
@@ -6117,6 +8277,16 @@
             "PURELY SHS": 0,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 64,
+            "Within Standard": 25,
+            "Above Standard": 9
+          },
+          "shiftingSchools": {
+            "Single Shift": 57,
+            "Double Shift": 0,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 65,
             "withClassSize": 64,
@@ -6144,6 +8314,16 @@
             "ALL OFFERING": 10,
             "PURELY SHS": 0,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 65,
+            "Within Standard": 48,
+            "Above Standard": 39
+          },
+          "shiftingSchools": {
+            "Single Shift": 58,
+            "Double Shift": 2,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 65,
@@ -6175,6 +8355,16 @@
         "PURELY SHS": 8,
         "ES WITH SHS": 0
       },
+      "classSizeSchools": {
+        "Less than Standard": 2190,
+        "Within Standard": 1169,
+        "Above Standard": 812
+      },
+      "shiftingSchools": {
+        "Single Shift": 1916,
+        "Double Shift": 92,
+        "Triple Shift": 3
+      },
       "coverage": {
         "schools": 2232,
         "withClassSize": 2197,
@@ -6202,6 +8392,16 @@
             "ALL OFFERING": 2,
             "PURELY SHS": 3,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 433,
+            "Within Standard": 296,
+            "Above Standard": 209
+          },
+          "shiftingSchools": {
+            "Single Shift": 352,
+            "Double Shift": 68,
+            "Triple Shift": 3
           },
           "coverage": {
             "schools": 438,
@@ -6231,6 +8431,16 @@
             "PURELY SHS": 1,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 413,
+            "Within Standard": 215,
+            "Above Standard": 144
+          },
+          "shiftingSchools": {
+            "Single Shift": 364,
+            "Double Shift": 2,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 419,
             "withClassSize": 415,
@@ -6258,6 +8468,16 @@
             "ALL OFFERING": 16,
             "PURELY SHS": 0,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 259,
+            "Within Standard": 127,
+            "Above Standard": 85
+          },
+          "shiftingSchools": {
+            "Single Shift": 238,
+            "Double Shift": 2,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 264,
@@ -6287,6 +8507,16 @@
             "PURELY SHS": 0,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 261,
+            "Within Standard": 128,
+            "Above Standard": 77
+          },
+          "shiftingSchools": {
+            "Single Shift": 226,
+            "Double Shift": 3,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 263,
             "withClassSize": 261,
@@ -6314,6 +8544,16 @@
             "ALL OFFERING": 1,
             "PURELY SHS": 0,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 215,
+            "Within Standard": 90,
+            "Above Standard": 74
+          },
+          "shiftingSchools": {
+            "Single Shift": 190,
+            "Double Shift": 1,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 219,
@@ -6343,6 +8583,16 @@
             "PURELY SHS": 0,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 320,
+            "Within Standard": 111,
+            "Above Standard": 77
+          },
+          "shiftingSchools": {
+            "Single Shift": 286,
+            "Double Shift": 2,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 333,
             "withClassSize": 321,
@@ -6370,6 +8620,16 @@
             "ALL OFFERING": 0,
             "PURELY SHS": 1,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 46,
+            "Within Standard": 34,
+            "Above Standard": 28
+          },
+          "shiftingSchools": {
+            "Single Shift": 44,
+            "Double Shift": 2,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 48,
@@ -6399,6 +8659,16 @@
             "PURELY SHS": 1,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 72,
+            "Within Standard": 46,
+            "Above Standard": 27
+          },
+          "shiftingSchools": {
+            "Single Shift": 60,
+            "Double Shift": 1,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 75,
             "withClassSize": 73,
@@ -6426,6 +8696,16 @@
             "ALL OFFERING": 5,
             "PURELY SHS": 0,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 72,
+            "Within Standard": 41,
+            "Above Standard": 29
+          },
+          "shiftingSchools": {
+            "Single Shift": 67,
+            "Double Shift": 1,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 72,
@@ -6455,6 +8735,16 @@
             "PURELY SHS": 1,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 61,
+            "Within Standard": 46,
+            "Above Standard": 35
+          },
+          "shiftingSchools": {
+            "Single Shift": 53,
+            "Double Shift": 6,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 62,
             "withClassSize": 61,
@@ -6482,6 +8772,16 @@
             "ALL OFFERING": 4,
             "PURELY SHS": 1,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 38,
+            "Within Standard": 35,
+            "Above Standard": 27
+          },
+          "shiftingSchools": {
+            "Single Shift": 36,
+            "Double Shift": 4,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 39,
@@ -6513,6 +8813,16 @@
         "PURELY SHS": 1,
         "ES WITH SHS": 0
       },
+      "classSizeSchools": {
+        "Less than Standard": 2107,
+        "Within Standard": 1167,
+        "Above Standard": 805
+      },
+      "shiftingSchools": {
+        "Single Shift": 1907,
+        "Double Shift": 27,
+        "Triple Shift": 3
+      },
       "coverage": {
         "schools": 2170,
         "withClassSize": 2120,
@@ -6540,6 +8850,16 @@
             "ALL OFFERING": 1,
             "PURELY SHS": 0,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 99,
+            "Within Standard": 80,
+            "Above Standard": 67
+          },
+          "shiftingSchools": {
+            "Single Shift": 93,
+            "Double Shift": 9,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 106,
@@ -6569,6 +8889,16 @@
             "PURELY SHS": 0,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 70,
+            "Within Standard": 47,
+            "Above Standard": 34
+          },
+          "shiftingSchools": {
+            "Single Shift": 70,
+            "Double Shift": 1,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 76,
             "withClassSize": 71,
@@ -6596,6 +8926,16 @@
             "ALL OFFERING": 0,
             "PURELY SHS": 0,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 51,
+            "Within Standard": 37,
+            "Above Standard": 23
+          },
+          "shiftingSchools": {
+            "Single Shift": 50,
+            "Double Shift": 3,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 54,
@@ -6625,6 +8965,16 @@
             "PURELY SHS": 0,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 764,
+            "Within Standard": 368,
+            "Above Standard": 240
+          },
+          "shiftingSchools": {
+            "Single Shift": 662,
+            "Double Shift": 6,
+            "Triple Shift": 1
+          },
           "coverage": {
             "schools": 784,
             "withClassSize": 766,
@@ -6652,6 +9002,16 @@
             "ALL OFFERING": 58,
             "PURELY SHS": 0,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 317,
+            "Within Standard": 172,
+            "Above Standard": 117
+          },
+          "shiftingSchools": {
+            "Single Shift": 304,
+            "Double Shift": 2,
+            "Triple Shift": 1
           },
           "coverage": {
             "schools": 327,
@@ -6681,6 +9041,16 @@
             "PURELY SHS": 1,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 377,
+            "Within Standard": 225,
+            "Above Standard": 152
+          },
+          "shiftingSchools": {
+            "Single Shift": 337,
+            "Double Shift": 5,
+            "Triple Shift": 1
+          },
           "coverage": {
             "schools": 384,
             "withClassSize": 379,
@@ -6709,6 +9079,16 @@
             "PURELY SHS": 0,
             "ES WITH SHS": 0
           },
+          "classSizeSchools": {
+            "Less than Standard": 399,
+            "Within Standard": 216,
+            "Above Standard": 159
+          },
+          "shiftingSchools": {
+            "Single Shift": 365,
+            "Double Shift": 1,
+            "Triple Shift": 0
+          },
           "coverage": {
             "schools": 408,
             "withClassSize": 400,
@@ -6736,6 +9116,16 @@
             "ALL OFFERING": 0,
             "PURELY SHS": 0,
             "ES WITH SHS": 0
+          },
+          "classSizeSchools": {
+            "Less than Standard": 30,
+            "Within Standard": 22,
+            "Above Standard": 13
+          },
+          "shiftingSchools": {
+            "Single Shift": 26,
+            "Double Shift": 0,
+            "Triple Shift": 0
           },
           "coverage": {
             "schools": 31,
@@ -6767,6 +9157,16 @@
       "ALL OFFERING": 0,
       "PURELY SHS": 0,
       "ES WITH SHS": 0
+    },
+    "classSizeSchools": {
+      "Less than Standard": 80,
+      "Within Standard": 31,
+      "Above Standard": 15
+    },
+    "shiftingSchools": {
+      "Single Shift": 9,
+      "Double Shift": 2,
+      "Triple Shift": 1
     },
     "coverage": {
       "orphanSchoolIds": 86

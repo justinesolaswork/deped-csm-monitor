@@ -15,6 +15,7 @@ import {
   toSchoolRows,
   toStackRow,
   toStackRows,
+  toUniqueSchoolRow,
   toggleHidden,
   valueKey,
   withRegionRows,
@@ -90,6 +91,22 @@ test("toStackRow: an area with no records gives zero shares, not NaN", () => {
 test("toStackRows: one row per area, in the data's order", () => {
   const rows = toStackRows(data.regions, "classSize", sizeStrata);
   assert.deepEqual(rows.map((row) => [row.name, row.total]), [["North", 100], ["South", 200]]);
+});
+
+test("toUniqueSchoolRow: shares divide by schools with records and can exceed 100% combined", () => {
+  const row = toUniqueSchoolRow("North", { "Above Standard": 40, "Within Standard": 70, "Less than Standard": 90 }, 100, sizeStrata);
+  assert.deepEqual(
+    { name: row.name, total: row.total, above: row.above, within: row.within, below: row.below },
+    { name: "North", total: 100, above: 40, within: 70, below: 90 },
+  );
+  assert.equal(row.aboveShare, 40);
+  assert.equal(row.withinShare, 70);
+  assert.equal(row.belowShare, 90);
+});
+
+test("toUniqueSchoolRow: an area with zero schools gives zero shares, not NaN", () => {
+  const row = toUniqueSchoolRow("Empty", {}, 0, sizeStrata);
+  assert.deepEqual([row.total, row.aboveShare, row.withinShare, row.belowShare], [0, 0, 0, 0]);
 });
 
 test("valueKey picks the count or the share field", () => {

@@ -26,10 +26,12 @@ SCHOOL_MEASURES = ("classSize", "shifting")
 ALL_REGIONS = "All regions"
 UNMATCHED = "Not in master list"
 MEASURES = ("classSize", "shifting", "offering")
+SCHOOL_COUNT_MEASURES = (("classSize", "classSizeSchools"), ("shifting", "shiftingSchools"))
 
 
 def new_tally():
-    return {key: Counter() for key in (*MEASURES, "coverage")}
+    school_keys = tuple(school_key for _, school_key in SCHOOL_COUNT_MEASURES)
+    return {key: Counter() for key in (*MEASURES, *school_keys, "coverage")}
 
 
 def load_schools():
@@ -73,6 +75,15 @@ def tally_divisions(schools):
         tally_for(school_id)["shifting"][row["shifting"]] += 1
         per_school["shifting"][school_id][row["shifting"]] += 1
 
+    # Count distinct schools that have at least one class or grade record in each category.
+    # A single school can appear in more than one category (for example both Within and Above Standard).
+    for measure, school_measure in SCHOOL_COUNT_MEASURES:
+        for school_id, counts in per_school[measure].items():
+            target = tally_for(school_id)[school_measure]
+            for category, count in counts.items():
+                if count > 0:
+                    target[category] += 1
+
     for school_id, (area, offering, _) in schools.items():
         tally = divisions[area]
         tally["offering"][offering] += 1
@@ -99,6 +110,8 @@ def block(name, tally, categories):
     out = {"name": name}
     for measure in MEASURES:
         out[measure] = {category: tally[measure][category] for category in categories[measure]}
+    for measure, school_measure in SCHOOL_COUNT_MEASURES:
+        out[school_measure] = {category: tally[school_measure][category] for category in categories[measure]}
     out["coverage"] = dict(tally["coverage"])
     return out
 

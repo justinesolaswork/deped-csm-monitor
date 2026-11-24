@@ -19,7 +19,7 @@ const DOCUMENTED = {
   orphanSchoolIds: 86,
 };
 
-const MEASURES = ["classSize", "shifting", "offering"];
+const MEASURES = ["classSize", "shifting", "offering", "classSizeSchools", "shiftingSchools"];
 const sum = (counts) => Object.values(counts).reduce((total, value) => total + value, 0);
 const allAreas = [data.national, data.unmatched, ...data.regions, ...data.regions.flatMap((region) => region.divisions)];
 
@@ -109,10 +109,15 @@ test("each region's school file lists every school and adds up to the region's t
     const divisions = new Set(region.divisions.map((division) => division.name));
     for (const school of file.schools) assert.ok(divisions.has(school.division), `${school.id}: unknown division ${school.division}`);
 
-    for (const [measure, keys] of [["classSize", file.classSizeKeys], ["shifting", file.shiftingKeys]]) {
+    for (const [measure, schoolMeasure, keys] of [
+      ["classSize", "classSizeSchools", file.classSizeKeys],
+      ["shifting", "shiftingSchools", file.shiftingKeys],
+    ]) {
       keys.forEach((key, position) => {
         const total = file.schools.reduce((acc, school) => acc + (school[measure]?.[position] ?? 0), 0);
         assert.equal(total, region[measure][key], `${region.name} / ${measure} / ${key}`);
+        const uniqueSchools = file.schools.filter((school) => (school[measure]?.[position] ?? 0) > 0).length;
+        assert.equal(uniqueSchools, region[schoolMeasure][key], `${region.name} / ${schoolMeasure} / ${key}`);
       });
     }
   }

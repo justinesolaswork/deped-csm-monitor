@@ -55,6 +55,21 @@ export function toStackRows(areas, measureKey, strata) {
 }
 
 /**
+ * One area's unique school counts and shares for each stratum.
+ * Because one school can appear in more than one stratum (e.g. both Within and Above Standard),
+ * shares divide by `schoolTotal` (schools with a record in that view) rather than the sum of strata.
+ */
+export function toUniqueSchoolRow(name, counts, schoolTotal, strata) {
+  const row = { name, total: schoolTotal };
+  for (const { key, field } of strata) {
+    const count = counts?.[key] ?? 0;
+    row[field] = count;
+    row[valueKey(field, "share")] = schoolTotal ? (count / schoolTotal) * 100 : 0;
+  }
+  return row;
+}
+
+/**
  * Order rows for display.
  * sort.by is "name" (the data's own order), "total", or a stratum field such as "above".
  * sort.dir is "asc" or "desc". Value sorts follow the current measure (share or count).

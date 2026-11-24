@@ -28,29 +28,37 @@ const ROWS_PER_PAGE = [25, 50, 100];
 const figures = { fontVariantNumeric: "tabular-nums", whiteSpace: "nowrap" };
 
 /**
- * Lists every school that has at least one class (or grade level) in the clicked slice of a bar,
+ * Lists every unique school that has at least one class (or grade level) in the chosen category,
  * with that school's counts for all slices of the same measure.
- * area is the bar's name: a region, or a division inside regionName.
+ * Works for a single division, a single region, or multiple regions ("All regions").
  */
-export default function SchoolSegmentModal({ area, areaIsRegion, field, measureKey, regionName, onClose }) {
+export default function SchoolSegmentModal({ area, areaIsRegion, field, measureKey, regionName, regionNames, onClose }) {
   const strata = measureKey === "shifting" ? shiftStrata : sizeStrata;
   const clicked = strata.find((stratum) => stratum.field === field);
-  const { status, files } = useRegionSchools([regionName]);
+  const regionsToLoad = regionNames ?? [regionName];
+  const isMultiRegion = regionsToLoad.length > 1;
+  const showDivision = areaIsRegion || isMultiRegion;
+  const { status, files } = useRegionSchools(regionsToLoad);
   const [search, setSearch] = useState("");
   const [sort, setSort] = useState({ by: field, dir: "desc" });
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(ROWS_PER_PAGE[0]);
 
   const all = useMemo(
-    () => schoolsInSegment(files.flatMap((file) => toSchoolRows(file, sizeStrata, shiftStrata)), areaIsRegion ? "" : area, field),
-    [files, areaIsRegion, area, field],
+    () =>
+      schoolsInSegment(
+        files.flatMap((file) => toSchoolRows(file, sizeStrata, shiftStrata).map((row) => ({ ...row, region: file.region }))),
+        showDivision ? "" : area,
+        field,
+      ),
+    [files, showDivision, area, field],
   );
   const rows = useMemo(() => sortSchools(filterSchools(all, "", search), sort), [all, search, sort]);
   const shownPage = Math.min(page, Math.max(0, Math.ceil(rows.length / rowsPerPage) - 1));
   const pageRows = rows.slice(shownPage * rowsPerPage, (shownPage + 1) * rowsPerPage);
 
   const sortBy = (by) => {
-    const text = by === "id" || by === "name" || by === "division";
+    const text = by === "id" || by === "name" || by === "division" || by === "region";
     setSort(sort.by === by ? { by, dir: sort.dir === "asc" ? "desc" : "asc" } : { by, dir: text ? "asc" : "desc" });
     setPage(0);
   };
@@ -67,7 +75,7 @@ export default function SchoolSegmentModal({ area, areaIsRegion, field, measureK
 
   const download = () => {
     const headers = ["Region", "Division", "School ID", "School", ...strata.map(({ label }) => label)];
-    const lines = rows.map((row) => [regionName, row.division, row.id, row.name, ...strata.map(({ field: f }) => row[f])]);
+    const lines = rows.map((row) => [row.region, row.division, row.id, row.name, ...strata.map(({ field: f }) => row[f])]);
     downloadCsv(csvFileName("schools", area, clicked.label), toCsv(headers, lines));
   };
 
@@ -79,13 +87,13 @@ export default function SchoolSegmentModal({ area, areaIsRegion, field, measureK
           {area}: {clicked.label}
         </Typography>
         <Typography color="text.secondary" component="span" sx={{ display: "block" }} variant="body2">
-          {status === "ready" ? `${formatNumber(all.length)} schools with ${unit} in this slice` : "Loading schools…"}
+          {status === "ready" ? `${formatNumber(all.length)} unique schools with ${unit} in this category` : "Loading schools…"}
         </Typography>
       </DialogTitle>
       <DialogContent dividers>
         {status === "error" && (
           <Typography color="text.secondary" role="status" sx={{ py: 4, textAlign: "center" }} variant="body2">
-            The school list for {regionName} could not be loaded. Refresh the page to try again.
+            The school list for {area} could not be loaded. Refresh the page to try again.
           </Typography>
         )}
         {status === "ready" && (
@@ -109,7 +117,8 @@ export default function SchoolSegmentModal({ area, areaIsRegion, field, measureK
                   <TableRow>
                     {heading("id", "School ID")}
                     {heading("name", "School")}
-                    {areaIsRegion && heading("division", "Division")}
+                    {isMultiRegion && heading("region", "Region")}
+                    {showDivision && heading("division", "Division")}
                     {strata.map(({ field: f, label, color }) => heading(f, label, { numeric: true, color }))}
                   </TableRow>
                 </TableHead>
@@ -120,7 +129,8 @@ export default function SchoolSegmentModal({ area, areaIsRegion, field, measureK
                       <TableCell component="th" scope="row">
                         {row.name}
                       </TableCell>
-                      {areaIsRegion && <TableCell>{row.division}</TableCell>}
+                      {isMultiRegion && <TableCell>{row.region}</TableCell>}
+                      {showDivision && <TableCell>{row.division}</TableCell>}
                       {strata.map(({ field: f }) => (
                         <TableCell align="right" key={f} sx={{ ...figures, fontWeight: f === field ? 700 : 400 }}>
                           {row[f] === null ? "—" : formatNumber(row[f])}
