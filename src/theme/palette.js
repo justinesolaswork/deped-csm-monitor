@@ -5,8 +5,8 @@ export const palette = {
   below: "#d93a3f",
   within: "#008556",
   above: "#1976d2",
-  // Shifts: the usual single shift is a quiet neutral so double and triple stand out
-  single: "#a7b5c3",
-  double: "#0f9fb0",
-  triple: "#c75a00",
+  // Shifts: matches the Class-size profile palette (red, green, blue)
+  single: "#d93a3f",
+  double: "#008556",
+  triple: "#1976d2",
 };

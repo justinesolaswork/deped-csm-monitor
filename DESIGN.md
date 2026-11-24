@@ -26,9 +26,9 @@ colors:
   above-standard: "#1976d2"
   within-standard: "#008556"
   below-standard: "#d93a3f"
-  single-shift: "#a7b5c3"
-  double-shift: "#0f9fb0"
-  triple-shift: "#c75a00"
+  single-shift: "#d93a3f"
+  double-shift: "#008556"
+  triple-shift: "#1976d2"
 typography:
   headline:
     fontFamily: "'Poppins', system-ui, -apple-system, 'Segoe UI', sans-serif"
@@ -113,7 +113,7 @@ A blue interface with a separate, fixed vocabulary of data colors.
 
 ### Data colors
 - **Class size:** `above-standard` (red), `within-standard` (green), `below-standard` (purple). Blue is reserved for the interface, so no data colour is ever the same as a toggle, link or selected item.
-- **Shifts:** `single-shift` is a quiet grey because it is the normal case; `double-shift` (teal) and `triple-shift` (orange) are the exceptions.
+- **Shifts:** matches the Class-size profile palette — `single-shift` (`#d93a3f` red), `double-shift` (`#008556` green), and `triple-shift` (`#1976d2` blue).
 
 ### Dark mode
 The interface colors have a dark set (the `-dark` tokens above): a deep navy page, slightly lighter cards, soft blue-white ink, a lighter blue for links and toggles, and a deep navy top bar. **Data colors do not change between modes**, so red, green, purple and the shift colors mean the same thing everywhere. Checked against the dark card color: text is 6.8:1 or better, and every data color is at least 3:1 (the minimum for graphics). White text on the colored KPI strips is unchanged.

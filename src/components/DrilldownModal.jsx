@@ -201,21 +201,21 @@ export default function DrilldownModal({ open, onClose, target, parentRegion, on
                   <Box
                     sx={{
                       width: `${(singleShift / totalShifts) * 100}%`,
-                      bgcolor: shiftStrata.find((s) => s.field === "single")?.color || "#455a64",
+                      bgcolor: shiftStrata.find((s) => s.field === "single")?.color || "#d93a3f",
                     }}
                     title={`Single Shift: ${formatNumber(singleShift)} (${formatPercent((singleShift / totalShifts) * 100)})`}
                   />
                   <Box
                     sx={{
                       width: `${(doubleShift / totalShifts) * 100}%`,
-                      bgcolor: shiftStrata.find((s) => s.field === "double")?.color || "#ed6c02",
+                      bgcolor: shiftStrata.find((s) => s.field === "double")?.color || "#008556",
                     }}
                     title={`Double Shift: ${formatNumber(doubleShift)} (${formatPercent((doubleShift / totalShifts) * 100)})`}
                   />
                   <Box
                     sx={{
                       width: `${(tripleShift / totalShifts) * 100}%`,
-                      bgcolor: shiftStrata.find((s) => s.field === "triple")?.color || "#c62828",
+                      bgcolor: shiftStrata.find((s) => s.field === "triple")?.color || "#1976d2",
                     }}
                     title={`Triple Shift: ${formatNumber(tripleShift)} (${formatPercent((tripleShift / totalShifts) * 100)})`}
                   />
